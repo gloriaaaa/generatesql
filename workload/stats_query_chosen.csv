@@ -1,0 +1,38 @@
+badges b,users u#b.UserId=u.Id#u.UpVotes,>=,0#79851
+comments c,badges b#c.UserId=b.UserId#c.Score,=,0,b.Date,<=,176909586.0#10220614
+comments c,postHistory ph#c.UserId=ph.UserId#c.Score,=,0,ph.PostHistoryTypeId,=,1#1458075
+comments c,postHistory ph#c.UserId=ph.UserId#ph.PostHistoryTypeId,=,1,ph.CreationDate,>=,50929147.0#1709781
+comments c,votes v#c.UserId=v.UserId#c.Score,=,0#7491903
+badges b,posts p#b.UserId=p.OwnerUserId#b.Date,<=,176889352.0,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,17#428612
+comments c,posts p,postLinks pl#c.UserId=p.OwnerUserId,p.Id=pl.PostId#p.CommentCount,<=,18,p.CreationDate,>=,46333651.0,p.CreationDate,<=,176690580.0#699302
+comments c,posts p,postLinks pl#c.UserId=p.OwnerUserId,p.Id=pl.PostId#c.Score,=,0,p.CreationDate,>=,50198301.0,p.CreationDate,<=,176979741.0,pl.LinkTypeId,=,1,pl.CreationDate,>=,76714544.0#481420
+comments c,posts p,postHistory ph#p.Id=c.PostId,p.Id=ph.PostId#p.CommentCount,>=,0,p.CommentCount,<=,25#698213
+comments c,posts p,users u#c.UserId=u.Id,u.Id=p.OwnerUserId#c.CreationDate,>=,47432162.0,c.CreationDate,<=,176658649.0,p.ViewCount,>=,0,p.ViewCount,<=,2897,p.CommentCount,>=,0,p.CommentCount,<=,16,p.FavoriteCount,>=,0,p.FavoriteCount,<=,10#780683
+comments c,posts p,users u#c.UserId=u.Id,u.Id=p.OwnerUserId#c.Score,=,0,p.Score,>=,0,p.Score,<=,15,p.ViewCount,>=,0,p.ViewCount,<=,3002,p.AnswerCount,<=,3,p.CommentCount,<=,10,u.DownVotes,<=,0,u.UpVotes,>=,0,u.CreationDate,>=,49044070.0,u.CreationDate,<=,176115006.0#326559
+comments c,postHistory ph,users u#u.Id=c.UserId,c.UserId=ph.UserId#u.Reputation,>=,1,u.Reputation,<=,487,u.UpVotes,<=,27,u.CreationDate,>=,54250835.0,u.CreationDate,<=,176832091.0#1018612
+comments c,votes v,users u#u.Id=c.UserId,u.Id=v.UserId#c.CreationDate,>=,47926545.0,u.Reputation,>=,1,u.Reputation,<=,691#315516
+comments c,votes v,users u#u.Id=c.UserId,u.Id=v.UserId#c.CreationDate,>=,52429526.0,c.CreationDate,<=,176385077.0,v.BountyAmount,<=,100,u.UpVotes,=,0,u.CreationDate,<=,176955934.0#200
+comments c,badges b,users u#u.Id=c.UserId,c.UserId=b.UserId#c.Score,=,0,c.CreationDate,>=,46417609.0,b.Date,>=,46035246.0,b.Date,<=,176998296.0,u.UpVotes,>=,0#10223864
+comments c,badges b,users u#u.Id=c.UserId,c.UserId=b.UserId#c.Score,=,0,b.Date,>=,46036446.0,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,17,u.CreationDate,>=,47541785.0,u.CreationDate,<=,176613524.0#245567
+posts p,tags t,votes v#p.Id=t.ExcerptPostId,p.OwnerUserId=v.UserId#p.CreationDate,>=,46054865.0#70752
+posts p,postLinks pl,postHistory ph#p.Id=pl.PostId,pl.PostId=ph.PostId#p.CreationDate,>=,46033717.0,ph.CreationDate,>=,46049400.0#63500
+posts p,postLinks pl,users u#p.Id=pl.PostId,p.OwnerUserId=u.Id#p.CommentCount,<=,17,u.CreationDate,<=,176969536.0#10895
+postHistory ph,posts p,users u#ph.PostId=p.Id,p.OwnerUserId=u.Id#ph.CreationDate,<=,174774251.0,p.CreationDate,>=,46635997.0,p.CreationDate,<=,175182219.0,u.Reputation,>=,1,u.Reputation,<=,6524,u.Views,>=,0#251068
+votes v,posts p,users u#v.PostId=p.Id,v.UserId=u.Id#v.CreationDate,<=,176943600.0,p.Score,>=,-1,p.CreationDate,>=,54130884.0,p.CreationDate,<=,176739142.0,u.UpVotes,>=,0,u.CreationDate,>=,46714557.0,u.CreationDate,<=,176212062.0#26836
+votes v,posts p,users u#v.UserId=p.OwnerUserId,p.OwnerUserId=u.Id#p.CommentCount,>=,0,p.CommentCount,<=,12,u.CreationDate,>=,46237086.0,u.CreationDate,<=,176655302.0#2488080
+votes v,badges b,users u#u.Id=v.UserId,v.UserId=b.UserId#u.DownVotes,>=,0,u.DownVotes,<=,0#144017
+votes v,badges b,users u#u.Id=v.UserId,v.UserId=b.UserId#v.BountyAmount,>=,0,v.BountyAmount,<=,50,u.DownVotes,=,0#4582
+comments c,posts p,users u#u.Id=p.OwnerUserId,c.UserId=u.Id#c.CreationDate,>=,46716398.0,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,46601208.0,p.CreationDate,<=,177066590.0,u.Reputation,>=,1,u.CreationDate,>=,47328160.0,u.CreationDate,<=,176952003.0#1459345
+comments c,posts p,users u#u.Id=p.OwnerUserId,c.UserId=u.Id#c.Score,=,0,p.AnswerCount,<=,5,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,<=,27,u.Reputation,>=,1#657592
+comments c,postHistory ph,users u#c.UserId=u.Id,ph.UserId=u.Id#c.CreationDate,>=,47802290.0,c.CreationDate,<=,176784362.0,u.Reputation,>=,1,u.Views,<=,80,u.UpVotes,>=,0,u.CreationDate,>=,47244672.0#1771584
+comments c,postHistory ph,users u#c.UserId=u.Id,ph.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,7931,u.Views,<=,109,u.DownVotes,>=,0,u.CreationDate,<=,176991176.0#2323452
+comments c,votes v,users u#u.Id=c.UserId,u.Id=v.UserId#c.CreationDate,>=,46709194.0,c.CreationDate,<=,176973314.0,v.CreationDate,>=,45961200.0,v.CreationDate,<=,176770800.0,u.CreationDate,<=,176170001.0#10993951
+comments c,votes v,users u#u.Id=c.UserId,u.Id=v.UserId#v.CreationDate,<=,176857200.0,u.CreationDate,>=,46033908.0,u.CreationDate,<=,171401830.0#10862842
+comments c,badges b,users u#c.UserId=u.Id,b.UserId=u.Id#c.CreationDate,>=,48108450.0,c.CreationDate,<=,176989759.0,u.Views,>=,0,u.DownVotes,>=,0,u.DownVotes,<=,2#758411
+comments c,badges b,users u#c.UserId=u.Id,b.UserId=u.Id#c.Score,=,0,c.CreationDate,>=,46417609.0,b.Date,>=,46035246.0,b.Date,<=,176998296.0,u.UpVotes,>=,0#10223864
+postHistory ph,posts p,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#p.Score,>=,-1,p.CommentCount,>=,0,p.CommentCount,<=,23,u.DownVotes,=,0,u.UpVotes,>=,0,u.UpVotes,<=,244#1356723
+postHistory ph,posts p,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#ph.CreationDate,>=,72380583.0,p.FavoriteCount,<=,5,u.Views,>=,0,u.UpVotes,>=,0,u.CreationDate,>=,57361609.0,u.CreationDate,<=,174830422.0#582617
+postHistory ph,posts p,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#ph.CreationDate,>=,48832240.0,p.Score,>=,0,u.Reputation,>=,1,u.UpVotes,<=,198,u.CreationDate,>=,46036145.0#4197329
+postHistory ph,posts p,users u#ph.PostId=p.Id,p.OwnerUserId=u.Id#p.CreationDate,>=,48535685.0,p.CreationDate,<=,175931892.0,u.UpVotes,>=,0,u.UpVotes,<=,9#155561
+votes v,posts p,users u#v.UserId=u.Id,p.OwnerUserId=u.Id#p.PostTypeId,=,2,p.CreationDate,<=,175556426.0,u.Views,>=,0#2162683
+votes v,posts p,users u#v.UserId=u.Id,p.OwnerUserId=u.Id#p.CommentCount,>=,0,u.CreationDate,>=,58860024.0#1100297

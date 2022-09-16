@@ -1,0 +1,1348 @@
+users u,badges b#b.UserId=u.Id#u.UpVotes,>=,0#79851
+badges b,comments c,users u#c.UserId=u.Id,b.UserId=u.Id#b.Date,<=,176909586,c.Score,=,0#10220614
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id#ph.PostHistoryTypeId,=,1,c.Score,=,0#1458075
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id#ph.PostHistoryTypeId,=,1,ph.CreationDate,>=,50929147#1709781
+votes v,comments c,users u#c.UserId=u.Id,v.UserId=u.Id#c.Score,=,0#7491903
+posts p,badges b,users u#b.UserId=u.Id,p.OwnerUserId=u.Id#p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,17,b.Date,<=,176889352#428612
+posts p,comments c,users u#c.UserId=u.Id,p.OwnerUserId=u.Id#p.CommentCount,<=,18,p.CreationDate,>=,46333651,p.CreationDate,<=,176690580#55900138
+postLinks pl,posts p#p.Id=pl.PostId#p.CommentCount,<=,18,p.CreationDate,>=,46333651,p.CreationDate,<=,176690580#10972
+posts p,comments c,users u#c.UserId=u.Id,p.OwnerUserId=u.Id#p.CreationDate,>=,50198301,p.CreationDate,<=,176979741,c.Score,=,0#36337035
+postLinks pl,posts p#p.Id=pl.PostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,76714544,p.CreationDate,>=,50198301,p.CreationDate,<=,176979741#9405
+posts p,comments c#p.Id=c.PostId#p.CommentCount,>=,0,p.CommentCount,<=,25#173407
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId##704085
+postHistory ph,posts p#p.Id=ph.PostId#p.CommentCount,>=,0,p.CommentCount,<=,25#303005
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#p.CommentCount,>=,0,p.CommentCount,<=,25#698213
+posts p,comments c,users u#c.UserId=u.Id,u.Id=p.OwnerUserId#p.ViewCount,>=,0,p.ViewCount,<=,2897,p.CommentCount,>=,0,p.CommentCount,<=,16,p.FavoriteCount,>=,0,p.FavoriteCount,<=,10,c.CreationDate,>=,47432162,c.CreationDate,<=,176658649#780683
+users u,comments c#c.UserId=u.Id#c.CreationDate,>=,47432162,c.CreationDate,<=,176658649#169446
+users u,posts p#u.Id=p.OwnerUserId#p.ViewCount,>=,0,p.ViewCount,<=,2897,p.CommentCount,>=,0,p.CommentCount,<=,16,p.FavoriteCount,>=,0,p.FavoriteCount,<=,10#11630
+users u,comments c,posts p#c.UserId=u.Id,u.Id=p.OwnerUserId#c.CreationDate,>=,47432162,c.CreationDate,<=,176658649,p.ViewCount,>=,0,p.ViewCount,<=,2897,p.CommentCount,>=,0,p.CommentCount,<=,16,p.FavoriteCount,>=,0,p.FavoriteCount,<=,10#780683
+posts p,comments c,users u#c.UserId=u.Id,u.Id=p.OwnerUserId#p.Score,>=,0,p.Score,<=,15,p.ViewCount,>=,0,p.ViewCount,<=,3002,p.AnswerCount,<=,3,p.CommentCount,<=,10,c.Score,=,0#1227386
+users u,comments c#c.UserId=u.Id#u.DownVotes,<=,0,u.UpVotes,>=,0,u.CreationDate,>=,49044070,u.CreationDate,<=,176115006,c.Score,=,0#53564
+users u,posts p#u.Id=p.OwnerUserId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.CreationDate,>=,49044070,u.CreationDate,<=,176115006,p.Score,>=,0,p.Score,<=,15,p.ViewCount,>=,0,p.ViewCount,<=,3002,p.AnswerCount,<=,3,p.CommentCount,<=,10#32260
+users u,comments c,posts p#c.UserId=u.Id,u.Id=p.OwnerUserId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.CreationDate,>=,49044070,u.CreationDate,<=,176115006,c.Score,=,0,p.Score,>=,0,p.Score,<=,15,p.ViewCount,>=,0,p.ViewCount,<=,3002,p.AnswerCount,<=,3,p.CommentCount,<=,10#326559
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id##263105194
+users u,comments c#c.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,487,u.UpVotes,<=,27,u.CreationDate,>=,54250835,u.CreationDate,<=,176832091#49655
+users u,postHistory ph#ph.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,487,u.UpVotes,<=,27,u.CreationDate,>=,54250835,u.CreationDate,<=,176832091#126748
+users u,comments c,postHistory ph#c.UserId=u.Id,ph.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,487,u.UpVotes,<=,27,u.CreationDate,>=,54250835,u.CreationDate,<=,176832091#1018612
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#c.CreationDate,>=,47926545#10984892
+users u,comments c#u.Id=c.UserId#u.Reputation,>=,1,u.Reputation,<=,691,c.CreationDate,>=,47926545#64566
+users u,votes v#u.Id=v.UserId#u.Reputation,>=,1,u.Reputation,<=,691#23267
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.Reputation,>=,1,u.Reputation,<=,691,c.CreationDate,>=,47926545#315516
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#v.BountyAmount,<=,100,c.CreationDate,>=,52429526,c.CreationDate,<=,176385077#447953
+users u,comments c#u.Id=c.UserId#u.UpVotes,=,0,u.CreationDate,<=,176955934,c.CreationDate,>=,52429526,c.CreationDate,<=,176385077#20126
+users u,votes v#u.Id=v.UserId#u.UpVotes,=,0,u.CreationDate,<=,176955934,v.BountyAmount,<=,100#40
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.UpVotes,=,0,u.CreationDate,<=,176955934,c.CreationDate,>=,52429526,c.CreationDate,<=,176385077,v.BountyAmount,<=,100#200
+badges b,comments c,users u#c.UserId=u.Id,b.UserId=u.Id#b.Date,>=,46035246,b.Date,<=,176998296,c.Score,=,0,c.CreationDate,>=,46417609#10223864
+users u,comments c#c.UserId=u.Id#u.UpVotes,>=,0,c.Score,=,0,c.CreationDate,>=,46417609#132504
+users u,badges b#b.UserId=u.Id#u.UpVotes,>=,0,b.Date,>=,46035246,b.Date,<=,176998296#79610
+users u,comments c,badges b#c.UserId=u.Id,b.UserId=u.Id#u.UpVotes,>=,0,c.Score,=,0,c.CreationDate,>=,46417609,b.Date,>=,46035246,b.Date,<=,176998296#10223864
+badges b,comments c,users u#c.UserId=u.Id,b.UserId=u.Id#b.Date,>=,46036446,c.Score,=,0#10234398
+users u,comments c#c.UserId=u.Id#u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,17,u.CreationDate,>=,47541785,u.CreationDate,<=,176613524,c.Score,=,0#45485
+users u,badges b#b.UserId=u.Id#u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,17,u.CreationDate,>=,47541785,u.CreationDate,<=,176613524,b.Date,>=,46036446#55035
+users u,comments c,badges b#c.UserId=u.Id,b.UserId=u.Id#u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,17,u.CreationDate,>=,47541785,u.CreationDate,<=,176613524,c.Score,=,0,b.Date,>=,46036446#245567
+tags t,posts p#p.Id=t.ExcerptPostId#p.CreationDate,>=,46054865#596
+votes v,posts p,users u#p.OwnerUserId=u.Id,v.UserId=u.Id#p.CreationDate,>=,46054865#2734033
+postLinks pl,posts p#pl.PostId=p.Id#p.CreationDate,>=,46033717#11091
+postHistory ph,posts p#ph.PostId=p.Id#ph.CreationDate,>=,46049400,p.CreationDate,>=,46033717#302620
+postHistory ph,postLinks pl,posts p#ph.PostId=p.Id,pl.PostId=p.Id#ph.CreationDate,>=,46049400#63543
+postHistory ph,posts p,postLinks pl#ph.PostId=p.Id,pl.PostId=p.Id#ph.CreationDate,>=,46049400,p.CreationDate,>=,46033717#63500
+postLinks pl,posts p#p.Id=pl.PostId#p.CommentCount,<=,17#11050
+users u,posts p#p.OwnerUserId=u.Id#u.CreationDate,<=,176969536,p.CommentCount,<=,17#90414
+users u,posts p,postLinks pl#p.Id=pl.PostId,p.OwnerUserId=u.Id#u.CreationDate,<=,176969536,p.CommentCount,<=,17#10895
+posts p,postHistory ph#ph.PostId=p.Id#p.CreationDate,>=,46635997,p.CreationDate,<=,175182219,ph.CreationDate,<=,174774251#291926
+users u,posts p#p.OwnerUserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,6524,u.Views,>=,0,p.CreationDate,>=,46635997,p.CreationDate,<=,175182219#69617
+users u,postHistory ph,posts p#ph.PostId=p.Id,p.OwnerUserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,6524,u.Views,>=,0,ph.CreationDate,<=,174774251,p.CreationDate,>=,46635997,p.CreationDate,<=,175182219#251068
+posts p,votes v#v.PostId=p.Id#p.Score,>=,-1,p.CreationDate,>=,54130884,p.CreationDate,<=,176739142,v.CreationDate,<=,176943600#288438
+users u,votes v#v.UserId=u.Id#u.UpVotes,>=,0,u.CreationDate,>=,46714557,u.CreationDate,<=,176212062,v.CreationDate,<=,176943600#31965
+users u,votes v,posts p#v.PostId=p.Id,v.UserId=u.Id#u.UpVotes,>=,0,u.CreationDate,>=,46714557,u.CreationDate,<=,176212062,v.CreationDate,<=,176943600,p.Score,>=,-1,p.CreationDate,>=,54130884,p.CreationDate,<=,176739142#26836
+posts p,votes v,users u#p.OwnerUserId=u.Id,v.UserId=u.Id#p.CommentCount,>=,0,p.CommentCount,<=,12#2704241
+users u,votes v#v.UserId=u.Id#u.CreationDate,>=,46237086,u.CreationDate,<=,176655302#32918
+users u,posts p#p.OwnerUserId=u.Id#u.CreationDate,>=,46237086,u.CreationDate,<=,176655302,p.CommentCount,>=,0,p.CommentCount,<=,12#86112
+users u,votes v,posts p#p.OwnerUserId=u.Id,v.UserId=u.Id#u.CreationDate,>=,46237086,u.CreationDate,<=,176655302,p.CommentCount,>=,0,p.CommentCount,<=,12#2488080
+badges b,votes v,users u#b.UserId=u.Id,v.UserId=u.Id##1056687
+users u,votes v#v.UserId=u.Id#u.DownVotes,>=,0,u.DownVotes,<=,0#20334
+users u,badges b#b.UserId=u.Id#u.DownVotes,>=,0,u.DownVotes,<=,0#62294
+users u,votes v,badges b#b.UserId=u.Id,v.UserId=u.Id#u.DownVotes,>=,0,u.DownVotes,<=,0#144017
+badges b,votes v,users u#b.UserId=u.Id,v.UserId=u.Id#v.BountyAmount,>=,0,v.BountyAmount,<=,50#29072
+users u,votes v#v.UserId=u.Id#u.DownVotes,=,0,v.BountyAmount,>=,0,v.BountyAmount,<=,50#433
+users u,badges b#b.UserId=u.Id#u.DownVotes,=,0#62294
+users u,votes v,badges b#b.UserId=u.Id,v.UserId=u.Id#u.DownVotes,=,0,v.BountyAmount,>=,0,v.BountyAmount,<=,50#4582
+posts p,comments c#c.PostId=p.Id#p.Score,>=,-3,c.CreationDate,>=,47256730#173065
+postLinks pl,comments c,posts p#c.PostId=p.Id,pl.PostId=p.Id#c.CreationDate,>=,47256730#35157
+votes v,comments c,posts p#c.PostId=p.Id,v.PostId=p.Id#v.VoteTypeId,=,2,v.CreationDate,<=,176943600,c.CreationDate,>=,47256730#670344
+postLinks pl,posts p#pl.PostId=p.Id#p.Score,>=,-3#11077
+votes v,posts p#v.PostId=p.Id#v.VoteTypeId,=,2,v.CreationDate,<=,176943600,p.Score,>=,-3#261948
+votes v,postLinks pl,posts p#pl.PostId=p.Id,v.PostId=p.Id#v.VoteTypeId,=,2,v.CreationDate,<=,176943600#45464
+postLinks pl,comments c,posts p#c.PostId=p.Id,pl.PostId=p.Id#c.CreationDate,>=,47256730,p.Score,>=,-3#35034
+votes v,comments c,posts p#c.PostId=p.Id,v.PostId=p.Id#v.VoteTypeId,=,2,v.CreationDate,<=,176943600,c.CreationDate,>=,47256730,p.Score,>=,-3#670154
+votes v,posts p,postLinks pl#pl.PostId=p.Id,v.PostId=p.Id#v.VoteTypeId,=,2,v.CreationDate,<=,176943600,p.Score,>=,-3#45455
+posts p,comments c#p.Id=c.PostId#c.CreationDate,>=,46173937,c.CreationDate,<=,175453165#170249
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#c.CreationDate,>=,46173937,c.CreationDate,<=,175453165#32792
+postLinks pl,posts p#p.Id=pl.RelatedPostId##11102
+users u,posts p#p.OwnerUserId=u.Id#u.UpVotes,>=,0,u.CreationDate,>=,48889658#77059
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#c.CreationDate,>=,46173937,c.CreationDate,<=,175453165#32792
+users u,comments c,posts p#p.OwnerUserId=u.Id,p.Id=c.PostId#u.UpVotes,>=,0,u.CreationDate,>=,48889658,c.CreationDate,>=,46173937,c.CreationDate,<=,175453165#142137
+users u,posts p,postLinks pl#p.OwnerUserId=u.Id,p.Id=pl.RelatedPostId#u.UpVotes,>=,0,u.CreationDate,>=,48889658#8528
+posts p,comments c,users u#u.Id=c.UserId,u.Id=p.OwnerUserId#p.CreationDate,>=,46659075,c.Score,=,0,c.CreationDate,<=,177102735#36980622
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#v.BountyAmount,<=,50,v.CreationDate,<=,176943600,c.Score,=,0,c.CreationDate,<=,177102735#242937
+users u,comments c#u.Id=c.UserId#u.UpVotes,>=,0,u.UpVotes,<=,12,u.CreationDate,>=,46030179,c.Score,=,0,c.CreationDate,<=,177102735#42543
+votes v,posts p,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#v.BountyAmount,<=,50,v.CreationDate,<=,176943600,p.CreationDate,>=,46659075#84481
+users u,posts p#u.Id=p.OwnerUserId#u.UpVotes,>=,0,u.UpVotes,<=,12,u.CreationDate,>=,46030179,p.CreationDate,>=,46659075#40496
+users u,votes v#u.Id=v.UserId#u.UpVotes,>=,0,u.UpVotes,<=,12,u.CreationDate,>=,46030179,v.BountyAmount,<=,50,v.CreationDate,<=,176943600#244
+users u,comments c,posts p#u.Id=c.UserId,u.Id=p.OwnerUserId#u.UpVotes,>=,0,u.UpVotes,<=,12,u.CreationDate,>=,46030179,c.Score,=,0,c.CreationDate,<=,177102735,p.CreationDate,>=,46659075#256660
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.UpVotes,>=,0,u.UpVotes,<=,12,u.CreationDate,>=,46030179,c.Score,=,0,c.CreationDate,<=,177102735,v.BountyAmount,<=,50,v.CreationDate,<=,176943600#2489
+users u,posts p,votes v#u.Id=p.OwnerUserId,u.Id=v.UserId#u.UpVotes,>=,0,u.UpVotes,<=,12,u.CreationDate,>=,46030179,p.CreationDate,>=,46659075,v.BountyAmount,<=,50,v.CreationDate,<=,176943600#1799
+posts p,votes v#p.Id=v.PostId#p.Score,<=,22#289619
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,>=,1,p.Score,<=,22#89863
+users u,badges b#u.Id=b.UserId#u.Reputation,>=,1#79851
+users u,votes v,posts p#u.Id=p.OwnerUserId,p.Id=v.PostId#u.Reputation,>=,1,p.Score,<=,22#284619
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.Score,<=,22,u.Reputation,>=,1#3660301
+posts p,votes v#p.Id=v.PostId#p.PostTypeId,=,1,p.Score,>=,-1,p.FavoriteCount,>=,0,p.FavoriteCount,<=,20,v.CreationDate,<=,176943600#93000
+users u,posts p#u.Id=p.OwnerUserId#u.DownVotes,<=,2,u.UpVotes,>=,0,u.CreationDate,>=,57209651,p.PostTypeId,=,1,p.Score,>=,-1,p.FavoriteCount,>=,0,p.FavoriteCount,<=,20#9872
+users u,badges b#u.Id=b.UserId#u.DownVotes,<=,2,u.UpVotes,>=,0,u.CreationDate,>=,57209651,b.Date,>=,46116142,b.Date,<=,176250969#60506
+users u,votes v,posts p#u.Id=p.OwnerUserId,p.Id=v.PostId#u.DownVotes,<=,2,u.UpVotes,>=,0,u.CreationDate,>=,57209651,v.CreationDate,<=,176943600,p.PostTypeId,=,1,p.Score,>=,-1,p.FavoriteCount,>=,0,p.FavoriteCount,<=,20#59978
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,>=,46116142,b.Date,<=,176250969,p.PostTypeId,=,1,p.Score,>=,-1,p.FavoriteCount,>=,0,p.FavoriteCount,<=,20,u.DownVotes,<=,2,u.UpVotes,>=,0,u.CreationDate,>=,57209651#80977
+posts p,votes v,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#p.Score,>=,0,p.Score,<=,30,p.CommentCount,=,0,p.CreationDate,>=,46708231,p.CreationDate,<=,176316310#1187068
+users u,votes v#u.Id=v.UserId##34789
+users u,posts p#u.Id=p.OwnerUserId#p.Score,>=,0,p.Score,<=,30,p.CommentCount,=,0,p.CreationDate,>=,46708231,p.CreationDate,<=,176316310#37048
+users u,badges b#u.Id=b.UserId##79851
+users u,votes v,posts p#u.Id=p.OwnerUserId,u.Id=v.UserId#p.Score,>=,0,p.Score,<=,30,p.CommentCount,=,0,p.CreationDate,>=,46708231,p.CreationDate,<=,176316310#1187068
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId##1056687
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.Score,>=,0,p.Score,<=,30,p.CommentCount,=,0,p.CreationDate,>=,46708231,p.CreationDate,<=,176316310#1486002
+posts p,votes v,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#p.Score,<=,48,p.AnswerCount,<=,8,v.CreationDate,<=,176425200#368186
+users u,votes v#u.Id=v.UserId#u.CreationDate,>=,56354584,v.CreationDate,<=,176425200#28260
+users u,posts p#u.Id=p.OwnerUserId#u.CreationDate,>=,56354584,p.Score,<=,48,p.AnswerCount,<=,8#38786
+users u,badges b#u.Id=b.UserId#u.CreationDate,>=,56354584,b.Date,>=,60555019,b.Date,<=,176135707#67113
+users u,votes v,posts p#u.Id=p.OwnerUserId,u.Id=v.UserId#u.CreationDate,>=,56354584,v.CreationDate,<=,176425200,p.Score,<=,48,p.AnswerCount,<=,8#239532
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId#b.Date,>=,60555019,b.Date,<=,176135707,v.CreationDate,<=,176425200,u.CreationDate,>=,56354584#475290
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,>=,60555019,b.Date,<=,176135707,p.Score,<=,48,p.AnswerCount,<=,8,u.CreationDate,>=,56354584#298796
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id#ph.CreationDate,>=,68996769,ph.CreationDate,<=,174757043,c.CreationDate,>=,48108826,c.CreationDate,<=,177100015#235010920
+votes v,comments c,users u#c.UserId=u.Id,v.UserId=u.Id#v.CreationDate,>=,46566000,v.CreationDate,<=,176943600,c.CreationDate,>=,48108826,c.CreationDate,<=,177100015#10967392
+users u,comments c#c.UserId=u.Id#u.Views,>=,0,u.Views,<=,783,u.DownVotes,>=,0,u.DownVotes,<=,1,u.UpVotes,<=,123,c.CreationDate,>=,48108826,c.CreationDate,<=,177100015#64129
+votes v,postHistory ph,users u#v.UserId=u.Id,ph.UserId=u.Id#v.CreationDate,>=,46566000,v.CreationDate,<=,176943600,ph.CreationDate,>=,68996769,ph.CreationDate,<=,174757043#12470361
+users u,postHistory ph#ph.UserId=u.Id#u.Views,>=,0,u.Views,<=,783,u.DownVotes,>=,0,u.DownVotes,<=,1,u.UpVotes,<=,123,ph.CreationDate,>=,68996769,ph.CreationDate,<=,174757043#140071
+users u,votes v#v.UserId=u.Id#u.Views,>=,0,u.Views,<=,783,u.DownVotes,>=,0,u.DownVotes,<=,1,u.UpVotes,<=,123,v.CreationDate,>=,46566000,v.CreationDate,<=,176943600#20007
+users u,comments c,postHistory ph#c.UserId=u.Id,ph.UserId=u.Id#u.Views,>=,0,u.Views,<=,783,u.DownVotes,>=,0,u.DownVotes,<=,1,u.UpVotes,<=,123,c.CreationDate,>=,48108826,c.CreationDate,<=,177100015,ph.CreationDate,>=,68996769,ph.CreationDate,<=,174757043#2038871
+users u,comments c,votes v#c.UserId=u.Id,v.UserId=u.Id#u.Views,>=,0,u.Views,<=,783,u.DownVotes,>=,0,u.DownVotes,<=,1,u.UpVotes,<=,123,c.CreationDate,>=,48108826,c.CreationDate,<=,177100015,v.CreationDate,>=,46566000,v.CreationDate,<=,176943600#221701
+users u,postHistory ph,votes v#v.UserId=u.Id,ph.UserId=u.Id#u.Views,>=,0,u.Views,<=,783,u.DownVotes,>=,0,u.DownVotes,<=,1,u.UpVotes,<=,123,ph.CreationDate,>=,68996769,ph.CreationDate,<=,174757043,v.CreationDate,>=,46566000,v.CreationDate,<=,176943600#425598
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id##263105194
+votes v,comments c,users u#c.UserId=u.Id,v.UserId=u.Id#v.BountyAmount,>=,0,v.CreationDate,>=,46566000,v.CreationDate,<=,176598000#505601
+users u,comments c#c.UserId=u.Id#u.Reputation,>=,1,u.Views,>=,0,u.Views,<=,110,u.UpVotes,=,0,u.CreationDate,>=,46808951,u.CreationDate,<=,174457770#19556
+votes v,postHistory ph,users u#v.UserId=u.Id,ph.UserId=u.Id#v.BountyAmount,>=,0,v.CreationDate,>=,46566000,v.CreationDate,<=,176598000#593512
+users u,postHistory ph#ph.UserId=u.Id#u.Reputation,>=,1,u.Views,>=,0,u.Views,<=,110,u.UpVotes,=,0,u.CreationDate,>=,46808951,u.CreationDate,<=,174457770#62790
+users u,votes v#v.UserId=u.Id#u.Reputation,>=,1,u.Views,>=,0,u.Views,<=,110,u.UpVotes,=,0,u.CreationDate,>=,46808951,u.CreationDate,<=,174457770,v.BountyAmount,>=,0,v.CreationDate,>=,46566000,v.CreationDate,<=,176598000#40
+users u,comments c,postHistory ph#c.UserId=u.Id,ph.UserId=u.Id#u.Reputation,>=,1,u.Views,>=,0,u.Views,<=,110,u.UpVotes,=,0,u.CreationDate,>=,46808951,u.CreationDate,<=,174457770#157483
+users u,comments c,votes v#c.UserId=u.Id,v.UserId=u.Id#u.Reputation,>=,1,u.Views,>=,0,u.Views,<=,110,u.UpVotes,=,0,u.CreationDate,>=,46808951,u.CreationDate,<=,174457770,v.BountyAmount,>=,0,v.CreationDate,>=,46566000,v.CreationDate,<=,176598000#200
+users u,postHistory ph,votes v#v.UserId=u.Id,ph.UserId=u.Id#u.Reputation,>=,1,u.Views,>=,0,u.Views,<=,110,u.UpVotes,=,0,u.CreationDate,>=,46808951,u.CreationDate,<=,174457770,v.BountyAmount,>=,0,v.CreationDate,>=,46566000,v.CreationDate,<=,176598000#440
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#c.Score,=,1,c.CreationDate,>=,46131448#2201378
+users u,comments c#u.Id=c.UserId#u.CreationDate,>=,46052849,c.Score,=,1,c.CreationDate,>=,46131448#24049
+users u,votes v#u.Id=v.UserId#u.CreationDate,>=,46052849#33891
+users u,badges b#u.Id=b.UserId#u.CreationDate,>=,46052849#77791
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.CreationDate,>=,46052849,c.Score,=,1,c.CreationDate,>=,46131448#2169982
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#c.Score,=,1,c.CreationDate,>=,46131448,u.CreationDate,>=,46052849#3271463
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId#u.CreationDate,>=,46052849#1012835
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#v.BountyAmount,>=,0,v.CreationDate,<=,176857200,c.Score,=,0#346990
+users u,comments c#u.Id=c.UserId#u.DownVotes,<=,57,u.CreationDate,>=,49276891,u.CreationDate,<=,174132099,c.Score,=,0#92013
+users u,votes v#u.Id=v.UserId#u.DownVotes,<=,57,u.CreationDate,>=,49276891,u.CreationDate,<=,174132099,v.BountyAmount,>=,0,v.CreationDate,<=,176857200#913
+users u,badges b#u.Id=b.UserId#u.DownVotes,<=,57,u.CreationDate,>=,49276891,u.CreationDate,<=,174132099#68895
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.DownVotes,<=,57,u.CreationDate,>=,49276891,u.CreationDate,<=,174132099,c.Score,=,0,v.BountyAmount,>=,0,v.CreationDate,<=,176857200#70700
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#c.Score,=,0,u.DownVotes,<=,57,u.CreationDate,>=,49276891,u.CreationDate,<=,174132099#1984289
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId#v.BountyAmount,>=,0,v.CreationDate,<=,176857200,u.DownVotes,<=,57,u.CreationDate,>=,49276891,u.CreationDate,<=,174132099#18346
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#v.BountyAmount,>=,0,v.BountyAmount,<=,300,v.CreationDate,>=,46825200,c.Score,=,0#345663
+users u,comments c#u.Id=c.UserId#u.UpVotes,>=,0,u.UpVotes,<=,18,c.Score,=,0#46989
+users u,votes v#u.Id=v.UserId#u.UpVotes,>=,0,u.UpVotes,<=,18,v.BountyAmount,>=,0,v.BountyAmount,<=,300,v.CreationDate,>=,46825200#381
+users u,badges b#u.Id=b.UserId#u.UpVotes,>=,0,u.UpVotes,<=,18#57353
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.UpVotes,>=,0,u.UpVotes,<=,18,c.Score,=,0,v.BountyAmount,>=,0,v.BountyAmount,<=,300,v.CreationDate,>=,46825200#4204
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#c.Score,=,0,u.UpVotes,>=,0,u.UpVotes,<=,18#261931
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId#v.BountyAmount,>=,0,v.BountyAmount,<=,300,v.CreationDate,>=,46825200,u.UpVotes,>=,0,u.UpVotes,<=,18#3236
+postLinks pl,comments c,posts p#c.PostId=p.Id,pl.PostId=p.Id##35295
+postHistory ph,comments c,posts p#ph.PostId=p.Id,c.PostId=p.Id#ph.CreationDate,>=,71268439,ph.CreationDate,<=,176818794#642583
+votes v,comments c,posts p#c.PostId=p.Id,v.PostId=p.Id##865125
+postHistory ph,postLinks pl,posts p#ph.PostId=p.Id,pl.PostId=p.Id#ph.CreationDate,>=,71268439,ph.CreationDate,<=,176818794#59346
+votes v,postLinks pl,posts p#pl.PostId=p.Id,v.PostId=p.Id##69701
+votes v,postHistory ph,posts p#ph.PostId=p.Id,v.PostId=p.Id#ph.CreationDate,>=,71268439,ph.CreationDate,<=,176818794#1057588
+postHistory ph,comments c,users u#u.Id=c.UserId,u.Id=ph.UserId#ph.PostHistoryTypeId,=,1,ph.CreationDate,>=,46638118,ph.CreationDate,<=,177092963,c.Score,=,0,c.CreationDate,>=,50166275,c.CreationDate,<=,176873736#1423047
+users u,comments c#u.Id=c.UserId#c.Score,=,0,c.CreationDate,>=,50166275,c.CreationDate,<=,176873736#130707
+users u,postHistory ph#u.Id=ph.UserId#ph.PostHistoryTypeId,=,1,ph.CreationDate,>=,46638118,ph.CreationDate,<=,177092963#42002
+users u,badges b#u.Id=b.UserId#b.Date,<=,176284496#79006
+users u,comments c,postHistory ph#u.Id=c.UserId,u.Id=ph.UserId#c.Score,=,0,c.CreationDate,>=,50166275,c.CreationDate,<=,176873736,ph.PostHistoryTypeId,=,1,ph.CreationDate,>=,46638118,ph.CreationDate,<=,177092963#1423047
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#b.Date,<=,176284496,c.Score,=,0,c.CreationDate,>=,50166275,c.CreationDate,<=,176873736#9976404
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#b.Date,<=,176284496,ph.PostHistoryTypeId,=,1,ph.CreationDate,>=,46638118,ph.CreationDate,<=,177092963#443440
+postHistory ph,comments c,users u#u.Id=c.UserId,u.Id=ph.UserId#ph.PostHistoryTypeId,=,5,ph.CreationDate,>=,62955337,c.Score,=,0,c.CreationDate,>=,46086777#69114343
+users u,comments c#u.Id=c.UserId#u.Reputation,>=,1,u.Reputation,<=,356,u.DownVotes,<=,34,u.CreationDate,>=,46038569,u.CreationDate,<=,175008706,c.Score,=,0,c.CreationDate,>=,46086777#48758
+users u,postHistory ph#u.Id=ph.UserId#u.Reputation,>=,1,u.Reputation,<=,356,u.DownVotes,<=,34,u.CreationDate,>=,46038569,u.CreationDate,<=,175008706,ph.PostHistoryTypeId,=,5,ph.CreationDate,>=,62955337#16892
+users u,badges b#u.Id=b.UserId#u.Reputation,>=,1,u.Reputation,<=,356,u.DownVotes,<=,34,u.CreationDate,>=,46038569,u.CreationDate,<=,175008706#58111
+users u,comments c,postHistory ph#u.Id=c.UserId,u.Id=ph.UserId#u.Reputation,>=,1,u.Reputation,<=,356,u.DownVotes,<=,34,u.CreationDate,>=,46038569,u.CreationDate,<=,175008706,c.Score,=,0,c.CreationDate,>=,46086777,ph.PostHistoryTypeId,=,5,ph.CreationDate,>=,62955337#194277
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#c.Score,=,0,c.CreationDate,>=,46086777,u.Reputation,>=,1,u.Reputation,<=,356,u.DownVotes,<=,34,u.CreationDate,>=,46038569,u.CreationDate,<=,175008706#281119
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#ph.PostHistoryTypeId,=,5,ph.CreationDate,>=,62955337,u.Reputation,>=,1,u.Reputation,<=,356,u.DownVotes,<=,34,u.CreationDate,>=,46038569,u.CreationDate,<=,175008706#103411
+posts p,postLinks pl#p.Id=pl.RelatedPostId#p.Score,>=,-1,p.CommentCount,<=,8,p.CreationDate,>=,46179043,p.CreationDate,<=,176515863,pl.LinkTypeId,=,1#9249
+users u,posts p#u.Id=p.OwnerUserId#u.Views,<=,40,u.CreationDate,>=,46635085,u.CreationDate,<=,176938002,p.Score,>=,-1,p.CommentCount,<=,8,p.CreationDate,>=,46179043,p.CreationDate,<=,176515863#41873
+badges b,users u#u.Id=b.UserId#u.Views,<=,40,u.CreationDate,>=,46635085,u.CreationDate,<=,176938002#58078
+users u,postLinks pl,posts p#u.Id=p.OwnerUserId,p.Id=pl.RelatedPostId#u.Views,<=,40,u.CreationDate,>=,46635085,u.CreationDate,<=,176938002,pl.LinkTypeId,=,1,p.Score,>=,-1,p.CommentCount,<=,8,p.CreationDate,>=,46179043,p.CreationDate,<=,176515863#4543
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.Score,>=,-1,p.CommentCount,<=,8,p.CreationDate,>=,46179043,p.CreationDate,<=,176515863,u.Views,<=,40,u.CreationDate,>=,46635085,u.CreationDate,<=,176938002#190339
+posts p,postLinks pl#p.Id=pl.RelatedPostId#p.Score,>=,-1,p.Score,<=,10,p.AnswerCount,<=,5,p.CommentCount,=,2,p.FavoriteCount,>=,0,p.FavoriteCount,<=,6,pl.CreationDate,<=,174702230#560
+users u,posts p#u.Id=p.OwnerUserId#u.Views,<=,33,u.DownVotes,>=,0,u.CreationDate,>=,48702696,u.CreationDate,<=,173773392,p.Score,>=,-1,p.Score,<=,10,p.AnswerCount,<=,5,p.CommentCount,=,2,p.FavoriteCount,>=,0,p.FavoriteCount,<=,6#1091
+badges b,users u#u.Id=b.UserId#b.Date,<=,176853006,u.Views,<=,33,u.DownVotes,>=,0,u.CreationDate,>=,48702696,u.CreationDate,<=,173773392#53752
+users u,postLinks pl,posts p#u.Id=p.OwnerUserId,p.Id=pl.RelatedPostId#u.Views,<=,33,u.DownVotes,>=,0,u.CreationDate,>=,48702696,u.CreationDate,<=,173773392,pl.CreationDate,<=,174702230,p.Score,>=,-1,p.Score,<=,10,p.AnswerCount,<=,5,p.CommentCount,=,2,p.FavoriteCount,>=,0,p.FavoriteCount,<=,6#332
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,<=,176853006,p.Score,>=,-1,p.Score,<=,10,p.AnswerCount,<=,5,p.CommentCount,=,2,p.FavoriteCount,>=,0,p.FavoriteCount,<=,6,u.Views,<=,33,u.DownVotes,>=,0,u.CreationDate,>=,48702696,u.CreationDate,<=,173773392#5044
+posts p,postHistory ph#p.Id=ph.PostId#p.PostTypeId,=,1,p.Score,>=,-1,p.CommentCount,>=,0,p.CommentCount,<=,11#213642
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId##1331347
+votes v,posts p#p.Id=v.PostId#p.PostTypeId,=,1,p.Score,>=,-1,p.CommentCount,>=,0,p.CommentCount,<=,11#150600
+users u,posts p#u.Id=p.OwnerUserId#p.PostTypeId,=,1,p.Score,>=,-1,p.CommentCount,>=,0,p.CommentCount,<=,11#41569
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#p.PostTypeId,=,1,p.Score,>=,-1,p.CommentCount,>=,0,p.CommentCount,<=,11#915414
+users u,postHistory ph,posts p#u.Id=p.OwnerUserId,p.Id=ph.PostId#p.PostTypeId,=,1,p.Score,>=,-1,p.CommentCount,>=,0,p.CommentCount,<=,11#209583
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#p.PostTypeId,=,1,p.Score,>=,-1,p.CommentCount,>=,0,p.CommentCount,<=,11#147464
+posts p,postHistory ph,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#p.Score,>=,-7,ph.PostHistoryTypeId,=,3#916826
+users u,postHistory ph#ph.UserId=u.Id#u.Reputation,>=,1,u.UpVotes,>=,0,u.UpVotes,<=,117,ph.PostHistoryTypeId,=,3#38775
+badges b,postHistory ph,users u#b.UserId=u.Id,ph.UserId=u.Id#ph.PostHistoryTypeId,=,3#452527
+users u,posts p#p.OwnerUserId=u.Id#u.Reputation,>=,1,u.UpVotes,>=,0,u.UpVotes,<=,117,p.Score,>=,-7#60142
+badges b,posts p,users u#b.UserId=u.Id,p.OwnerUserId=u.Id#p.Score,>=,-7#3728285
+badges b,users u#b.UserId=u.Id#u.Reputation,>=,1,u.UpVotes,>=,0,u.UpVotes,<=,117#68676
+users u,postHistory ph,posts p#p.OwnerUserId=u.Id,ph.UserId=u.Id#u.Reputation,>=,1,u.UpVotes,>=,0,u.UpVotes,<=,117,ph.PostHistoryTypeId,=,3,p.Score,>=,-7#404170
+badges b,postHistory ph,users u#b.UserId=u.Id,ph.UserId=u.Id#ph.PostHistoryTypeId,=,3,u.Reputation,>=,1,u.UpVotes,>=,0,u.UpVotes,<=,117#264252
+badges b,posts p,users u#b.UserId=u.Id,p.OwnerUserId=u.Id#p.Score,>=,-7,u.Reputation,>=,1,u.UpVotes,>=,0,u.UpVotes,<=,117#550289
+posts p,postHistory ph,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#p.Score,>=,-1,p.ViewCount,>=,0,p.ViewCount,<=,39097,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,<=,10,p.CreationDate,>=,48129489,p.CreationDate,<=,176721627,ph.CreationDate,>=,50236903,ph.CreationDate,<=,176226078#1236745
+users u,postHistory ph#ph.UserId=u.Id#u.Views,>=,0,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,37,ph.CreationDate,>=,50236903,ph.CreationDate,<=,176226078#130349
+badges b,postHistory ph,users u#b.UserId=u.Id,ph.UserId=u.Id#ph.CreationDate,>=,50236903,ph.CreationDate,<=,176226078#15878293
+users u,posts p#p.OwnerUserId=u.Id#u.Views,>=,0,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,37,p.Score,>=,-1,p.ViewCount,>=,0,p.ViewCount,<=,39097,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,<=,10,p.CreationDate,>=,48129489,p.CreationDate,<=,176721627#8538
+badges b,posts p,users u#b.UserId=u.Id,p.OwnerUserId=u.Id#p.Score,>=,-1,p.ViewCount,>=,0,p.ViewCount,<=,39097,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,<=,10,p.CreationDate,>=,48129489,p.CreationDate,<=,176721627#190399
+badges b,users u#b.UserId=u.Id#u.Views,>=,0,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,37#58524
+users u,postHistory ph,posts p#p.OwnerUserId=u.Id,ph.UserId=u.Id#u.Views,>=,0,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,37,ph.CreationDate,>=,50236903,ph.CreationDate,<=,176226078,p.Score,>=,-1,p.ViewCount,>=,0,p.ViewCount,<=,39097,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,<=,10,p.CreationDate,>=,48129489,p.CreationDate,<=,176721627#181951
+badges b,postHistory ph,users u#b.UserId=u.Id,ph.UserId=u.Id#ph.CreationDate,>=,50236903,ph.CreationDate,<=,176226078,u.Views,>=,0,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,37#659318
+badges b,posts p,users u#b.UserId=u.Id,p.OwnerUserId=u.Id#p.Score,>=,-1,p.ViewCount,>=,0,p.ViewCount,<=,39097,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,<=,10,p.CreationDate,>=,48129489,p.CreationDate,<=,176721627,u.Views,>=,0,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,37#51156
+votes v,postHistory ph,users u#u.Id=ph.UserId,u.Id=v.UserId#ph.PostHistoryTypeId,=,2#2639317
+users u,postHistory ph#u.Id=ph.UserId#u.Views,=,5,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,224,u.CreationDate,<=,176269282,ph.PostHistoryTypeId,=,2#1816
+users u,votes v#u.Id=v.UserId#u.Views,=,5,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,224,u.CreationDate,<=,176269282#574
+badges b,users u#u.Id=b.UserId#b.Date,>=,46031950,b.Date,<=,176405868,u.Views,=,5,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,224,u.CreationDate,<=,176269282#2560
+users u,postHistory ph,votes v#u.Id=ph.UserId,u.Id=v.UserId#u.Views,=,5,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,224,u.CreationDate,<=,176269282,ph.PostHistoryTypeId,=,2#1291
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#b.Date,>=,46031950,b.Date,<=,176405868,ph.PostHistoryTypeId,=,2,u.Views,=,5,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,224,u.CreationDate,<=,176269282#6576
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId#b.Date,>=,46031950,b.Date,<=,176405868,u.Views,=,5,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,224,u.CreationDate,<=,176269282#2275
+posts p,comments c#p.Id=c.PostId#p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756,c.CreationDate,>=,47128361#25695
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591,c.CreationDate,>=,47128361#31580
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.CreationDate,>=,51473505,c.CreationDate,>=,47128361#691045
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,<=,176857200,c.CreationDate,>=,47128361#847176
+postLinks pl,posts p#p.Id=pl.PostId#pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756#3167
+postHistory ph,posts p#p.Id=ph.PostId#ph.CreationDate,>=,51473505,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756#61284
+votes v,posts p#p.Id=v.PostId#v.CreationDate,<=,176857200,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756#56627
+postHistory ph,postLinks pl,posts p#p.Id=pl.PostId,p.Id=ph.PostId#ph.CreationDate,>=,51473505,pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591#55293
+votes v,postLinks pl,posts p#p.Id=pl.PostId,p.Id=v.PostId#v.CreationDate,<=,176857200,pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591#66311
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,<=,176857200,ph.CreationDate,>=,51473505#1228382
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591,c.CreationDate,>=,47128361,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756#10594
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.CreationDate,>=,51473505,c.CreationDate,>=,47128361,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756#160411
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,<=,176857200,c.CreationDate,>=,47128361,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756#147586
+postHistory ph,posts p,postLinks pl#p.Id=pl.PostId,p.Id=ph.PostId#ph.CreationDate,>=,51473505,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756,pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591#19015
+votes v,posts p,postLinks pl#p.Id=pl.PostId,p.Id=v.PostId#v.CreationDate,<=,176857200,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756,pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591#18097
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,<=,176857200,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756,ph.CreationDate,>=,51473505#334037
+posts p,comments c,users u#c.UserId=u.Id,p.OwnerUserId=u.Id#p.Score,<=,13,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.FavoriteCount,<=,2#535671
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id#ph.PostHistoryTypeId,=,3#1794583
+votes v,comments c,users u#c.UserId=u.Id,v.UserId=u.Id#v.BountyAmount,<=,50#356545
+users u,comments c#c.UserId=u.Id#u.DownVotes,>=,0#171470
+postHistory ph,posts p,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#ph.PostHistoryTypeId,=,3,p.Score,<=,13,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.FavoriteCount,<=,2#131564
+votes v,posts p,users u#p.OwnerUserId=u.Id,v.UserId=u.Id#v.BountyAmount,<=,50,p.Score,<=,13,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.FavoriteCount,<=,2#4636
+users u,posts p#p.OwnerUserId=u.Id#u.DownVotes,>=,0,p.Score,<=,13,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.FavoriteCount,<=,2#9880
+votes v,postHistory ph,users u#v.UserId=u.Id,ph.UserId=u.Id#v.BountyAmount,<=,50,ph.PostHistoryTypeId,=,3#14444
+users u,postHistory ph#ph.UserId=u.Id#u.DownVotes,>=,0,ph.PostHistoryTypeId,=,3#42167
+users u,votes v#v.UserId=u.Id#u.DownVotes,>=,0,v.BountyAmount,<=,50#810
+users u,comments c,posts p#c.UserId=u.Id,p.OwnerUserId=u.Id#u.DownVotes,>=,0,p.Score,<=,13,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.FavoriteCount,<=,2#535671
+users u,comments c,postHistory ph#c.UserId=u.Id,ph.UserId=u.Id#u.DownVotes,>=,0,ph.PostHistoryTypeId,=,3#1794583
+users u,comments c,votes v#c.UserId=u.Id,v.UserId=u.Id#u.DownVotes,>=,0,v.BountyAmount,<=,50#356545
+users u,posts p,postHistory ph#p.OwnerUserId=u.Id,ph.UserId=u.Id#u.DownVotes,>=,0,p.Score,<=,13,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.FavoriteCount,<=,2,ph.PostHistoryTypeId,=,3#131564
+users u,posts p,votes v#p.OwnerUserId=u.Id,v.UserId=u.Id#u.DownVotes,>=,0,p.Score,<=,13,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.FavoriteCount,<=,2,v.BountyAmount,<=,50#4636
+users u,postHistory ph,votes v#v.UserId=u.Id,ph.UserId=u.Id#u.DownVotes,>=,0,ph.PostHistoryTypeId,=,3,v.BountyAmount,<=,50#14444
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id#ph.PostHistoryTypeId,=,12,c.CreationDate,>=,46125451#393181
+badges b,comments c,users u#b.UserId=u.Id,c.UserId=u.Id#c.CreationDate,>=,46125451#15890691
+votes v,comments c,users u#c.UserId=u.Id,v.UserId=u.Id#c.CreationDate,>=,46125451#11026771
+badges b,postHistory ph,users u#b.UserId=u.Id,ph.UserId=u.Id#ph.PostHistoryTypeId,=,12#24105
+votes v,postHistory ph,users u#v.UserId=u.Id,ph.UserId=u.Id#ph.PostHistoryTypeId,=,12#18817
+votes v,badges b,users u#b.UserId=u.Id,v.UserId=u.Id##1056687
+users u,badges b#b.UserId=u.Id#u.UpVotes,=,0#26948
+users u,comments c,badges b#b.UserId=u.Id,c.UserId=u.Id#u.UpVotes,=,0,c.CreationDate,>=,46125451#52366
+users u,postHistory ph,badges b#b.UserId=u.Id,ph.UserId=u.Id#u.UpVotes,=,0,ph.PostHistoryTypeId,=,12#120
+users u,badges b,votes v#b.UserId=u.Id,v.UserId=u.Id#u.UpVotes,=,0#4930
+posts p,comments c,users u#c.UserId=u.Id,p.OwnerUserId=u.Id#p.Score,>=,-1,p.Score,<=,29,p.CreationDate,>=,46035636,p.CreationDate,<=,176845950,c.Score,=,1#11575234
+votes v,comments c,users u#c.UserId=u.Id,v.UserId=u.Id#v.BountyAmount,<=,50,c.Score,=,1#71021
+badges b,comments c,users u#c.UserId=u.Id,b.UserId=u.Id#b.Date,<=,175457146,c.Score,=,1#3244883
+users u,comments c#c.UserId=u.Id#u.DownVotes,<=,11,u.CreationDate,>=,47061176,u.CreationDate,<=,176569586,c.Score,=,1#8862
+votes v,posts p,users u#p.OwnerUserId=u.Id,v.UserId=u.Id#v.BountyAmount,<=,50,p.Score,>=,-1,p.Score,<=,29,p.CreationDate,>=,46035636,p.CreationDate,<=,176845950#83727
+badges b,posts p,users u#b.UserId=u.Id,p.OwnerUserId=u.Id#b.Date,<=,175457146,p.Score,>=,-1,p.Score,<=,29,p.CreationDate,>=,46035636,p.CreationDate,<=,176845950#3589712
+users u,posts p#p.OwnerUserId=u.Id#u.DownVotes,<=,11,u.CreationDate,>=,47061176,u.CreationDate,<=,176569586,p.Score,>=,-1,p.Score,<=,29,p.CreationDate,>=,46035636,p.CreationDate,<=,176845950#65951
+badges b,votes v,users u#b.UserId=u.Id,v.UserId=u.Id#b.Date,<=,175457146,v.BountyAmount,<=,50#28435
+users u,votes v#v.UserId=u.Id#u.DownVotes,<=,11,u.CreationDate,>=,47061176,u.CreationDate,<=,176569586,v.BountyAmount,<=,50#649
+users u,badges b#b.UserId=u.Id#u.DownVotes,<=,11,u.CreationDate,>=,47061176,u.CreationDate,<=,176569586,b.Date,<=,175457146#67832
+users u,comments c,posts p#c.UserId=u.Id,p.OwnerUserId=u.Id#u.DownVotes,<=,11,u.CreationDate,>=,47061176,u.CreationDate,<=,176569586,c.Score,=,1,p.Score,>=,-1,p.Score,<=,29,p.CreationDate,>=,46035636,p.CreationDate,<=,176845950#666674
+users u,comments c,votes v#c.UserId=u.Id,v.UserId=u.Id#u.DownVotes,<=,11,u.CreationDate,>=,47061176,u.CreationDate,<=,176569586,c.Score,=,1,v.BountyAmount,<=,50#3254
+users u,comments c,badges b#c.UserId=u.Id,b.UserId=u.Id#u.DownVotes,<=,11,u.CreationDate,>=,47061176,u.CreationDate,<=,176569586,c.Score,=,1,b.Date,<=,175457146#201495
+users u,posts p,votes v#p.OwnerUserId=u.Id,v.UserId=u.Id#u.DownVotes,<=,11,u.CreationDate,>=,47061176,u.CreationDate,<=,176569586,p.Score,>=,-1,p.Score,<=,29,p.CreationDate,>=,46035636,p.CreationDate,<=,176845950,v.BountyAmount,<=,50#18142
+users u,posts p,badges b#b.UserId=u.Id,p.OwnerUserId=u.Id#u.DownVotes,<=,11,u.CreationDate,>=,47061176,u.CreationDate,<=,176569586,p.Score,>=,-1,p.Score,<=,29,p.CreationDate,>=,46035636,p.CreationDate,<=,176845950,b.Date,<=,175457146#876769
+users u,votes v,badges b#b.UserId=u.Id,v.UserId=u.Id#u.DownVotes,<=,11,u.CreationDate,>=,47061176,u.CreationDate,<=,176569586,v.BountyAmount,<=,50,b.Date,<=,175457146#9988
+posts p,comments c,users u#c.UserId=u.Id,p.OwnerUserId=u.Id#p.Score,>=,-2,p.Score,<=,23,p.ViewCount,<=,2432,p.CommentCount,=,0,p.FavoriteCount,>=,0,c.Score,=,1#32749
+votes v,comments c,users u#c.UserId=u.Id,v.UserId=u.Id#c.Score,=,1#2202146
+badges b,comments c,users u#c.UserId=u.Id,b.UserId=u.Id#c.Score,=,1#3322860
+users u,comments c#c.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,113,u.Views,>=,0,u.Views,<=,51,c.Score,=,1#1561
+votes v,posts p,users u#p.OwnerUserId=u.Id,v.UserId=u.Id#p.Score,>=,-2,p.Score,<=,23,p.ViewCount,<=,2432,p.CommentCount,=,0,p.FavoriteCount,>=,0#60591
+badges b,posts p,users u#b.UserId=u.Id,p.OwnerUserId=u.Id#p.Score,>=,-2,p.Score,<=,23,p.ViewCount,<=,2432,p.CommentCount,=,0,p.FavoriteCount,>=,0#62905
+users u,posts p#p.OwnerUserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,113,u.Views,>=,0,u.Views,<=,51,p.Score,>=,-2,p.Score,<=,23,p.ViewCount,<=,2432,p.CommentCount,=,0,p.FavoriteCount,>=,0#1716
+badges b,votes v,users u#b.UserId=u.Id,v.UserId=u.Id##1056687
+users u,votes v#v.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,113,u.Views,>=,0,u.Views,<=,51#11130
+users u,badges b#b.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,113,u.Views,>=,0,u.Views,<=,51#40625
+users u,comments c,posts p#c.UserId=u.Id,p.OwnerUserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,113,u.Views,>=,0,u.Views,<=,51,c.Score,=,1,p.Score,>=,-2,p.Score,<=,23,p.ViewCount,<=,2432,p.CommentCount,=,0,p.FavoriteCount,>=,0#255
+users u,comments c,votes v#c.UserId=u.Id,v.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,113,u.Views,>=,0,u.Views,<=,51,c.Score,=,1#2276
+users u,comments c,badges b#c.UserId=u.Id,b.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,113,u.Views,>=,0,u.Views,<=,51,c.Score,=,1#5340
+users u,posts p,votes v#p.OwnerUserId=u.Id,v.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,113,u.Views,>=,0,u.Views,<=,51,p.Score,>=,-2,p.Score,<=,23,p.ViewCount,<=,2432,p.CommentCount,=,0,p.FavoriteCount,>=,0#2054
+users u,posts p,badges b#b.UserId=u.Id,p.OwnerUserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,113,u.Views,>=,0,u.Views,<=,51,p.Score,>=,-2,p.Score,<=,23,p.ViewCount,<=,2432,p.CommentCount,=,0,p.FavoriteCount,>=,0#5670
+users u,votes v,badges b#b.UserId=u.Id,v.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,113,u.Views,>=,0,u.Views,<=,51#29249
+posts p,comments c,users u#u.Id=c.UserId,u.Id=p.OwnerUserId#p.Score,>=,-2,p.ViewCount,>=,0,p.ViewCount,<=,18281,c.CreationDate,>=,47017139,c.CreationDate,<=,176972353#1774105
+postHistory ph,comments c,users u#u.Id=c.UserId,u.Id=ph.UserId#ph.PostHistoryTypeId,=,2,c.CreationDate,>=,47017139,c.CreationDate,<=,176972353#54459286
+users u,comments c#u.Id=c.UserId#u.Views,>=,0,u.Views,<=,75,c.CreationDate,>=,47017139,c.CreationDate,<=,176972353#62181
+postHistory ph,posts p,users u#u.Id=p.OwnerUserId,u.Id=ph.UserId#ph.PostHistoryTypeId,=,2,p.Score,>=,-2,p.ViewCount,>=,0,p.ViewCount,<=,18281#902413
+users u,posts p#u.Id=p.OwnerUserId#u.Views,>=,0,u.Views,<=,75,p.Score,>=,-2,p.ViewCount,>=,0,p.ViewCount,<=,18281#35799
+users u,postHistory ph#u.Id=ph.UserId#u.Views,>=,0,u.Views,<=,75,ph.PostHistoryTypeId,=,2#51691
+users u,badges b#u.Id=b.UserId#u.Views,>=,0,u.Views,<=,75,b.Date,>=,54027224#62539
+users u,comments c,posts p#u.Id=c.UserId,u.Id=p.OwnerUserId#u.Views,>=,0,u.Views,<=,75,c.CreationDate,>=,47017139,c.CreationDate,<=,176972353,p.Score,>=,-2,p.ViewCount,>=,0,p.ViewCount,<=,18281#332175
+users u,comments c,postHistory ph#u.Id=c.UserId,u.Id=ph.UserId#u.Views,>=,0,u.Views,<=,75,c.CreationDate,>=,47017139,c.CreationDate,<=,176972353,ph.PostHistoryTypeId,=,2#565858
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#b.Date,>=,54027224,c.CreationDate,>=,47017139,c.CreationDate,<=,176972353,u.Views,>=,0,u.Views,<=,75#427027
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,u.Id=ph.UserId#u.Views,>=,0,u.Views,<=,75,p.Score,>=,-2,p.ViewCount,>=,0,p.ViewCount,<=,18281,ph.PostHistoryTypeId,=,2#236070
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,>=,54027224,p.Score,>=,-2,p.ViewCount,>=,0,p.ViewCount,<=,18281,u.Views,>=,0,u.Views,<=,75#186140
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#b.Date,>=,54027224,ph.PostHistoryTypeId,=,2,u.Views,>=,0,u.Views,<=,75#288162
+posts p,comments c,users u#u.Id=c.UserId,u.Id=p.OwnerUserId#p.PostTypeId,=,1,p.Score,<=,35,p.AnswerCount,=,1,p.CommentCount,<=,17,p.FavoriteCount,>=,0#311724
+postHistory ph,comments c,users u#u.Id=c.UserId,u.Id=ph.UserId##263105194
+users u,comments c#u.Id=c.UserId#u.Views,<=,233,u.DownVotes,<=,2,u.CreationDate,>=,51116455,u.CreationDate,<=,175378322#66480
+postHistory ph,posts p,users u#u.Id=p.OwnerUserId,u.Id=ph.UserId#p.PostTypeId,=,1,p.Score,<=,35,p.AnswerCount,=,1,p.CommentCount,<=,17,p.FavoriteCount,>=,0#494123
+users u,posts p#u.Id=p.OwnerUserId#u.Views,<=,233,u.DownVotes,<=,2,u.CreationDate,>=,51116455,u.CreationDate,<=,175378322,p.PostTypeId,=,1,p.Score,<=,35,p.AnswerCount,=,1,p.CommentCount,<=,17,p.FavoriteCount,>=,0#4137
+users u,postHistory ph#u.Id=ph.UserId#u.Views,<=,233,u.DownVotes,<=,2,u.CreationDate,>=,51116455,u.CreationDate,<=,175378322#152743
+users u,badges b#u.Id=b.UserId#u.Views,<=,233,u.DownVotes,<=,2,u.CreationDate,>=,51116455,u.CreationDate,<=,175378322,b.Date,>=,46717125,b.Date,<=,176488402#61425
+users u,comments c,posts p#u.Id=c.UserId,u.Id=p.OwnerUserId#u.Views,<=,233,u.DownVotes,<=,2,u.CreationDate,>=,51116455,u.CreationDate,<=,175378322,p.PostTypeId,=,1,p.Score,<=,35,p.AnswerCount,=,1,p.CommentCount,<=,17,p.FavoriteCount,>=,0#68599
+users u,comments c,postHistory ph#u.Id=c.UserId,u.Id=ph.UserId#u.Views,<=,233,u.DownVotes,<=,2,u.CreationDate,>=,51116455,u.CreationDate,<=,175378322#2563676
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#b.Date,>=,46717125,b.Date,<=,176488402,u.Views,<=,233,u.DownVotes,<=,2,u.CreationDate,>=,51116455,u.CreationDate,<=,175378322#552707
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,u.Id=ph.UserId#u.Views,<=,233,u.DownVotes,<=,2,u.CreationDate,>=,51116455,u.CreationDate,<=,175378322,p.PostTypeId,=,1,p.Score,<=,35,p.AnswerCount,=,1,p.CommentCount,<=,17,p.FavoriteCount,>=,0#148234
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,>=,46717125,b.Date,<=,176488402,p.PostTypeId,=,1,p.Score,<=,35,p.AnswerCount,=,1,p.CommentCount,<=,17,p.FavoriteCount,>=,0,u.Views,<=,233,u.DownVotes,<=,2,u.CreationDate,>=,51116455,u.CreationDate,<=,175378322#31954
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#b.Date,>=,46717125,b.Date,<=,176488402,u.Views,<=,233,u.DownVotes,<=,2,u.CreationDate,>=,51116455,u.CreationDate,<=,175378322#1054352
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#c.CreationDate,<=,176655488#33309
+posts p,comments c#p.Id=c.PostId#p.ViewCount,>=,0,c.CreationDate,<=,176655488#90072
+posts p,postLinks pl#p.Id=pl.RelatedPostId#p.ViewCount,>=,0#11097
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,>=,1,p.ViewCount,>=,0#42188
+badges b,users u#u.Id=b.UserId#u.Reputation,>=,1#79851
+posts p,comments c,postLinks pl#p.Id=pl.RelatedPostId,p.Id=c.PostId#p.ViewCount,>=,0,c.CreationDate,<=,176655488#33295
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.Reputation,>=,1,c.CreationDate,<=,176655488,p.ViewCount,>=,0#88490
+users u,postLinks pl,posts p#u.Id=p.OwnerUserId,p.Id=pl.RelatedPostId#u.Reputation,>=,1,p.ViewCount,>=,0#10828
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.ViewCount,>=,0,u.Reputation,>=,1#452644
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,69085439#29229
+posts p,comments c#p.Id=c.PostId#p.Score,=,1,p.ViewCount,>=,0,p.FavoriteCount,>=,0#3772
+posts p,postLinks pl#p.Id=pl.RelatedPostId#p.Score,=,1,p.ViewCount,>=,0,p.FavoriteCount,>=,0,pl.LinkTypeId,=,1,pl.CreationDate,>=,69085439#229
+users u,posts p#u.Id=p.OwnerUserId#u.CreationDate,>=,63655897,p.Score,=,1,p.ViewCount,>=,0,p.FavoriteCount,>=,0#1774
+badges b,users u#u.Id=b.UserId#u.CreationDate,>=,63655897#65153
+posts p,comments c,postLinks pl#p.Id=pl.RelatedPostId,p.Id=c.PostId#p.Score,=,1,p.ViewCount,>=,0,p.FavoriteCount,>=,0,pl.LinkTypeId,=,1,pl.CreationDate,>=,69085439#522
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.CreationDate,>=,63655897,p.Score,=,1,p.ViewCount,>=,0,p.FavoriteCount,>=,0#3365
+users u,postLinks pl,posts p#u.Id=p.OwnerUserId,p.Id=pl.RelatedPostId#u.CreationDate,>=,63655897,pl.LinkTypeId,=,1,pl.CreationDate,>=,69085439,p.Score,=,1,p.ViewCount,>=,0,p.FavoriteCount,>=,0#192
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.Score,=,1,p.ViewCount,>=,0,p.FavoriteCount,>=,0,u.CreationDate,>=,63655897#13729
+posts p,tags t#p.Id=t.ExcerptPostId#p.CommentCount,>=,0#596
+users u,posts p#u.Id=p.OwnerUserId#u.DownVotes,<=,0,p.CommentCount,>=,0#50205
+postHistory ph,posts p,users u#u.Id=p.OwnerUserId,u.Id=ph.UserId#p.CommentCount,>=,0#54807156
+postHistory ph,users u#u.Id=ph.UserId#u.DownVotes,<=,0#148177
+badges b,users u#u.Id=b.UserId#b.Date,<=,175137715,u.DownVotes,<=,0#60582
+users u,tags t,posts p#u.Id=p.OwnerUserId,p.Id=t.ExcerptPostId#u.DownVotes,<=,0,p.CommentCount,>=,0#26
+postHistory ph,posts p,users u#u.Id=p.OwnerUserId,u.Id=ph.UserId#p.CommentCount,>=,0,u.DownVotes,<=,0#1759830
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,<=,175137715,p.CommentCount,>=,0,u.DownVotes,<=,0#333338
+badges b,users u,postHistory ph#u.Id=b.UserId,u.Id=ph.UserId#b.Date,<=,175137715,u.DownVotes,<=,0#980375
+posts p,tags t#p.Id=t.ExcerptPostId##596
+users u,posts p#u.Id=p.OwnerUserId#u.DownVotes,>=,0#90584
+votes v,posts p,users u#u.Id=p.OwnerUserId,u.Id=v.UserId##2737086
+votes v,users u#u.Id=v.UserId#u.DownVotes,>=,0#34789
+badges b,users u#u.Id=b.UserId#u.DownVotes,>=,0#79851
+users u,tags t,posts p#u.Id=p.OwnerUserId,p.Id=t.ExcerptPostId#u.DownVotes,>=,0#593
+votes v,posts p,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#u.DownVotes,>=,0#2737086
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#u.DownVotes,>=,0#3728360
+badges b,users u,votes v#u.Id=b.UserId,u.Id=v.UserId#u.DownVotes,>=,0#1056687
+posts p,tags t#p.Id=t.ExcerptPostId##596
+users u,posts p#u.Id=p.OwnerUserId#u.Views,>=,0,u.Views,<=,515,u.UpVotes,>=,0,u.CreationDate,<=,176561201#67930
+votes v,posts p,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#v.BountyAmount,>=,0,v.BountyAmount,<=,200#121174
+votes v,users u#u.Id=v.UserId#v.BountyAmount,>=,0,v.BountyAmount,<=,200,u.Views,>=,0,u.Views,<=,515,u.UpVotes,>=,0,u.CreationDate,<=,176561201#942
+badges b,users u#u.Id=b.UserId#b.Date,<=,176990182,u.Views,>=,0,u.Views,<=,515,u.UpVotes,>=,0,u.CreationDate,<=,176561201#72791
+users u,tags t,posts p#u.Id=p.OwnerUserId,p.Id=t.ExcerptPostId#u.Views,>=,0,u.Views,<=,515,u.UpVotes,>=,0,u.CreationDate,<=,176561201#218
+votes v,posts p,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#v.BountyAmount,>=,0,v.BountyAmount,<=,200,u.Views,>=,0,u.Views,<=,515,u.UpVotes,>=,0,u.CreationDate,<=,176561201#32380
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,<=,176990182,u.Views,>=,0,u.Views,<=,515,u.UpVotes,>=,0,u.CreationDate,<=,176561201#738281
+badges b,users u,votes v#u.Id=b.UserId,u.Id=v.UserId#b.Date,<=,176990182,u.Views,>=,0,u.Views,<=,515,u.UpVotes,>=,0,u.CreationDate,<=,176561201,v.BountyAmount,>=,0,v.BountyAmount,<=,200#16394
+postLinks pl,posts p#p.Id=pl.RelatedPostId#p.CommentCount,>=,0,p.CommentCount,<=,13#10959
+postHistory ph,posts p,users u#u.Id=p.OwnerUserId,u.Id=ph.UserId#ph.PostHistoryTypeId,=,5,ph.CreationDate,<=,174385210,p.CommentCount,>=,0,p.CommentCount,<=,13#21426821
+votes v,posts p,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#v.CreationDate,>=,45961200,p.CommentCount,>=,0,p.CommentCount,<=,13#2712537
+users u,posts p#u.Id=p.OwnerUserId#u.Views,>=,0,u.DownVotes,>=,0,u.CreationDate,>=,47404793,u.CreationDate,<=,172505722,p.CommentCount,>=,0,p.CommentCount,<=,13#79662
+votes v,postHistory ph,users u#u.Id=ph.UserId,u.Id=v.UserId#v.CreationDate,>=,45961200,ph.PostHistoryTypeId,=,5,ph.CreationDate,<=,174385210#6053427
+users u,postHistory ph#u.Id=ph.UserId#u.Views,>=,0,u.DownVotes,>=,0,u.CreationDate,>=,47404793,u.CreationDate,<=,172505722,ph.PostHistoryTypeId,=,5,ph.CreationDate,<=,174385210#58416
+users u,votes v#u.Id=v.UserId#u.Views,>=,0,u.DownVotes,>=,0,u.CreationDate,>=,47404793,u.CreationDate,<=,172505722,v.CreationDate,>=,45961200#31148
+users u,badges b#u.Id=b.UserId#u.Views,>=,0,u.DownVotes,>=,0,u.CreationDate,>=,47404793,u.CreationDate,<=,172505722,b.Date,<=,176721875#71547
+users u,posts p,postLinks pl#u.Id=p.OwnerUserId,p.Id=pl.RelatedPostId#u.Views,>=,0,u.DownVotes,>=,0,u.CreationDate,>=,47404793,u.CreationDate,<=,172505722,p.CommentCount,>=,0,p.CommentCount,<=,13#8909
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,u.Id=ph.UserId#u.Views,>=,0,u.DownVotes,>=,0,u.CreationDate,>=,47404793,u.CreationDate,<=,172505722,p.CommentCount,>=,0,p.CommentCount,<=,13,ph.PostHistoryTypeId,=,5,ph.CreationDate,<=,174385210#18631047
+users u,posts p,votes v#u.Id=p.OwnerUserId,u.Id=v.UserId#u.Views,>=,0,u.DownVotes,>=,0,u.CreationDate,>=,47404793,u.CreationDate,<=,172505722,p.CommentCount,>=,0,p.CommentCount,<=,13,v.CreationDate,>=,45961200#2409832
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,<=,176721875,p.CommentCount,>=,0,p.CommentCount,<=,13,u.Views,>=,0,u.DownVotes,>=,0,u.CreationDate,>=,47404793,u.CreationDate,<=,172505722#2954776
+users u,postHistory ph,votes v#u.Id=ph.UserId,u.Id=v.UserId#u.Views,>=,0,u.DownVotes,>=,0,u.CreationDate,>=,47404793,u.CreationDate,<=,172505722,ph.PostHistoryTypeId,=,5,ph.CreationDate,<=,174385210,v.CreationDate,>=,45961200#5699168
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#b.Date,<=,176721875,ph.PostHistoryTypeId,=,5,ph.CreationDate,<=,174385210,u.Views,>=,0,u.DownVotes,>=,0,u.CreationDate,>=,47404793,u.CreationDate,<=,172505722#5385663
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId#b.Date,<=,176721875,v.CreationDate,>=,45961200,u.Views,>=,0,u.DownVotes,>=,0,u.CreationDate,>=,47404793,u.CreationDate,<=,172505722#858085
+postLinks pl,posts p#p.Id=pl.RelatedPostId#pl.LinkTypeId,=,1,p.AnswerCount,>=,0,p.FavoriteCount,>=,0#7972
+postHistory ph,posts p,users u#u.Id=p.OwnerUserId,u.Id=ph.UserId#ph.PostHistoryTypeId,=,2,p.AnswerCount,>=,0,p.FavoriteCount,>=,0#416123
+votes v,posts p,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#v.CreationDate,>=,46047600,p.AnswerCount,>=,0,p.FavoriteCount,>=,0#196751
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,<=,439,u.CreationDate,<=,173873925,p.AnswerCount,>=,0,p.FavoriteCount,>=,0#9921
+votes v,postHistory ph,users u#u.Id=ph.UserId,u.Id=v.UserId#v.CreationDate,>=,46047600,ph.PostHistoryTypeId,=,2#2638909
+users u,postHistory ph#u.Id=ph.UserId#u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,<=,439,u.CreationDate,<=,173873925,ph.PostHistoryTypeId,=,2#48768
+users u,votes v#u.Id=v.UserId#u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,<=,439,u.CreationDate,<=,173873925,v.CreationDate,>=,46047600#19995
+users u,badges b#u.Id=b.UserId#u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,<=,439,u.CreationDate,<=,173873925#60793
+users u,posts p,postLinks pl#u.Id=p.OwnerUserId,p.Id=pl.RelatedPostId#u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,<=,439,u.CreationDate,<=,173873925,p.AnswerCount,>=,0,p.FavoriteCount,>=,0,pl.LinkTypeId,=,1#4846
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,u.Id=ph.UserId#u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,<=,439,u.CreationDate,<=,173873925,p.AnswerCount,>=,0,p.FavoriteCount,>=,0,ph.PostHistoryTypeId,=,2#113661
+users u,posts p,votes v#u.Id=p.OwnerUserId,u.Id=v.UserId#u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,<=,439,u.CreationDate,<=,173873925,p.AnswerCount,>=,0,p.FavoriteCount,>=,0,v.CreationDate,>=,46047600#46721
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.AnswerCount,>=,0,p.FavoriteCount,>=,0,u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,<=,439,u.CreationDate,<=,173873925#79008
+users u,postHistory ph,votes v#u.Id=ph.UserId,u.Id=v.UserId#u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,<=,439,u.CreationDate,<=,173873925,ph.PostHistoryTypeId,=,2,v.CreationDate,>=,46047600#165958
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#ph.PostHistoryTypeId,=,2,u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,<=,439,u.CreationDate,<=,173873925#328282
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId#v.CreationDate,>=,46047600,u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,<=,439,u.CreationDate,<=,173873925#137842
+posts p,comments c#p.Id=c.PostId##174305
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId##33326
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId##865125
+postLinks pl,posts p#p.Id=pl.RelatedPostId##11102
+votes v,posts p#p.Id=v.PostId##328064
+users u,posts p#u.Id=p.OwnerUserId#u.Views,<=,190,u.CreationDate,>=,46076739,u.CreationDate,<=,175595488#57955
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId##316252
+users u,badges b#u.Id=b.UserId#u.Views,<=,190,u.CreationDate,>=,46076739,u.CreationDate,<=,175595488#67286
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId##33326
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId##865125
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.Views,<=,190,u.CreationDate,>=,46076739,u.CreationDate,<=,175595488#106271
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId##316252
+users u,posts p,postLinks pl#u.Id=p.OwnerUserId,p.Id=pl.RelatedPostId#u.Views,<=,190,u.CreationDate,>=,46076739,u.CreationDate,<=,175595488#8128
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.Views,<=,190,u.CreationDate,>=,46076739,u.CreationDate,<=,175595488#168526
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#u.Views,<=,190,u.CreationDate,>=,46076739,u.CreationDate,<=,175595488#454662
+posts p,comments c#p.Id=c.PostId#p.Score,>=,0,p.Score,<=,13,p.FavoriteCount,>=,0,c.CreationDate,>=,47560899,c.CreationDate,<=,176932534#28256
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,66336629,c.CreationDate,>=,47560899,c.CreationDate,<=,176932534#28803
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,2,v.CreationDate,<=,176857200,c.CreationDate,>=,47560899,c.CreationDate,<=,176932534#666440
+postLinks pl,posts p#p.Id=pl.RelatedPostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,66336629,p.Score,>=,0,p.Score,<=,13,p.FavoriteCount,>=,0#4556
+votes v,posts p#p.Id=v.PostId#v.VoteTypeId,=,2,v.CreationDate,<=,176857200,p.Score,>=,0,p.Score,<=,13,p.FavoriteCount,>=,0#47828
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,>=,1,u.CreationDate,>=,64381322,u.CreationDate,<=,176032479,p.Score,>=,0,p.Score,<=,13,p.FavoriteCount,>=,0#9723
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.VoteTypeId,=,2,v.CreationDate,<=,176857200,pl.LinkTypeId,=,1,pl.CreationDate,>=,66336629#156174
+users u,badges b#u.Id=b.UserId#u.Reputation,>=,1,u.CreationDate,>=,64381322,u.CreationDate,<=,176032479#64342
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,66336629,c.CreationDate,>=,47560899,c.CreationDate,<=,176932534,p.Score,>=,0,p.Score,<=,13,p.FavoriteCount,>=,0#12375
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,2,v.CreationDate,<=,176857200,c.CreationDate,>=,47560899,c.CreationDate,<=,176932534,p.Score,>=,0,p.Score,<=,13,p.FavoriteCount,>=,0#119851
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.Reputation,>=,1,u.CreationDate,>=,64381322,u.CreationDate,<=,176032479,c.CreationDate,>=,47560899,c.CreationDate,<=,176932534,p.Score,>=,0,p.Score,<=,13,p.FavoriteCount,>=,0#22952
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.VoteTypeId,=,2,v.CreationDate,<=,176857200,p.Score,>=,0,p.Score,<=,13,p.FavoriteCount,>=,0,pl.LinkTypeId,=,1,pl.CreationDate,>=,66336629#29438
+users u,posts p,postLinks pl#u.Id=p.OwnerUserId,p.Id=pl.RelatedPostId#u.Reputation,>=,1,u.CreationDate,>=,64381322,u.CreationDate,<=,176032479,p.Score,>=,0,p.Score,<=,13,p.FavoriteCount,>=,0,pl.LinkTypeId,=,1,pl.CreationDate,>=,66336629#3268
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.Reputation,>=,1,u.CreationDate,>=,64381322,u.CreationDate,<=,176032479,p.Score,>=,0,p.Score,<=,13,p.FavoriteCount,>=,0,v.VoteTypeId,=,2,v.CreationDate,<=,176857200#33755
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.Score,>=,0,p.Score,<=,13,p.FavoriteCount,>=,0,u.Reputation,>=,1,u.CreationDate,>=,64381322,u.CreationDate,<=,176032479#91862
+posts p,comments c#p.Id=c.PostId#p.ViewCount,<=,7710,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,4,p.CreationDate,>=,46666702,c.Score,=,2#1532
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#c.Score,=,2#2957
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#c.Score,=,2#58321
+postLinks pl,posts p#p.Id=pl.RelatedPostId#p.ViewCount,<=,7710,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,4,p.CreationDate,>=,46666702#3847
+votes v,posts p#p.Id=v.PostId#p.ViewCount,<=,7710,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,4,p.CreationDate,>=,46666702#62202
+users u,posts p#u.Id=p.OwnerUserId#u.UpVotes,>=,0,p.ViewCount,<=,7710,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,4,p.CreationDate,>=,46666702#11323
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId##316252
+users u,badges b#u.Id=b.UserId#u.UpVotes,>=,0#79851
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#c.Score,=,2,p.ViewCount,<=,7710,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,4,p.CreationDate,>=,46666702#640
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#c.Score,=,2,p.ViewCount,<=,7710,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,4,p.CreationDate,>=,46666702#10043
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.UpVotes,>=,0,c.Score,=,2,p.ViewCount,<=,7710,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,4,p.CreationDate,>=,46666702#1503
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#p.ViewCount,<=,7710,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,4,p.CreationDate,>=,46666702#31875
+users u,posts p,postLinks pl#u.Id=p.OwnerUserId,p.Id=pl.RelatedPostId#u.UpVotes,>=,0,p.ViewCount,<=,7710,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,4,p.CreationDate,>=,46666702#3757
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.UpVotes,>=,0,p.ViewCount,<=,7710,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,4,p.CreationDate,>=,46666702#60960
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.ViewCount,<=,7710,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,4,p.CreationDate,>=,46666702,u.UpVotes,>=,0#163757
+posts p,comments c#p.Id=c.PostId#p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CreationDate,<=,177000979,c.Score,=,0#65658
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,65981124,c.Score,=,0#18301
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.BountyAmount,<=,100,v.CreationDate,>=,86400,v.CreationDate,<=,176857200,c.Score,=,0#4185
+postLinks pl,posts p#p.Id=pl.RelatedPostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,65981124,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CreationDate,<=,177000979#7995
+votes v,posts p#p.Id=v.PostId#v.BountyAmount,<=,100,v.CreationDate,>=,86400,v.CreationDate,<=,176857200,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CreationDate,<=,177000979#998
+users u,posts p#u.Id=p.OwnerUserId#u.Views,<=,160,u.CreationDate,>=,46699110,u.CreationDate,<=,171659287,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CreationDate,<=,177000979#35623
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.BountyAmount,<=,100,v.CreationDate,>=,86400,v.CreationDate,<=,176857200,pl.LinkTypeId,=,1,pl.CreationDate,>=,65981124#559
+users u,badges b#u.Id=b.UserId#u.Views,<=,160,u.CreationDate,>=,46699110,u.CreationDate,<=,171659287#63526
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,65981124,c.Score,=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CreationDate,<=,177000979#15003
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.BountyAmount,<=,100,v.CreationDate,>=,86400,v.CreationDate,<=,176857200,c.Score,=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CreationDate,<=,177000979#2475
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.Views,<=,160,u.CreationDate,>=,46699110,u.CreationDate,<=,171659287,c.Score,=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CreationDate,<=,177000979#55359
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.BountyAmount,<=,100,v.CreationDate,>=,86400,v.CreationDate,<=,176857200,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CreationDate,<=,177000979,pl.LinkTypeId,=,1,pl.CreationDate,>=,65981124#382
+users u,posts p,postLinks pl#u.Id=p.OwnerUserId,p.Id=pl.RelatedPostId#u.Views,<=,160,u.CreationDate,>=,46699110,u.CreationDate,<=,171659287,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CreationDate,<=,177000979,pl.LinkTypeId,=,1,pl.CreationDate,>=,65981124#5909
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.Views,<=,160,u.CreationDate,>=,46699110,u.CreationDate,<=,171659287,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CreationDate,<=,177000979,v.BountyAmount,<=,100,v.CreationDate,>=,86400,v.CreationDate,<=,176857200#721
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CreationDate,<=,177000979,u.Views,<=,160,u.CreationDate,>=,46699110,u.CreationDate,<=,171659287#221968
+posts p,comments c#p.Id=c.PostId#p.PostTypeId,=,1,p.Score,=,2,p.FavoriteCount,<=,12,c.CreationDate,<=,176905462#4378
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.CreationDate,>=,48163328,pl.CreationDate,<=,175735625,c.CreationDate,<=,176905462#34640
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.CreationDate,>=,60565655,ph.CreationDate,<=,176644116,c.CreationDate,<=,176905462#671772
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#v.CreationDate,>=,46652400,c.CreationDate,<=,176905462#10988114
+users u,comments c#u.Id=c.UserId#u.Reputation,>=,1,u.DownVotes,>=,0,c.CreationDate,<=,176905462#171050
+postLinks pl,posts p#p.Id=pl.PostId#pl.CreationDate,>=,48163328,pl.CreationDate,<=,175735625,p.PostTypeId,=,1,p.Score,=,2,p.FavoriteCount,<=,12#529
+postHistory ph,posts p#p.Id=ph.PostId#ph.CreationDate,>=,60565655,ph.CreationDate,<=,176644116,p.PostTypeId,=,1,p.Score,=,2,p.FavoriteCount,<=,12#10606
+postHistory ph,postLinks pl,posts p#p.Id=pl.PostId,p.Id=ph.PostId#ph.CreationDate,>=,60565655,ph.CreationDate,<=,176644116,pl.CreationDate,>=,48163328,pl.CreationDate,<=,175735625#60597
+users u,votes v#u.Id=v.UserId#u.Reputation,>=,1,u.DownVotes,>=,0,v.CreationDate,>=,46652400#34635
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.CreationDate,>=,48163328,pl.CreationDate,<=,175735625,c.CreationDate,<=,176905462,p.PostTypeId,=,1,p.Score,=,2,p.FavoriteCount,<=,12#1613
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.CreationDate,>=,60565655,ph.CreationDate,<=,176644116,c.CreationDate,<=,176905462,p.PostTypeId,=,1,p.Score,=,2,p.FavoriteCount,<=,12#25205
+users u,comments c,posts p#u.Id=c.UserId,p.Id=c.PostId#u.Reputation,>=,1,u.DownVotes,>=,0,c.CreationDate,<=,176905462,p.PostTypeId,=,1,p.Score,=,2,p.FavoriteCount,<=,12#4311
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.Reputation,>=,1,u.DownVotes,>=,0,c.CreationDate,<=,176905462,v.CreationDate,>=,46652400#10988114
+postHistory ph,posts p,postLinks pl#p.Id=pl.PostId,p.Id=ph.PostId#ph.CreationDate,>=,60565655,ph.CreationDate,<=,176644116,p.PostTypeId,=,1,p.Score,=,2,p.FavoriteCount,<=,12,pl.CreationDate,>=,48163328,pl.CreationDate,<=,175735625#2869
+posts p,comments c#p.Id=c.PostId#p.PostTypeId,=,1,p.FavoriteCount,>=,0,p.FavoriteCount,<=,2,c.Score,=,0,c.CreationDate,>=,46070788,c.CreationDate,<=,176924709#17103
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#c.Score,=,0,c.CreationDate,>=,46070788,c.CreationDate,<=,176924709#24679
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,5,c.Score,=,0,c.CreationDate,>=,46070788,c.CreationDate,<=,176924709#161741
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#c.Score,=,0,c.CreationDate,>=,46070788,c.CreationDate,<=,176924709#7472581
+users u,comments c#u.Id=c.UserId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.CreationDate,>=,51238721,c.Score,=,0,c.CreationDate,>=,46070788,c.CreationDate,<=,176924709#53154
+postLinks pl,posts p#p.Id=pl.PostId#p.PostTypeId,=,1,p.FavoriteCount,>=,0,p.FavoriteCount,<=,2#3043
+postHistory ph,posts p#p.Id=ph.PostId#ph.PostHistoryTypeId,=,5,p.PostTypeId,=,1,p.FavoriteCount,>=,0,p.FavoriteCount,<=,2#11016
+postHistory ph,postLinks pl,posts p#p.Id=pl.PostId,p.Id=ph.PostId#ph.PostHistoryTypeId,=,5#12763
+users u,votes v#u.Id=v.UserId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.CreationDate,>=,51238721#18677
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#c.Score,=,0,c.CreationDate,>=,46070788,c.CreationDate,<=,176924709,p.PostTypeId,=,1,p.FavoriteCount,>=,0,p.FavoriteCount,<=,2#6935
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,5,c.Score,=,0,c.CreationDate,>=,46070788,c.CreationDate,<=,176924709,p.PostTypeId,=,1,p.FavoriteCount,>=,0,p.FavoriteCount,<=,2#26496
+users u,comments c,posts p#u.Id=c.UserId,p.Id=c.PostId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.CreationDate,>=,51238721,c.Score,=,0,c.CreationDate,>=,46070788,c.CreationDate,<=,176924709,p.PostTypeId,=,1,p.FavoriteCount,>=,0,p.FavoriteCount,<=,2#6318
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.CreationDate,>=,51238721,c.Score,=,0,c.CreationDate,>=,46070788,c.CreationDate,<=,176924709#203806
+postHistory ph,posts p,postLinks pl#p.Id=pl.PostId,p.Id=ph.PostId#ph.PostHistoryTypeId,=,5,p.PostTypeId,=,1,p.FavoriteCount,>=,0,p.FavoriteCount,<=,2#3997
+posts p,comments c#p.Id=c.PostId#p.Score,>=,-1,p.Score,<=,19,p.CommentCount,<=,13,c.CreationDate,>=,46639275,c.CreationDate,<=,177035176#161074
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#c.CreationDate,>=,46639275,c.CreationDate,<=,177035176#35199
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,2,ph.CreationDate,<=,173876760,c.CreationDate,>=,46639275,c.CreationDate,<=,177035176#167345
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#v.BountyAmount,<=,50,v.CreationDate,>=,46134000,v.CreationDate,<=,177116400,c.CreationDate,>=,46639275,c.CreationDate,<=,177035176#356034
+users u,comments c#u.Id=c.UserId#u.Views,>=,0,u.CreationDate,<=,174947594,c.CreationDate,>=,46639275,c.CreationDate,<=,177035176#170260
+postLinks pl,posts p#p.Id=pl.PostId#p.Score,>=,-1,p.Score,<=,19,p.CommentCount,<=,13#10545
+postHistory ph,posts p#p.Id=ph.PostId#ph.PostHistoryTypeId,=,2,ph.CreationDate,<=,173876760,p.Score,>=,-1,p.Score,<=,19,p.CommentCount,<=,13#86319
+postHistory ph,postLinks pl,posts p#p.Id=pl.PostId,p.Id=ph.PostId#ph.PostHistoryTypeId,=,2,ph.CreationDate,<=,173876760#10684
+users u,votes v#u.Id=v.UserId#u.Views,>=,0,u.CreationDate,<=,174947594,v.BountyAmount,<=,50,v.CreationDate,>=,46134000,v.CreationDate,<=,177116400#809
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#c.CreationDate,>=,46639275,c.CreationDate,<=,177035176,p.Score,>=,-1,p.Score,<=,19,p.CommentCount,<=,13#30862
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,2,ph.CreationDate,<=,173876760,c.CreationDate,>=,46639275,c.CreationDate,<=,177035176,p.Score,>=,-1,p.Score,<=,19,p.CommentCount,<=,13#155051
+users u,comments c,posts p#u.Id=c.UserId,p.Id=c.PostId#u.Views,>=,0,u.CreationDate,<=,174947594,c.CreationDate,>=,46639275,c.CreationDate,<=,177035176,p.Score,>=,-1,p.Score,<=,19,p.CommentCount,<=,13#157979
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.Views,>=,0,u.CreationDate,<=,174947594,c.CreationDate,>=,46639275,c.CreationDate,<=,177035176,v.BountyAmount,<=,50,v.CreationDate,>=,46134000,v.CreationDate,<=,177116400#356034
+postHistory ph,posts p,postLinks pl#p.Id=pl.PostId,p.Id=ph.PostId#ph.PostHistoryTypeId,=,2,ph.CreationDate,<=,173876760,p.Score,>=,-1,p.Score,<=,19,p.CommentCount,<=,13#10145
+posts p,comments c#p.Id=c.PostId#p.PostTypeId,=,1,p.Score,=,4,p.ViewCount,<=,4937,c.Score,=,0,c.CreationDate,>=,47244468,c.CreationDate,<=,176828963#4460
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.CreationDate,>=,86760575,c.Score,=,0,c.CreationDate,>=,47244468,c.CreationDate,<=,176828963#22346
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,1,c.Score,=,0,c.CreationDate,>=,47244468,c.CreationDate,<=,176828963#66548
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#c.Score,=,0,c.CreationDate,>=,47244468,c.CreationDate,<=,176828963#7442989
+users u,comments c#u.Id=c.UserId#u.Reputation,<=,270,u.Views,>=,0,u.Views,<=,51,u.DownVotes,>=,0,c.Score,=,0,c.CreationDate,>=,47244468,c.CreationDate,<=,176828963#42661
+postLinks pl,posts p#p.Id=pl.PostId#pl.CreationDate,>=,86760575,p.PostTypeId,=,1,p.Score,=,4,p.ViewCount,<=,4937#670
+postHistory ph,posts p#p.Id=ph.PostId#ph.PostHistoryTypeId,=,1,p.PostTypeId,=,1,p.Score,=,4,p.ViewCount,<=,4937#2637
+postHistory ph,postLinks pl,posts p#p.Id=pl.PostId,p.Id=ph.PostId#ph.PostHistoryTypeId,=,1,pl.CreationDate,>=,86760575#10006
+users u,votes v#u.Id=v.UserId#u.Reputation,<=,270,u.Views,>=,0,u.Views,<=,51,u.DownVotes,>=,0#17166
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.CreationDate,>=,86760575,c.Score,=,0,c.CreationDate,>=,47244468,c.CreationDate,<=,176828963,p.PostTypeId,=,1,p.Score,=,4,p.ViewCount,<=,4937#1444
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,1,c.Score,=,0,c.CreationDate,>=,47244468,c.CreationDate,<=,176828963,p.PostTypeId,=,1,p.Score,=,4,p.ViewCount,<=,4937#4460
+users u,comments c,posts p#u.Id=c.UserId,p.Id=c.PostId#u.Reputation,<=,270,u.Views,>=,0,u.Views,<=,51,u.DownVotes,>=,0,c.Score,=,0,c.CreationDate,>=,47244468,c.CreationDate,<=,176828963,p.PostTypeId,=,1,p.Score,=,4,p.ViewCount,<=,4937#1231
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.Reputation,<=,270,u.Views,>=,0,u.Views,<=,51,u.DownVotes,>=,0,c.Score,=,0,c.CreationDate,>=,47244468,c.CreationDate,<=,176828963#76983
+postHistory ph,posts p,postLinks pl#p.Id=pl.PostId,p.Id=ph.PostId#ph.PostHistoryTypeId,=,1,p.PostTypeId,=,1,p.Score,=,4,p.ViewCount,<=,4937,pl.CreationDate,>=,86760575#670
+posts p,comments c#p.Id=c.PostId##174305
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId##33326
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId##704085
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#862828
+badges b,comments c,users u#b.UserId=u.Id,c.UserId=u.Id##15900001
+postLinks pl,posts p#p.Id=pl.RelatedPostId##11102
+postHistory ph,posts p#p.Id=ph.PostId##303187
+votes v,posts p#p.Id=v.PostId#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#327152
+postHistory ph,postLinks pl,posts p#p.Id=ph.PostId,p.Id=pl.RelatedPostId##71242
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#315611
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#1327972
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId##33326
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId##704085
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#862828
+postHistory ph,posts p,postLinks pl#p.Id=ph.PostId,p.Id=pl.RelatedPostId##71242
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#315611
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#1327972
+posts p,comments c#p.Id=c.PostId#p.Score,<=,32,p.ViewCount,<=,4146,c.Score,=,0#65647
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1,c.Score,=,0#18836
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.Score,=,0#529790
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,<=,176770800,c.Score,=,0#589658
+badges b,comments c,users u#b.UserId=u.Id,c.UserId=u.Id#c.Score,=,0#10238947
+postLinks pl,posts p#p.Id=pl.RelatedPostId#pl.LinkTypeId,=,1,p.Score,<=,32,p.ViewCount,<=,4146#7258
+postHistory ph,posts p#p.Id=ph.PostId#p.Score,<=,32,p.ViewCount,<=,4146#211947
+votes v,posts p#p.Id=v.PostId#v.CreationDate,<=,176770800,p.Score,<=,32,p.ViewCount,<=,4146#128465
+postHistory ph,postLinks pl,posts p#p.Id=ph.PostId,p.Id=pl.RelatedPostId#pl.LinkTypeId,=,1#65334
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.CreationDate,<=,176770800,pl.LinkTypeId,=,1#287359
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,<=,176770800#1328246
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1,c.Score,=,0,p.Score,<=,32,p.ViewCount,<=,4146#14505
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.Score,=,0,p.Score,<=,32,p.ViewCount,<=,4146#372882
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,<=,176770800,c.Score,=,0,p.Score,<=,32,p.ViewCount,<=,4146#230062
+postHistory ph,posts p,postLinks pl#p.Id=ph.PostId,p.Id=pl.RelatedPostId#p.Score,<=,32,p.ViewCount,<=,4146,pl.LinkTypeId,=,1#44651
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.CreationDate,<=,176770800,p.Score,<=,32,p.ViewCount,<=,4146,pl.LinkTypeId,=,1#75613
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,<=,176770800,p.Score,<=,32,p.ViewCount,<=,4146#762635
+posts p,comments c#p.Id=c.PostId#p.Score,<=,61,p.ViewCount,<=,3627,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,8,p.FavoriteCount,>=,0,c.CreationDate,>=,46639275,c.CreationDate,<=,177095530#22212
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#c.CreationDate,>=,46639275,c.CreationDate,<=,177095530#32679
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.CreationDate,>=,46639275,c.CreationDate,<=,177095530#701779
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,2,v.CreationDate,>=,46652400,c.CreationDate,>=,46639275,c.CreationDate,<=,177095530#673007
+badges b,comments c,users u#b.UserId=u.Id,c.UserId=u.Id#b.Date,>=,46925364,c.CreationDate,>=,46639275,c.CreationDate,<=,177095530#15818932
+postLinks pl,posts p#p.Id=pl.RelatedPostId#p.Score,<=,61,p.ViewCount,<=,3627,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,8,p.FavoriteCount,>=,0#4664
+postHistory ph,posts p#p.Id=ph.PostId#p.Score,<=,61,p.ViewCount,<=,3627,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,8,p.FavoriteCount,>=,0#64200
+votes v,posts p#p.Id=v.PostId#v.VoteTypeId,=,2,v.CreationDate,>=,46652400,p.Score,<=,61,p.ViewCount,<=,3627,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,8,p.FavoriteCount,>=,0#46899
+postHistory ph,postLinks pl,posts p#p.Id=ph.PostId,p.Id=pl.RelatedPostId##71242
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.VoteTypeId,=,2,v.CreationDate,>=,46652400#178630
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,2,v.CreationDate,>=,46652400#983609
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#c.CreationDate,>=,46639275,c.CreationDate,<=,177095530,p.Score,<=,61,p.ViewCount,<=,3627,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,8,p.FavoriteCount,>=,0#11134
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.CreationDate,>=,46639275,c.CreationDate,<=,177095530,p.Score,<=,61,p.ViewCount,<=,3627,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,8,p.FavoriteCount,>=,0#134334
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,2,v.CreationDate,>=,46652400,c.CreationDate,>=,46639275,c.CreationDate,<=,177095530,p.Score,<=,61,p.ViewCount,<=,3627,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,8,p.FavoriteCount,>=,0#100438
+postHistory ph,posts p,postLinks pl#p.Id=ph.PostId,p.Id=pl.RelatedPostId#p.Score,<=,61,p.ViewCount,<=,3627,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,8,p.FavoriteCount,>=,0#29224
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.VoteTypeId,=,2,v.CreationDate,>=,46652400,p.Score,<=,61,p.ViewCount,<=,3627,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,8,p.FavoriteCount,>=,0#37735
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,2,v.CreationDate,>=,46652400,p.Score,<=,61,p.ViewCount,<=,3627,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,8,p.FavoriteCount,>=,0#280772
+posts p,comments c#p.Id=c.PostId#p.CommentCount,>=,0#174305
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId##33326
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,2#174305
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,5#97054
+badges b,comments c,users u#b.UserId=u.Id,c.UserId=u.Id##15900001
+postLinks pl,posts p#p.Id=pl.RelatedPostId#p.CommentCount,>=,0#11102
+postHistory ph,posts p#p.Id=ph.PostId#ph.PostHistoryTypeId,=,2,p.CommentCount,>=,0#91976
+votes v,posts p#p.Id=v.PostId#v.VoteTypeId,=,5,p.CommentCount,>=,0#33691
+postHistory ph,postLinks pl,posts p#p.Id=ph.PostId,p.Id=pl.RelatedPostId#ph.PostHistoryTypeId,=,2#11102
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.VoteTypeId,=,5#130148
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,5,ph.PostHistoryTypeId,=,2#33691
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#p.CommentCount,>=,0#33326
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,2,p.CommentCount,>=,0#174305
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,5,p.CommentCount,>=,0#97054
+postHistory ph,posts p,postLinks pl#p.Id=ph.PostId,p.Id=pl.RelatedPostId#ph.PostHistoryTypeId,=,2,p.CommentCount,>=,0#11102
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.VoteTypeId,=,5,p.CommentCount,>=,0#130148
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,5,p.CommentCount,>=,0,ph.PostHistoryTypeId,=,2#33691
+posts p,comments c#p.Id=c.PostId#p.Score,<=,67,c.Score,=,0#134678
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#c.Score,=,0#20522
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,34,c.Score,=,0#2681
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#c.Score,=,0#591108
+badges b,comments c,users u#b.UserId=u.Id,c.UserId=u.Id#b.Date,<=,175000616,c.Score,=,0#9940949
+postLinks pl,posts p#p.Id=pl.RelatedPostId#p.Score,<=,67#10626
+postHistory ph,posts p#p.Id=ph.PostId#ph.PostHistoryTypeId,=,34,p.Score,<=,67#1038
+votes v,posts p#p.Id=v.PostId#p.Score,<=,67#319008
+postHistory ph,postLinks pl,posts p#p.Id=ph.PostId,p.Id=pl.RelatedPostId#ph.PostHistoryTypeId,=,34#537
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId##316252
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#ph.PostHistoryTypeId,=,34#10299
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#c.Score,=,0,p.Score,<=,67#19618
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,34,c.Score,=,0,p.Score,<=,67#2666
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#c.Score,=,0,p.Score,<=,67#562905
+postHistory ph,posts p,postLinks pl#p.Id=ph.PostId,p.Id=pl.RelatedPostId#ph.PostHistoryTypeId,=,34,p.Score,<=,67#411
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#p.Score,<=,67#216565
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#p.Score,<=,67,ph.PostHistoryTypeId,=,34#8989
+posts p,comments c#p.Id=c.PostId#p.Score,>=,-1,p.ViewCount,>=,0,p.CommentCount,<=,9,c.CreationDate,>=,46225183#78162
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#c.CreationDate,>=,46225183#32941
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.CreationDate,>=,51468315,ph.CreationDate,<=,173836845,c.CreationDate,>=,46225183#664704
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,15,c.CreationDate,>=,46225183#8289
+badges b,comments c,users u#b.UserId=u.Id,c.UserId=u.Id#c.CreationDate,>=,46225183#15887427
+postLinks pl,posts p#p.Id=pl.RelatedPostId#p.Score,>=,-1,p.ViewCount,>=,0,p.CommentCount,<=,9#10595
+postHistory ph,posts p#p.Id=ph.PostId#ph.CreationDate,>=,51468315,ph.CreationDate,<=,173836845,p.Score,>=,-1,p.ViewCount,>=,0,p.CommentCount,<=,9#197778
+votes v,posts p#p.Id=v.PostId#v.VoteTypeId,=,15,p.Score,>=,-1,p.ViewCount,>=,0,p.CommentCount,<=,9#1184
+postHistory ph,postLinks pl,posts p#p.Id=ph.PostId,p.Id=pl.RelatedPostId#ph.CreationDate,>=,51468315,ph.CreationDate,<=,173836845#64479
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.VoteTypeId,=,15#597
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,15,ph.CreationDate,>=,51468315,ph.CreationDate,<=,173836845#10773
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#c.CreationDate,>=,46225183,p.Score,>=,-1,p.ViewCount,>=,0,p.CommentCount,<=,9#26711
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.CreationDate,>=,51468315,ph.CreationDate,<=,173836845,c.CreationDate,>=,46225183,p.Score,>=,-1,p.ViewCount,>=,0,p.CommentCount,<=,9#410781
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,15,c.CreationDate,>=,46225183,p.Score,>=,-1,p.ViewCount,>=,0,p.CommentCount,<=,9#3495
+postHistory ph,posts p,postLinks pl#p.Id=ph.PostId,p.Id=pl.RelatedPostId#ph.CreationDate,>=,51468315,ph.CreationDate,<=,173836845,p.Score,>=,-1,p.ViewCount,>=,0,p.CommentCount,<=,9#60962
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.VoteTypeId,=,15,p.Score,>=,-1,p.ViewCount,>=,0,p.CommentCount,<=,9#544
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,15,p.Score,>=,-1,p.ViewCount,>=,0,p.CommentCount,<=,9,ph.CreationDate,>=,51468315,ph.CreationDate,<=,173836845#7129
+posts p,comments c#p.Id=c.PostId#p.PostTypeId,=,1,p.Score,<=,192,p.ViewCount,>=,0,p.ViewCount,<=,2772,p.AnswerCount,<=,5#86053
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId##704085
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId##865125
+postHistory ph,posts p#p.Id=ph.PostId#p.PostTypeId,=,1,p.Score,<=,192,p.ViewCount,>=,0,p.ViewCount,<=,2772,p.AnswerCount,<=,5#207015
+votes v,posts p#p.Id=v.PostId#p.PostTypeId,=,1,p.Score,<=,192,p.ViewCount,>=,0,p.ViewCount,<=,2772,p.AnswerCount,<=,5#118732
+users u,posts p#u.Id=p.OwnerUserId#u.DownVotes,>=,0,p.PostTypeId,=,1,p.Score,<=,192,p.ViewCount,>=,0,p.ViewCount,<=,2772,p.AnswerCount,<=,5#40508
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId##1331347
+users u,badges b#u.Id=b.UserId#u.DownVotes,>=,0#79851
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#p.PostTypeId,=,1,p.Score,<=,192,p.ViewCount,>=,0,p.ViewCount,<=,2772,p.AnswerCount,<=,5#488583
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#p.PostTypeId,=,1,p.Score,<=,192,p.ViewCount,>=,0,p.ViewCount,<=,2772,p.AnswerCount,<=,5#302981
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.DownVotes,>=,0,p.PostTypeId,=,1,p.Score,<=,192,p.ViewCount,>=,0,p.ViewCount,<=,2772,p.AnswerCount,<=,5#84576
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#p.PostTypeId,=,1,p.Score,<=,192,p.ViewCount,>=,0,p.ViewCount,<=,2772,p.AnswerCount,<=,5#700696
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,p.Id=ph.PostId#u.DownVotes,>=,0,p.PostTypeId,=,1,p.Score,<=,192,p.ViewCount,>=,0,p.ViewCount,<=,2772,p.AnswerCount,<=,5#203276
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.DownVotes,>=,0,p.PostTypeId,=,1,p.Score,<=,192,p.ViewCount,>=,0,p.ViewCount,<=,2772,p.AnswerCount,<=,5#116602
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.PostTypeId,=,1,p.Score,<=,192,p.ViewCount,>=,0,p.ViewCount,<=,2772,p.AnswerCount,<=,5,u.DownVotes,>=,0#409126
+posts p,comments c#p.Id=c.PostId#p.Score,>=,-4,p.ViewCount,>=,0,p.ViewCount,<=,5977,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,62411501,c.Score,=,0,c.CreationDate,<=,176756309#58070
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.Score,=,0,c.CreationDate,<=,176756309#527280
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#c.Score,=,0,c.CreationDate,<=,176756309#589000
+postHistory ph,posts p#p.Id=ph.PostId#p.Score,>=,-4,p.ViewCount,>=,0,p.ViewCount,<=,5977,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,62411501#201156
+votes v,posts p#p.Id=v.PostId#p.Score,>=,-4,p.ViewCount,>=,0,p.ViewCount,<=,5977,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,62411501#112363
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,<=,312,u.DownVotes,<=,0,p.Score,>=,-4,p.ViewCount,>=,0,p.ViewCount,<=,5977,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,62411501#30671
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId##1331347
+users u,badges b#u.Id=b.UserId#u.Reputation,<=,312,u.DownVotes,<=,0#55970
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.Score,=,0,c.CreationDate,<=,176756309,p.Score,>=,-4,p.ViewCount,>=,0,p.ViewCount,<=,5977,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,62411501#321700
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#c.Score,=,0,c.CreationDate,<=,176756309,p.Score,>=,-4,p.ViewCount,>=,0,p.ViewCount,<=,5977,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,62411501#181841
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.Reputation,<=,312,u.DownVotes,<=,0,c.Score,=,0,c.CreationDate,<=,176756309,p.Score,>=,-4,p.ViewCount,>=,0,p.ViewCount,<=,5977,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,62411501#43915
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#p.Score,>=,-4,p.ViewCount,>=,0,p.ViewCount,<=,5977,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,62411501#665901
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,p.Id=ph.PostId#u.Reputation,<=,312,u.DownVotes,<=,0,p.Score,>=,-4,p.ViewCount,>=,0,p.ViewCount,<=,5977,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,62411501#152027
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.Reputation,<=,312,u.DownVotes,<=,0,p.Score,>=,-4,p.ViewCount,>=,0,p.ViewCount,<=,5977,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,62411501#72077
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.Score,>=,-4,p.ViewCount,>=,0,p.ViewCount,<=,5977,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,62411501,u.Reputation,<=,312,u.DownVotes,<=,0#122301
+posts p,comments c#p.Id=c.PostId#p.PostTypeId,=,1,p.ViewCount,<=,4159,p.CommentCount,>=,0,p.CommentCount,<=,12#83428
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,2#174305
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,2#683288
+postHistory ph,posts p#p.Id=ph.PostId#ph.PostHistoryTypeId,=,2,p.PostTypeId,=,1,p.ViewCount,<=,4159,p.CommentCount,>=,0,p.CommentCount,<=,12#41710
+votes v,posts p#p.Id=v.PostId#v.VoteTypeId,=,2,p.PostTypeId,=,1,p.ViewCount,<=,4159,p.CommentCount,>=,0,p.CommentCount,<=,12#94239
+users u,posts p#u.Id=p.OwnerUserId#u.Views,<=,86,u.DownVotes,>=,0,u.DownVotes,<=,1,u.UpVotes,<=,6,p.PostTypeId,=,1,p.ViewCount,<=,4159,p.CommentCount,>=,0,p.CommentCount,<=,12#26496
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,2,ph.PostHistoryTypeId,=,2#262116
+users u,badges b#u.Id=b.UserId#u.Views,<=,86,u.DownVotes,>=,0,u.DownVotes,<=,1,u.UpVotes,<=,6#48141
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,2,p.PostTypeId,=,1,p.ViewCount,<=,4159,p.CommentCount,>=,0,p.CommentCount,<=,12#83428
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,2,p.PostTypeId,=,1,p.ViewCount,<=,4159,p.CommentCount,>=,0,p.CommentCount,<=,12#224227
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.Views,<=,86,u.DownVotes,>=,0,u.DownVotes,<=,1,u.UpVotes,<=,6,p.PostTypeId,=,1,p.ViewCount,<=,4159,p.CommentCount,>=,0,p.CommentCount,<=,12#51472
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,2,p.PostTypeId,=,1,p.ViewCount,<=,4159,p.CommentCount,>=,0,p.CommentCount,<=,12,ph.PostHistoryTypeId,=,2#94239
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,p.Id=ph.PostId#u.Views,<=,86,u.DownVotes,>=,0,u.DownVotes,<=,1,u.UpVotes,<=,6,p.PostTypeId,=,1,p.ViewCount,<=,4159,p.CommentCount,>=,0,p.CommentCount,<=,12,ph.PostHistoryTypeId,=,2#26496
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.Views,<=,86,u.DownVotes,>=,0,u.DownVotes,<=,1,u.UpVotes,<=,6,p.PostTypeId,=,1,p.ViewCount,<=,4159,p.CommentCount,>=,0,p.CommentCount,<=,12,v.VoteTypeId,=,2#46047
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.PostTypeId,=,1,p.ViewCount,<=,4159,p.CommentCount,>=,0,p.CommentCount,<=,12,u.Views,<=,86,u.DownVotes,>=,0,u.DownVotes,<=,1,u.UpVotes,<=,6#86270
+posts p,comments c#p.Id=c.PostId#p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.FavoriteCount,>=,0,p.FavoriteCount,<=,17#30578
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId##704085
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,5#97054
+postHistory ph,posts p#p.Id=ph.PostId#p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.FavoriteCount,>=,0,p.FavoriteCount,<=,17#73582
+votes v,posts p#p.Id=v.PostId#v.VoteTypeId,=,5,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.FavoriteCount,>=,0,p.FavoriteCount,<=,17#25932
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,>=,1,u.Views,>=,0,u.CreationDate,>=,48662794,u.CreationDate,<=,176876546,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.FavoriteCount,>=,0,p.FavoriteCount,<=,17#11555
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,5#214245
+users u,badges b#u.Id=b.UserId#u.Reputation,>=,1,u.Views,>=,0,u.CreationDate,>=,48662794,u.CreationDate,<=,176876546,b.Date,>=,47094893#71850
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.FavoriteCount,>=,0,p.FavoriteCount,<=,17#194727
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,5,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.FavoriteCount,>=,0,p.FavoriteCount,<=,17#65424
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.Reputation,>=,1,u.Views,>=,0,u.CreationDate,>=,48662794,u.CreationDate,<=,176876546,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.FavoriteCount,>=,0,p.FavoriteCount,<=,17#27503
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,5,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.FavoriteCount,>=,0,p.FavoriteCount,<=,17#154585
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,p.Id=ph.PostId#u.Reputation,>=,1,u.Views,>=,0,u.CreationDate,>=,48662794,u.CreationDate,<=,176876546,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.FavoriteCount,>=,0,p.FavoriteCount,<=,17#65782
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.Reputation,>=,1,u.Views,>=,0,u.CreationDate,>=,48662794,u.CreationDate,<=,176876546,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.FavoriteCount,>=,0,p.FavoriteCount,<=,17,v.VoteTypeId,=,5#21632
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,>=,47094893,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.FavoriteCount,>=,0,p.FavoriteCount,<=,17,u.Reputation,>=,1,u.Views,>=,0,u.CreationDate,>=,48662794,u.CreationDate,<=,176876546#138289
+posts p,comments c#p.Id=c.PostId#p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0#29284
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId##704085
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.BountyAmount,<=,50#4010
+postHistory ph,posts p#p.Id=ph.PostId#p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0#74304
+votes v,posts p#p.Id=v.PostId#v.BountyAmount,<=,50,p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0#495
+users u,posts p#u.Id=p.OwnerUserId#p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0#12841
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.BountyAmount,<=,50#7927
+users u,badges b#u.Id=b.UserId##79851
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0#183554
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.BountyAmount,<=,50,p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0#1557
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0#28803
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.BountyAmount,<=,50,p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0#4233
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,p.Id=ph.PostId#p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0#72777
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0,v.BountyAmount,<=,50#492
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0#215690
+posts p,comments c#p.Id=c.PostId#p.Score,<=,21,p.AnswerCount,<=,3,p.FavoriteCount,>=,0,c.Score,=,0#20059
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.Score,=,0#529790
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,>=,45961200,c.Score,=,0#590979
+postHistory ph,posts p#p.Id=ph.PostId#p.Score,<=,21,p.AnswerCount,<=,3,p.FavoriteCount,>=,0#67005
+votes v,posts p#p.Id=v.PostId#v.CreationDate,>=,45961200,p.Score,<=,21,p.AnswerCount,<=,3,p.FavoriteCount,>=,0#71750
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,<=,240,p.Score,<=,21,p.AnswerCount,<=,3,p.FavoriteCount,>=,0#7505
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,>=,45961200#1331073
+users u,badges b#u.Id=b.UserId#u.Reputation,<=,240,b.Date,<=,176924108#55147
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.Score,=,0,p.Score,<=,21,p.AnswerCount,<=,3,p.FavoriteCount,>=,0#127200
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,>=,45961200,c.Score,=,0,p.Score,<=,21,p.AnswerCount,<=,3,p.FavoriteCount,>=,0#130442
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.Reputation,<=,240,c.Score,=,0,p.Score,<=,21,p.AnswerCount,<=,3,p.FavoriteCount,>=,0#12716
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,>=,45961200,p.Score,<=,21,p.AnswerCount,<=,3,p.FavoriteCount,>=,0#435449
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,p.Id=ph.PostId#u.Reputation,<=,240,p.Score,<=,21,p.AnswerCount,<=,3,p.FavoriteCount,>=,0#42007
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.Reputation,<=,240,p.Score,<=,21,p.AnswerCount,<=,3,p.FavoriteCount,>=,0,v.CreationDate,>=,45961200#38573
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,<=,176924108,p.Score,<=,21,p.AnswerCount,<=,3,p.FavoriteCount,>=,0,u.Reputation,<=,240#35682
+posts p,comments c,users u#c.UserId=u.Id,u.Id=p.OwnerUserId#p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,46601208,p.CreationDate,<=,177066590,c.CreationDate,>=,46716398#1659783
+users u,comments c#c.UserId=u.Id#u.Reputation,>=,1,u.CreationDate,>=,47328160,u.CreationDate,<=,176952003,c.CreationDate,>=,46716398#160207
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,>=,1,u.CreationDate,>=,47328160,u.CreationDate,<=,176952003,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,46601208,p.CreationDate,<=,177066590#39797
+users u,comments c,posts p#c.UserId=u.Id,u.Id=p.OwnerUserId#u.Reputation,>=,1,u.CreationDate,>=,47328160,u.CreationDate,<=,176952003,c.CreationDate,>=,46716398,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,11,p.CreationDate,>=,46601208,p.CreationDate,<=,177066590#1459345
+posts p,comments c,users u#c.UserId=u.Id,u.Id=p.OwnerUserId#p.AnswerCount,<=,5,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,<=,27,c.Score,=,0#657592
+users u,comments c#c.UserId=u.Id#u.Reputation,>=,1,c.Score,=,0#132712
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,>=,1,p.AnswerCount,<=,5,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,<=,27#12426
+users u,comments c,posts p#c.UserId=u.Id,u.Id=p.OwnerUserId#u.Reputation,>=,1,c.Score,=,0,p.AnswerCount,<=,5,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,<=,27#657592
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id#c.CreationDate,>=,47802290,c.CreationDate,<=,176784362#260852417
+users u,comments c#c.UserId=u.Id#u.Reputation,>=,1,u.Views,<=,80,u.UpVotes,>=,0,u.CreationDate,>=,47244672,c.CreationDate,>=,47802290,c.CreationDate,<=,176784362#62423
+users u,postHistory ph#ph.UserId=u.Id#u.Reputation,>=,1,u.Views,<=,80,u.UpVotes,>=,0,u.CreationDate,>=,47244672#149025
+users u,comments c,postHistory ph#c.UserId=u.Id,ph.UserId=u.Id#u.Reputation,>=,1,u.Views,<=,80,u.UpVotes,>=,0,u.CreationDate,>=,47244672,c.CreationDate,>=,47802290,c.CreationDate,<=,176784362#1771584
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id##263105194
+users u,comments c#c.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,7931,u.Views,<=,109,u.DownVotes,>=,0,u.CreationDate,<=,176991176#69018
+users u,postHistory ph#ph.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,7931,u.Views,<=,109,u.DownVotes,>=,0,u.CreationDate,<=,176991176#163513
+users u,comments c,postHistory ph#c.UserId=u.Id,ph.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,7931,u.Views,<=,109,u.DownVotes,>=,0,u.CreationDate,<=,176991176#2323452
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800,c.CreationDate,>=,46709194,c.CreationDate,<=,176973314#10993960
+users u,comments c#u.Id=c.UserId#u.CreationDate,<=,176170001,c.CreationDate,>=,46709194,c.CreationDate,<=,176973314#170480
+users u,votes v#u.Id=v.UserId#u.CreationDate,<=,176170001,v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#34664
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.CreationDate,<=,176170001,c.CreationDate,>=,46709194,c.CreationDate,<=,176973314,v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#10993951
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#v.CreationDate,<=,176857200#11029918
+users u,comments c#u.Id=c.UserId#u.CreationDate,>=,46033908,u.CreationDate,<=,171401830#166415
+users u,votes v#u.Id=v.UserId#u.CreationDate,>=,46033908,u.CreationDate,<=,171401830,v.CreationDate,<=,176857200#33533
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.CreationDate,>=,46033908,u.CreationDate,<=,171401830,v.CreationDate,<=,176857200#10862842
+votes v,comments c,posts p#c.PostId=p.Id,v.PostId=p.Id#c.Score,=,0#591108
+users u,comments c#u.Id=c.UserId#u.Views,>=,0,u.Views,<=,74,c.Score,=,0#56533
+posts p,comments c#c.PostId=p.Id#c.Score,=,0#134887
+posts p,votes v#v.PostId=p.Id##328064
+posts p,comments c,votes v#c.PostId=p.Id,v.PostId=p.Id#c.Score,=,0#591108
+posts p,comments c,users u#u.Id=c.UserId,c.PostId=p.Id#c.Score,=,0,u.Views,>=,0,u.Views,<=,74#56533
+users u,comments c#c.UserId=u.Id#u.Views,>=,0,u.DownVotes,>=,0,u.DownVotes,<=,2,c.CreationDate,>=,48108450,c.CreationDate,<=,176989759#73909
+users u,badges b#b.UserId=u.Id#u.Views,>=,0,u.DownVotes,>=,0,u.DownVotes,<=,2#68130
+badges b,comments c,users u#c.UserId=u.Id,b.UserId=u.Id#c.CreationDate,>=,48108450,c.CreationDate,<=,176989759,u.Views,>=,0,u.DownVotes,>=,0,u.DownVotes,<=,2#758411
+users u,comments c#c.UserId=u.Id#u.UpVotes,>=,0,c.Score,=,0,c.CreationDate,>=,46417609#132504
+users u,badges b#b.UserId=u.Id#u.UpVotes,>=,0,b.Date,>=,46035246,b.Date,<=,176998296#79610
+badges b,comments c,users u#c.UserId=u.Id,b.UserId=u.Id#b.Date,>=,46035246,b.Date,<=,176998296,c.Score,=,0,c.CreationDate,>=,46417609,u.UpVotes,>=,0#10223864
+posts p,postHistory ph,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#p.Score,>=,-1,p.CommentCount,>=,0,p.CommentCount,<=,23#54725800
+users u,postHistory ph#ph.UserId=u.Id#u.DownVotes,=,0,u.UpVotes,>=,0,u.UpVotes,<=,244#145895
+users u,posts p#p.OwnerUserId=u.Id#u.DownVotes,=,0,u.UpVotes,>=,0,u.UpVotes,<=,244,p.Score,>=,-1,p.CommentCount,>=,0,p.CommentCount,<=,23#49174
+users u,postHistory ph,posts p#p.OwnerUserId=u.Id,ph.UserId=u.Id#u.DownVotes,=,0,u.UpVotes,>=,0,u.UpVotes,<=,244,p.Score,>=,-1,p.CommentCount,>=,0,p.CommentCount,<=,23#1356723
+posts p,postHistory ph,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#p.FavoriteCount,<=,5,ph.CreationDate,>=,72380583#1008487
+users u,postHistory ph#ph.UserId=u.Id#u.Views,>=,0,u.UpVotes,>=,0,u.CreationDate,>=,57361609,u.CreationDate,<=,174830422,ph.CreationDate,>=,72380583#205970
+users u,posts p#p.OwnerUserId=u.Id#u.Views,>=,0,u.UpVotes,>=,0,u.CreationDate,>=,57361609,u.CreationDate,<=,174830422,p.FavoriteCount,<=,5#10205
+users u,postHistory ph,posts p#p.OwnerUserId=u.Id,ph.UserId=u.Id#u.Views,>=,0,u.UpVotes,>=,0,u.CreationDate,>=,57361609,u.CreationDate,<=,174830422,ph.CreationDate,>=,72380583,p.FavoriteCount,<=,5#582617
+posts p,postHistory ph,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#p.Score,>=,0,ph.CreationDate,>=,48832240#54200975
+users u,postHistory ph#ph.UserId=u.Id#u.Reputation,>=,1,u.UpVotes,<=,198,u.CreationDate,>=,46036145,ph.CreationDate,>=,48832240#178928
+users u,posts p#p.OwnerUserId=u.Id#u.Reputation,>=,1,u.UpVotes,<=,198,u.CreationDate,>=,46036145,p.Score,>=,0#63604
+users u,postHistory ph,posts p#p.OwnerUserId=u.Id,ph.UserId=u.Id#u.Reputation,>=,1,u.UpVotes,<=,198,u.CreationDate,>=,46036145,ph.CreationDate,>=,48832240,p.Score,>=,0#4197329
+posts p,postHistory ph#ph.PostId=p.Id#p.CreationDate,>=,48535685,p.CreationDate,<=,175931892#293859
+users u,posts p#p.OwnerUserId=u.Id#u.UpVotes,>=,0,u.UpVotes,<=,9,p.CreationDate,>=,48535685,p.CreationDate,<=,175931892#37249
+users u,postHistory ph,posts p#ph.PostId=p.Id,p.OwnerUserId=u.Id#u.UpVotes,>=,0,u.UpVotes,<=,9,p.CreationDate,>=,48535685,p.CreationDate,<=,175931892#155561
+posts p,votes v,users u#p.OwnerUserId=u.Id,v.UserId=u.Id#p.PostTypeId,=,2,p.CreationDate,<=,175556426#2162683
+users u,votes v#v.UserId=u.Id#u.Views,>=,0#34789
+users u,posts p#p.OwnerUserId=u.Id#u.Views,>=,0,p.PostTypeId,=,2,p.CreationDate,<=,175556426#46273
+users u,votes v,posts p#p.OwnerUserId=u.Id,v.UserId=u.Id#u.Views,>=,0,p.PostTypeId,=,2,p.CreationDate,<=,175556426#2162683
+posts p,votes v,users u#p.OwnerUserId=u.Id,v.UserId=u.Id#p.CommentCount,>=,0#2737086
+users u,votes v#v.UserId=u.Id#u.CreationDate,>=,58860024#27929
+users u,posts p#p.OwnerUserId=u.Id#u.CreationDate,>=,58860024,p.CommentCount,>=,0#72152
+users u,votes v,posts p#p.OwnerUserId=u.Id,v.UserId=u.Id#u.CreationDate,>=,58860024,p.CommentCount,>=,0#1100297
+postHistory ph,comments c,posts p#ph.PostId=p.Id,c.PostId=p.Id##704085
+votes v,comments c,posts p#c.PostId=p.Id,v.PostId=p.Id#v.CreationDate,<=,176943600#864796
+posts p,comments c#c.PostId=p.Id##174305
+votes v,postHistory ph,posts p#ph.PostId=p.Id,v.PostId=p.Id#v.CreationDate,<=,176943600#1330735
+posts p,postHistory ph#ph.PostId=p.Id##303187
+posts p,votes v#v.PostId=p.Id#v.CreationDate,<=,176943600#327888
+posts p,comments c,postHistory ph#ph.PostId=p.Id,c.PostId=p.Id##704085
+posts p,comments c,votes v#c.PostId=p.Id,v.PostId=p.Id#v.CreationDate,<=,176943600#864796
+posts p,postHistory ph,votes v#ph.PostId=p.Id,v.PostId=p.Id#v.CreationDate,<=,176943600#1330735
+postHistory ph,comments c,posts p#ph.PostId=p.Id,c.PostId=p.Id#ph.CreationDate,<=,176362765,c.Score,=,0,c.CreationDate,>=,49269311#520457
+votes v,comments c,posts p#c.PostId=p.Id,v.PostId=p.Id#v.VoteTypeId,=,2,c.Score,=,0,c.CreationDate,>=,49269311#456127
+posts p,comments c#c.PostId=p.Id#c.Score,=,0,c.CreationDate,>=,49269311#133397
+votes v,postHistory ph,posts p#ph.PostId=p.Id,v.PostId=p.Id#v.VoteTypeId,=,2,ph.CreationDate,<=,176362765#985080
+posts p,postHistory ph#ph.PostId=p.Id#ph.CreationDate,<=,176362765#300288
+posts p,votes v#v.PostId=p.Id#v.VoteTypeId,=,2#262116
+posts p,comments c,postHistory ph#ph.PostId=p.Id,c.PostId=p.Id#c.Score,=,0,c.CreationDate,>=,49269311,ph.CreationDate,<=,176362765#520457
+posts p,comments c,votes v#c.PostId=p.Id,v.PostId=p.Id#c.Score,=,0,c.CreationDate,>=,49269311,v.VoteTypeId,=,2#456127
+posts p,postHistory ph,votes v#ph.PostId=p.Id,v.PostId=p.Id#ph.CreationDate,<=,176362765,v.VoteTypeId,=,2#985080
+posts p,comments c,users u#u.Id=c.UserId,u.Id=p.OwnerUserId#p.Score,>=,0,p.Score,<=,28,p.ViewCount,>=,0,p.ViewCount,<=,6517,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.FavoriteCount,>=,0,p.FavoriteCount,<=,8,p.CreationDate,>=,46693760,p.CreationDate,<=,177040215,c.CreationDate,>=,46695820#783881
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#c.CreationDate,>=,46695820#11015599
+users u,comments c#u.Id=c.UserId#u.Views,>=,0,u.CreationDate,>=,46687085,c.CreationDate,>=,46695820#164047
+votes v,posts p,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#p.Score,>=,0,p.Score,<=,28,p.ViewCount,>=,0,p.ViewCount,<=,6517,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.FavoriteCount,>=,0,p.FavoriteCount,<=,8,p.CreationDate,>=,46693760,p.CreationDate,<=,177040215#171377
+users u,posts p#u.Id=p.OwnerUserId#u.Views,>=,0,u.CreationDate,>=,46687085,p.Score,>=,0,p.Score,<=,28,p.ViewCount,>=,0,p.ViewCount,<=,6517,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.FavoriteCount,>=,0,p.FavoriteCount,<=,8,p.CreationDate,>=,46693760,p.CreationDate,<=,177040215#11436
+users u,votes v#u.Id=v.UserId#u.Views,>=,0,u.CreationDate,>=,46687085#32349
+users u,comments c,posts p#u.Id=c.UserId,u.Id=p.OwnerUserId#u.Views,>=,0,u.CreationDate,>=,46687085,c.CreationDate,>=,46695820,p.Score,>=,0,p.Score,<=,28,p.ViewCount,>=,0,p.ViewCount,<=,6517,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.FavoriteCount,>=,0,p.FavoriteCount,<=,8,p.CreationDate,>=,46693760,p.CreationDate,<=,177040215#697548
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.Views,>=,0,u.CreationDate,>=,46687085,c.CreationDate,>=,46695820#10544032
+users u,posts p,votes v#u.Id=p.OwnerUserId,u.Id=v.UserId#u.Views,>=,0,u.CreationDate,>=,46687085,p.Score,>=,0,p.Score,<=,28,p.ViewCount,>=,0,p.ViewCount,<=,6517,p.AnswerCount,>=,0,p.AnswerCount,<=,5,p.FavoriteCount,>=,0,p.FavoriteCount,<=,8,p.CreationDate,>=,46693760,p.CreationDate,<=,177040215#129111
+posts p,comments c,users u#u.Id=c.UserId,u.Id=p.OwnerUserId#p.Score,<=,52,p.AnswerCount,>=,0#1787527
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#v.CreationDate,>=,46047600#11030553
+users u,comments c#u.Id=c.UserId#u.UpVotes,>=,0,u.CreationDate,>=,52721555,u.CreationDate,<=,176655302#125725
+votes v,posts p,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#v.CreationDate,>=,46047600,p.Score,<=,52,p.AnswerCount,>=,0#372328
+users u,posts p#u.Id=p.OwnerUserId#u.UpVotes,>=,0,u.CreationDate,>=,52721555,u.CreationDate,<=,176655302,p.Score,<=,52,p.AnswerCount,>=,0#39132
+users u,votes v#u.Id=v.UserId#u.UpVotes,>=,0,u.CreationDate,>=,52721555,u.CreationDate,<=,176655302,v.CreationDate,>=,46047600#28895
+users u,comments c,posts p#u.Id=c.UserId,u.Id=p.OwnerUserId#u.UpVotes,>=,0,u.CreationDate,>=,52721555,u.CreationDate,<=,176655302,p.Score,<=,52,p.AnswerCount,>=,0#1100480
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.UpVotes,>=,0,u.CreationDate,>=,52721555,u.CreationDate,<=,176655302,v.CreationDate,>=,46047600#3412592
+users u,posts p,votes v#u.Id=p.OwnerUserId,u.Id=v.UserId#u.UpVotes,>=,0,u.CreationDate,>=,52721555,u.CreationDate,<=,176655302,p.Score,<=,52,p.AnswerCount,>=,0,v.CreationDate,>=,46047600#243679
+posts p,comments c,users u#u.Id=c.UserId,u.Id=p.OwnerUserId#p.ViewCount,>=,0,c.Score,=,0#1458221
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#c.Score,=,0#7491903
+users u,comments c#u.Id=c.UserId#u.Reputation,<=,306,u.UpVotes,>=,0,c.Score,=,0#47188
+votes v,posts p,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#p.ViewCount,>=,0#373777
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,<=,306,u.UpVotes,>=,0,p.ViewCount,>=,0#32854
+users u,votes v#u.Id=v.UserId#u.Reputation,<=,306,u.UpVotes,>=,0#18280
+users u,comments c,posts p#u.Id=c.UserId,u.Id=p.OwnerUserId#u.Reputation,<=,306,u.UpVotes,>=,0,c.Score,=,0,p.ViewCount,>=,0#224804
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.Reputation,<=,306,u.UpVotes,>=,0,c.Score,=,0#113650
+users u,posts p,votes v#u.Id=p.OwnerUserId,u.Id=v.UserId#u.Reputation,<=,306,u.UpVotes,>=,0,p.ViewCount,>=,0#53869
+posts p,comments c#p.Id=c.PostId#p.Score,>=,0,p.Score,<=,16,p.ViewCount,>=,0,p.CreationDate,<=,176727650#86810
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId##865125
+votes v,posts p#p.Id=v.PostId#p.Score,>=,0,p.Score,<=,16,p.ViewCount,>=,0,p.CreationDate,<=,176727650#125349
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,>=,1,u.CreationDate,>=,46030129,u.CreationDate,<=,175691756,p.Score,>=,0,p.Score,<=,16,p.ViewCount,>=,0,p.CreationDate,<=,176727650#40645
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#p.Score,>=,0,p.Score,<=,16,p.ViewCount,>=,0,p.CreationDate,<=,176727650#310335
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.Reputation,>=,1,u.CreationDate,>=,46030129,u.CreationDate,<=,175691756,p.Score,>=,0,p.Score,<=,16,p.ViewCount,>=,0,p.CreationDate,<=,176727650#84759
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.Reputation,>=,1,u.CreationDate,>=,46030129,u.CreationDate,<=,175691756,p.Score,>=,0,p.Score,<=,16,p.ViewCount,>=,0,p.CreationDate,<=,176727650#122304
+posts p,comments c#p.Id=c.PostId#p.Score,>=,0,p.Score,<=,19,p.CommentCount,<=,10,p.CreationDate,<=,175696293,c.Score,=,0,c.CreationDate,<=,176780873#115487
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,<=,176943600,c.Score,=,0,c.CreationDate,<=,176780873#589044
+votes v,posts p#p.Id=v.PostId#v.CreationDate,<=,176943600,p.Score,>=,0,p.Score,<=,19,p.CommentCount,<=,10,p.CreationDate,<=,175696293#271632
+users u,posts p#u.Id=p.OwnerUserId#u.DownVotes,>=,0,p.Score,>=,0,p.Score,<=,19,p.CommentCount,<=,10,p.CreationDate,<=,175696293#85857
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,<=,176943600,c.Score,=,0,c.CreationDate,<=,176780873,p.Score,>=,0,p.Score,<=,19,p.CommentCount,<=,10,p.CreationDate,<=,175696293#414167
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.DownVotes,>=,0,c.Score,=,0,c.CreationDate,<=,176780873,p.Score,>=,0,p.Score,<=,19,p.CommentCount,<=,10,p.CreationDate,<=,175696293#113882
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.DownVotes,>=,0,p.Score,>=,0,p.Score,<=,19,p.CommentCount,<=,10,p.CreationDate,<=,175696293,v.CreationDate,<=,176943600#266893
+posts p,votes v#p.Id=v.PostId#p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.CreationDate,<=,176943812#143872
+users u,posts p#u.Id=p.OwnerUserId#p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.CreationDate,<=,176943812#41935
+users u,badges b#u.Id=b.UserId#b.Date,<=,176884056#79593
+users u,votes v,posts p#u.Id=p.OwnerUserId,p.Id=v.PostId#p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.CreationDate,<=,176943812#140884
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,<=,176884056,p.AnswerCount,>=,0,p.AnswerCount,<=,7,p.CreationDate,<=,176943812#443526
+posts p,votes v,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,15#371909
+users u,votes v#u.Id=v.UserId#u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,1#23113
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,1,p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,15#37799
+users u,badges b#u.Id=b.UserId#u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,1#66192
+users u,votes v,posts p#u.Id=p.OwnerUserId,u.Id=v.UserId#u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,1,p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,15#151229
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId#u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,1#204329
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.PostTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,15,u.Reputation,>=,1,u.DownVotes,>=,0,u.DownVotes,<=,1#253539
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id#ph.CreationDate,>=,46771894,ph.CreationDate,<=,176449913#260664622
+votes v,comments c,users u#c.UserId=u.Id,v.UserId=u.Id##11031325
+users u,comments c#c.UserId=u.Id#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,72#57512
+votes v,postHistory ph,users u#v.UserId=u.Id,ph.UserId=u.Id#ph.CreationDate,>=,46771894,ph.CreationDate,<=,176449913#13983299
+users u,postHistory ph#ph.UserId=u.Id#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,72,ph.CreationDate,>=,46771894,ph.CreationDate,<=,176449913#139728
+users u,votes v#v.UserId=u.Id#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,72#17404
+users u,comments c,postHistory ph#c.UserId=u.Id,ph.UserId=u.Id#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,72,ph.CreationDate,>=,46771894,ph.CreationDate,<=,176449913#1643026
+users u,comments c,votes v#c.UserId=u.Id,v.UserId=u.Id#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,72#141015
+users u,postHistory ph,votes v#v.UserId=u.Id,ph.UserId=u.Id#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,72,ph.CreationDate,>=,46771894,ph.CreationDate,<=,176449913#320887
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id#c.Score,=,0,c.CreationDate,>=,46032981,c.CreationDate,<=,176906172#166885001
+votes v,comments c,users u#c.UserId=u.Id,v.UserId=u.Id#c.Score,=,0,c.CreationDate,>=,46032981,c.CreationDate,<=,176906172#7472486
+users u,comments c#c.UserId=u.Id#u.Views,<=,433,u.DownVotes,>=,0,u.CreationDate,<=,177021459,c.Score,=,0,c.CreationDate,>=,46032981,c.CreationDate,<=,176906172#80882
+votes v,postHistory ph,users u#v.UserId=u.Id,ph.UserId=u.Id##14111005
+users u,postHistory ph#ph.UserId=u.Id#u.Views,<=,433,u.DownVotes,>=,0,u.CreationDate,<=,177021459#194813
+users u,votes v#v.UserId=u.Id#u.Views,<=,433,u.DownVotes,>=,0,u.CreationDate,<=,177021459#29904
+users u,comments c,postHistory ph#c.UserId=u.Id,ph.UserId=u.Id#u.Views,<=,433,u.DownVotes,>=,0,u.CreationDate,<=,177021459,c.Score,=,0,c.CreationDate,>=,46032981,c.CreationDate,<=,176906172#5645148
+users u,comments c,votes v#c.UserId=u.Id,v.UserId=u.Id#u.Views,<=,433,u.DownVotes,>=,0,u.CreationDate,<=,177021459,c.Score,=,0,c.CreationDate,>=,46032981,c.CreationDate,<=,176906172#949319
+users u,postHistory ph,votes v#v.UserId=u.Id,ph.UserId=u.Id#u.Views,<=,433,u.DownVotes,>=,0,u.CreationDate,<=,177021459#1861587
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id#ph.PostHistoryTypeId,=,2,c.CreationDate,<=,175674355#53580751
+votes v,comments c,users u#c.UserId=u.Id,v.UserId=u.Id#c.CreationDate,<=,175674355#10790526
+users u,comments c#c.UserId=u.Id#u.Reputation,>=,1,u.Views,>=,0,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,15,u.CreationDate,>=,49977916,u.CreationDate,<=,174845993,c.CreationDate,<=,175674355#46532
+votes v,postHistory ph,users u#v.UserId=u.Id,ph.UserId=u.Id#ph.PostHistoryTypeId,=,2#2639317
+users u,postHistory ph#ph.UserId=u.Id#u.Reputation,>=,1,u.Views,>=,0,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,15,u.CreationDate,>=,49977916,u.CreationDate,<=,174845993,ph.PostHistoryTypeId,=,2#40568
+users u,votes v#v.UserId=u.Id#u.Reputation,>=,1,u.Views,>=,0,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,15,u.CreationDate,>=,49977916,u.CreationDate,<=,174845993#11735
+users u,comments c,postHistory ph#c.UserId=u.Id,ph.UserId=u.Id#u.Reputation,>=,1,u.Views,>=,0,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,15,u.CreationDate,>=,49977916,u.CreationDate,<=,174845993,c.CreationDate,<=,175674355,ph.PostHistoryTypeId,=,2#365522
+users u,comments c,votes v#c.UserId=u.Id,v.UserId=u.Id#u.Reputation,>=,1,u.Views,>=,0,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,15,u.CreationDate,>=,49977916,u.CreationDate,<=,174845993,c.CreationDate,<=,175674355#48772
+users u,postHistory ph,votes v#v.UserId=u.Id,ph.UserId=u.Id#u.Reputation,>=,1,u.Views,>=,0,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,15,u.CreationDate,>=,49977916,u.CreationDate,<=,174845993,ph.PostHistoryTypeId,=,2#36614
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#v.VoteTypeId,=,5,v.CreationDate,>=,45961200,v.CreationDate,<=,177030000,c.Score,=,1,c.CreationDate,>=,49381927#2087379
+users u,comments c#u.Id=c.UserId#u.Reputation,>=,1,c.Score,=,1,c.CreationDate,>=,49381927#24368
+users u,votes v#u.Id=v.UserId#u.Reputation,>=,1,v.VoteTypeId,=,5,v.CreationDate,>=,45961200,v.CreationDate,<=,177030000#33690
+users u,badges b#u.Id=b.UserId#u.Reputation,>=,1,b.Date,<=,174907933#77535
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.Reputation,>=,1,c.Score,=,1,c.CreationDate,>=,49381927,v.VoteTypeId,=,5,v.CreationDate,>=,45961200,v.CreationDate,<=,177030000#2087379
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#b.Date,<=,174907933,c.Score,=,1,c.CreationDate,>=,49381927,u.Reputation,>=,1#3203614
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId#b.Date,<=,174907933,v.VoteTypeId,=,5,v.CreationDate,>=,45961200,v.CreationDate,<=,177030000,u.Reputation,>=,1#991738
+votes v,comments c,users u#u.Id=c.UserId,u.Id=v.UserId#c.Score,=,1,c.CreationDate,>=,46131448#2201378
+users u,comments c#u.Id=c.UserId#u.CreationDate,>=,46052849,c.Score,=,1,c.CreationDate,>=,46131448#24049
+users u,votes v#u.Id=v.UserId#u.CreationDate,>=,46052849#33891
+users u,badges b#u.Id=b.UserId#u.CreationDate,>=,46052849#77791
+users u,comments c,votes v#u.Id=c.UserId,u.Id=v.UserId#u.CreationDate,>=,46052849,c.Score,=,1,c.CreationDate,>=,46131448#2169982
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#c.Score,=,1,c.CreationDate,>=,46131448,u.CreationDate,>=,46052849#3271463
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId#u.CreationDate,>=,46052849#1012835
+postLinks pl,comments c,posts p#c.PostId=p.Id,pl.PostId=p.Id#pl.CreationDate,>=,88382381,pl.CreationDate,<=,176052596,c.Score,=,0#22016
+postHistory ph,comments c,posts p#ph.PostId=p.Id,c.PostId=p.Id#c.Score,=,0#529790
+votes v,comments c,posts p#c.PostId=p.Id,v.PostId=p.Id#v.CreationDate,>=,46220400,v.CreationDate,<=,177116400,c.Score,=,0#589751
+posts p,comments c#c.PostId=p.Id#c.Score,=,0#134887
+postHistory ph,postLinks pl,posts p#ph.PostId=p.Id,pl.PostId=p.Id#pl.CreationDate,>=,88382381,pl.CreationDate,<=,176052596#55626
+votes v,postLinks pl,posts p#pl.PostId=p.Id,v.PostId=p.Id#v.CreationDate,>=,46220400,v.CreationDate,<=,177116400,pl.CreationDate,>=,88382381,pl.CreationDate,<=,176052596#53419
+posts p,postLinks pl#pl.PostId=p.Id#pl.CreationDate,>=,88382381,pl.CreationDate,<=,176052596#9794
+votes v,postHistory ph,posts p#ph.PostId=p.Id,v.PostId=p.Id#v.CreationDate,>=,46220400,v.CreationDate,<=,177116400#1326706
+posts p,postHistory ph#ph.PostId=p.Id##303187
+posts p,votes v#v.PostId=p.Id#v.CreationDate,>=,46220400,v.CreationDate,<=,177116400#326887
+posts p,comments c,postLinks pl#c.PostId=p.Id,pl.PostId=p.Id#c.Score,=,0,pl.CreationDate,>=,88382381,pl.CreationDate,<=,176052596#22016
+posts p,comments c,postHistory ph#ph.PostId=p.Id,c.PostId=p.Id#c.Score,=,0#529790
+posts p,comments c,votes v#c.PostId=p.Id,v.PostId=p.Id#c.Score,=,0,v.CreationDate,>=,46220400,v.CreationDate,<=,177116400#589751
+posts p,postLinks pl,postHistory ph#ph.PostId=p.Id,pl.PostId=p.Id#pl.CreationDate,>=,88382381,pl.CreationDate,<=,176052596#55626
+posts p,postLinks pl,votes v#pl.PostId=p.Id,v.PostId=p.Id#pl.CreationDate,>=,88382381,pl.CreationDate,<=,176052596,v.CreationDate,>=,46220400,v.CreationDate,<=,177116400#53419
+posts p,postHistory ph,votes v#ph.PostId=p.Id,v.PostId=p.Id#v.CreationDate,>=,46220400,v.CreationDate,<=,177116400#1326706
+postLinks pl,comments c,posts p#c.PostId=p.Id,pl.PostId=p.Id#pl.CreationDate,>=,67238314,pl.CreationDate,<=,175201465,c.Score,=,0#23304
+postHistory ph,comments c,posts p#ph.PostId=p.Id,c.PostId=p.Id#c.Score,=,0#529790
+votes v,comments c,posts p#c.PostId=p.Id,v.PostId=p.Id#c.Score,=,0#591108
+posts p,comments c#c.PostId=p.Id#c.Score,=,0#134887
+postHistory ph,postLinks pl,posts p#ph.PostId=p.Id,pl.PostId=p.Id#pl.CreationDate,>=,67238314,pl.CreationDate,<=,175201465#59832
+votes v,postLinks pl,posts p#pl.PostId=p.Id,v.PostId=p.Id#pl.CreationDate,>=,67238314,pl.CreationDate,<=,175201465#60440
+posts p,postLinks pl#pl.PostId=p.Id#pl.CreationDate,>=,67238314,pl.CreationDate,<=,175201465#10423
+votes v,postHistory ph,posts p#ph.PostId=p.Id,v.PostId=p.Id##1331347
+posts p,postHistory ph#ph.PostId=p.Id##303187
+posts p,votes v#v.PostId=p.Id##328064
+posts p,comments c,postLinks pl#c.PostId=p.Id,pl.PostId=p.Id#c.Score,=,0,pl.CreationDate,>=,67238314,pl.CreationDate,<=,175201465#23304
+posts p,comments c,postHistory ph#ph.PostId=p.Id,c.PostId=p.Id#c.Score,=,0#529790
+posts p,comments c,votes v#c.PostId=p.Id,v.PostId=p.Id#c.Score,=,0#591108
+posts p,postLinks pl,postHistory ph#ph.PostId=p.Id,pl.PostId=p.Id#pl.CreationDate,>=,67238314,pl.CreationDate,<=,175201465#59832
+posts p,postLinks pl,votes v#pl.PostId=p.Id,v.PostId=p.Id#pl.CreationDate,>=,67238314,pl.CreationDate,<=,175201465#60440
+posts p,postHistory ph,votes v#ph.PostId=p.Id,v.PostId=p.Id##1331347
+postLinks pl,comments c,posts p#c.PostId=p.Id,pl.PostId=p.Id#pl.LinkTypeId,=,1,pl.CreationDate,>=,53964162#32645
+postHistory ph,comments c,posts p#ph.PostId=p.Id,c.PostId=p.Id#ph.CreationDate,<=,169575247#642530
+votes v,comments c,posts p#c.PostId=p.Id,v.PostId=p.Id#v.CreationDate,>=,46047600#864063
+posts p,comments c#c.PostId=p.Id##174305
+postHistory ph,postLinks pl,posts p#ph.PostId=p.Id,pl.PostId=p.Id#ph.CreationDate,<=,169575247,pl.LinkTypeId,=,1,pl.CreationDate,>=,53964162#52257
+votes v,postLinks pl,posts p#pl.PostId=p.Id,v.PostId=p.Id#v.CreationDate,>=,46047600,pl.LinkTypeId,=,1,pl.CreationDate,>=,53964162#64699
+posts p,postLinks pl#pl.PostId=p.Id#pl.LinkTypeId,=,1,pl.CreationDate,>=,53964162#10032
+votes v,postHistory ph,posts p#ph.PostId=p.Id,v.PostId=p.Id#v.CreationDate,>=,46047600,ph.CreationDate,<=,169575247#1260416
+posts p,postHistory ph#ph.PostId=p.Id#ph.CreationDate,<=,169575247#272988
+posts p,votes v#v.PostId=p.Id#v.CreationDate,>=,46047600#327650
+posts p,comments c,postLinks pl#c.PostId=p.Id,pl.PostId=p.Id#pl.LinkTypeId,=,1,pl.CreationDate,>=,53964162#32645
+posts p,comments c,postHistory ph#ph.PostId=p.Id,c.PostId=p.Id#ph.CreationDate,<=,169575247#642530
+posts p,comments c,votes v#c.PostId=p.Id,v.PostId=p.Id#v.CreationDate,>=,46047600#864063
+posts p,postLinks pl,postHistory ph#ph.PostId=p.Id,pl.PostId=p.Id#pl.LinkTypeId,=,1,pl.CreationDate,>=,53964162,ph.CreationDate,<=,169575247#52257
+posts p,postLinks pl,votes v#pl.PostId=p.Id,v.PostId=p.Id#pl.LinkTypeId,=,1,pl.CreationDate,>=,53964162,v.CreationDate,>=,46047600#64699
+posts p,postHistory ph,votes v#ph.PostId=p.Id,v.PostId=p.Id#ph.CreationDate,<=,169575247,v.CreationDate,>=,46047600#1260416
+postLinks pl,comments c,posts p#c.PostId=p.Id,pl.PostId=p.Id#pl.LinkTypeId,=,1,pl.CreationDate,>=,74521895#31229
+postHistory ph,comments c,posts p#ph.PostId=p.Id,c.PostId=p.Id##704085
+votes v,comments c,posts p#c.PostId=p.Id,v.PostId=p.Id#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#862828
+posts p,comments c#c.PostId=p.Id##174305
+postHistory ph,postLinks pl,posts p#ph.PostId=p.Id,pl.PostId=p.Id#pl.LinkTypeId,=,1,pl.CreationDate,>=,74521895#54502
+votes v,postLinks pl,posts p#pl.PostId=p.Id,v.PostId=p.Id#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800,pl.LinkTypeId,=,1,pl.CreationDate,>=,74521895#56757
+posts p,postLinks pl#pl.PostId=p.Id#pl.LinkTypeId,=,1,pl.CreationDate,>=,74521895#9549
+votes v,postHistory ph,posts p#ph.PostId=p.Id,v.PostId=p.Id#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#1327972
+posts p,postHistory ph#ph.PostId=p.Id##303187
+posts p,votes v#v.PostId=p.Id#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#327152
+posts p,comments c,postLinks pl#c.PostId=p.Id,pl.PostId=p.Id#pl.LinkTypeId,=,1,pl.CreationDate,>=,74521895#31229
+posts p,comments c,postHistory ph#ph.PostId=p.Id,c.PostId=p.Id##704085
+posts p,comments c,votes v#c.PostId=p.Id,v.PostId=p.Id#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#862828
+posts p,postLinks pl,postHistory ph#ph.PostId=p.Id,pl.PostId=p.Id#pl.LinkTypeId,=,1,pl.CreationDate,>=,74521895#54502
+posts p,postLinks pl,votes v#pl.PostId=p.Id,v.PostId=p.Id#pl.LinkTypeId,=,1,pl.CreationDate,>=,74521895,v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#56757
+posts p,postHistory ph,votes v#ph.PostId=p.Id,v.PostId=p.Id#v.CreationDate,>=,45961200,v.CreationDate,<=,176770800#1327972
+postHistory ph,comments c,users u#u.Id=c.UserId,u.Id=ph.UserId#c.CreationDate,<=,176772810#261938196
+users u,comments c#u.Id=c.UserId#u.DownVotes,<=,0,u.UpVotes,<=,47,c.CreationDate,<=,176772810#54402
+users u,postHistory ph#u.Id=ph.UserId#u.DownVotes,<=,0,u.UpVotes,<=,47#136807
+users u,badges b#u.Id=b.UserId#u.DownVotes,<=,0,u.UpVotes,<=,47#59312
+users u,comments c,postHistory ph#u.Id=c.UserId,u.Id=ph.UserId#u.DownVotes,<=,0,u.UpVotes,<=,47,c.CreationDate,<=,176772810#1423316
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#c.CreationDate,<=,176772810,u.DownVotes,<=,0,u.UpVotes,<=,47#345737
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#u.DownVotes,<=,0,u.UpVotes,<=,47#739163
+postHistory ph,comments c,users u#u.Id=c.UserId,u.Id=ph.UserId#ph.PostHistoryTypeId,=,2,ph.CreationDate,<=,173364982#52345244
+users u,comments c#u.Id=c.UserId#u.Views,>=,0,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,62,u.CreationDate,>=,46714230,u.CreationDate,<=,173296116#65943
+users u,postHistory ph#u.Id=ph.UserId#u.Views,>=,0,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,62,u.CreationDate,>=,46714230,u.CreationDate,<=,173296116,ph.PostHistoryTypeId,=,2,ph.CreationDate,<=,173364982#49719
+users u,badges b#u.Id=b.UserId#u.Views,>=,0,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,62,u.CreationDate,>=,46714230,u.CreationDate,<=,173296116,b.Date,<=,176164396#61057
+users u,comments c,postHistory ph#u.Id=c.UserId,u.Id=ph.UserId#u.Views,>=,0,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,62,u.CreationDate,>=,46714230,u.CreationDate,<=,173296116,ph.PostHistoryTypeId,=,2,ph.CreationDate,<=,173364982#1031868
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#b.Date,<=,176164396,u.Views,>=,0,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,62,u.CreationDate,>=,46714230,u.CreationDate,<=,173296116#540560
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#b.Date,<=,176164396,ph.PostHistoryTypeId,=,2,ph.CreationDate,<=,173364982,u.Views,>=,0,u.DownVotes,>=,0,u.UpVotes,>=,0,u.UpVotes,<=,62,u.CreationDate,>=,46714230,u.CreationDate,<=,173296116#341222
+postHistory ph,comments c,users u#u.Id=c.UserId,u.Id=ph.UserId#c.CreationDate,<=,175648704#257948495
+users u,comments c#u.Id=c.UserId#u.Reputation,>=,1,u.Reputation,<=,1443,u.DownVotes,>=,0,u.DownVotes,<=,3,c.CreationDate,<=,175648704#70030
+users u,postHistory ph#u.Id=ph.UserId#u.Reputation,>=,1,u.Reputation,<=,1443,u.DownVotes,>=,0,u.DownVotes,<=,3#162695
+users u,badges b#u.Id=b.UserId#u.Reputation,>=,1,u.Reputation,<=,1443,u.DownVotes,>=,0,u.DownVotes,<=,3,b.Date,>=,50982648#65776
+users u,comments c,postHistory ph#u.Id=c.UserId,u.Id=ph.UserId#u.Reputation,>=,1,u.Reputation,<=,1443,u.DownVotes,>=,0,u.DownVotes,<=,3,c.CreationDate,<=,175648704#2697536
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#b.Date,>=,50982648,c.CreationDate,<=,175648704,u.Reputation,>=,1,u.Reputation,<=,1443,u.DownVotes,>=,0,u.DownVotes,<=,3#609782
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#b.Date,>=,50982648,u.Reputation,>=,1,u.Reputation,<=,1443,u.DownVotes,>=,0,u.DownVotes,<=,3#1155518
+postHistory ph,comments c,users u#u.Id=c.UserId,u.Id=ph.UserId#ph.CreationDate,>=,48685555,ph.CreationDate,<=,176244397,c.Score,=,2#22310877
+users u,comments c#u.Id=c.UserId#u.Reputation,>=,1,u.Reputation,<=,1183,u.Views,>=,0,c.Score,=,2#1192
+users u,postHistory ph#u.Id=ph.UserId#u.Reputation,>=,1,u.Reputation,<=,1183,u.Views,>=,0,ph.CreationDate,>=,48685555,ph.CreationDate,<=,176244397#167503
+users u,badges b#u.Id=b.UserId#u.Reputation,>=,1,u.Reputation,<=,1183,u.Views,>=,0#68382
+users u,comments c,postHistory ph#u.Id=c.UserId,u.Id=ph.UserId#u.Reputation,>=,1,u.Reputation,<=,1183,u.Views,>=,0,c.Score,=,2,ph.CreationDate,>=,48685555,ph.CreationDate,<=,176244397#49318
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#c.Score,=,2,u.Reputation,>=,1,u.Reputation,<=,1183,u.Views,>=,0#14309
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#ph.CreationDate,>=,48685555,ph.CreationDate,<=,176244397,u.Reputation,>=,1,u.Reputation,<=,1183,u.Views,>=,0#1242771
+posts p,postHistory ph#p.Id=ph.PostId#p.ViewCount,>=,0,p.CommentCount,>=,0,ph.CreationDate,>=,46136648#217448
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,2,ph.CreationDate,>=,46136648#977123
+votes v,posts p#p.Id=v.PostId#v.VoteTypeId,=,2,p.ViewCount,>=,0,p.CommentCount,>=,0#109665
+users u,posts p#u.Id=p.OwnerUserId#u.Views,>=,0,u.Views,<=,34,u.UpVotes,>=,0,p.ViewCount,>=,0,p.CommentCount,>=,0#31729
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,2,ph.CreationDate,>=,46136648,p.ViewCount,>=,0,p.CommentCount,>=,0#645020
+users u,postHistory ph,posts p#u.Id=p.OwnerUserId,p.Id=ph.PostId#u.Views,>=,0,u.Views,<=,34,u.UpVotes,>=,0,ph.CreationDate,>=,46136648,p.ViewCount,>=,0,p.CommentCount,>=,0#157452
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.Views,>=,0,u.Views,<=,34,u.UpVotes,>=,0,p.ViewCount,>=,0,p.CommentCount,>=,0,v.VoteTypeId,=,2#62169
+posts p,postHistory ph#p.Id=ph.PostId#p.PostTypeId,=,1,p.AnswerCount,>=,0,p.AnswerCount,<=,4,ph.CreationDate,<=,173017535#200802
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,>=,46047600,v.CreationDate,<=,176166000,ph.CreationDate,<=,173017535#1288522
+votes v,posts p#p.Id=v.PostId#v.CreationDate,>=,46047600,v.CreationDate,<=,176166000,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.AnswerCount,<=,4#130721
+users u,posts p#u.Id=p.OwnerUserId#u.DownVotes,=,0,u.CreationDate,<=,173945009,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.AnswerCount,<=,4#34830
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,>=,46047600,v.CreationDate,<=,176166000,ph.CreationDate,<=,173017535,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.AnswerCount,<=,4#759809
+users u,postHistory ph,posts p#u.Id=p.OwnerUserId,p.Id=ph.PostId#u.DownVotes,=,0,u.CreationDate,<=,173945009,ph.CreationDate,<=,173017535,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.AnswerCount,<=,4#167333
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.DownVotes,=,0,u.CreationDate,<=,173945009,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.AnswerCount,<=,4,v.CreationDate,>=,46047600,v.CreationDate,<=,176166000#96144
+posts p,postHistory ph,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#p.ViewCount,>=,0,p.ViewCount,<=,2024,ph.PostHistoryTypeId,=,5#674563
+users u,postHistory ph#ph.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,750,ph.PostHistoryTypeId,=,5#22618
+users u,posts p#p.OwnerUserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,750,p.ViewCount,>=,0,p.ViewCount,<=,2024#35776
+badges b,users u#b.UserId=u.Id#b.Date,>=,46085650,u.Reputation,>=,1,u.Reputation,<=,750#65475
+users u,postHistory ph,posts p#p.OwnerUserId=u.Id,ph.UserId=u.Id#u.Reputation,>=,1,u.Reputation,<=,750,ph.PostHistoryTypeId,=,5,p.ViewCount,>=,0,p.ViewCount,<=,2024#139036
+badges b,postHistory ph,users u#b.UserId=u.Id,ph.UserId=u.Id#b.Date,>=,46085650,ph.PostHistoryTypeId,=,5,u.Reputation,>=,1,u.Reputation,<=,750#181824
+badges b,posts p,users u#b.UserId=u.Id,p.OwnerUserId=u.Id#b.Date,>=,46085650,p.ViewCount,>=,0,p.ViewCount,<=,2024,u.Reputation,>=,1,u.Reputation,<=,750#203957
+posts p,postHistory ph,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#p.Score,>=,0,ph.CreationDate,>=,46032751#54661696
+users u,postHistory ph#ph.UserId=u.Id#u.CreationDate,>=,46662966,u.CreationDate,<=,176809440,ph.CreationDate,>=,46032751#258907
+users u,posts p#p.OwnerUserId=u.Id#u.CreationDate,>=,46662966,u.CreationDate,<=,176809440,p.Score,>=,0#84828
+badges b,users u#b.UserId=u.Id#u.CreationDate,>=,46662966,u.CreationDate,<=,176809440#75698
+users u,postHistory ph,posts p#p.OwnerUserId=u.Id,ph.UserId=u.Id#u.CreationDate,>=,46662966,u.CreationDate,<=,176809440,ph.CreationDate,>=,46032751,p.Score,>=,0#49191000
+badges b,postHistory ph,users u#b.UserId=u.Id,ph.UserId=u.Id#ph.CreationDate,>=,46032751,u.CreationDate,>=,46662966,u.CreationDate,<=,176809440#14328073
+badges b,posts p,users u#b.UserId=u.Id,p.OwnerUserId=u.Id#p.Score,>=,0,u.CreationDate,>=,46662966,u.CreationDate,<=,176809440#3349913
+posts p,postHistory ph,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,89,p.CreationDate,<=,176116864,ph.PostHistoryTypeId,=,2,ph.CreationDate,>=,60923028,ph.CreationDate,<=,175439083#329862
+users u,postHistory ph#ph.UserId=u.Id#u.Reputation,<=,705,u.CreationDate,>=,46824960,u.CreationDate,<=,176115881,ph.PostHistoryTypeId,=,2,ph.CreationDate,>=,60923028,ph.CreationDate,<=,175439083#47834
+users u,posts p#p.OwnerUserId=u.Id#u.Reputation,<=,705,u.CreationDate,>=,46824960,u.CreationDate,<=,176115881,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,89,p.CreationDate,<=,176116864#9739
+badges b,users u#b.UserId=u.Id#b.Date,>=,46122447,b.Date,<=,176732668,u.Reputation,<=,705,u.CreationDate,>=,46824960,u.CreationDate,<=,176115881#62746
+users u,postHistory ph,posts p#p.OwnerUserId=u.Id,ph.UserId=u.Id#u.Reputation,<=,705,u.CreationDate,>=,46824960,u.CreationDate,<=,176115881,ph.PostHistoryTypeId,=,2,ph.CreationDate,>=,60923028,ph.CreationDate,<=,175439083,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,89,p.CreationDate,<=,176116864#80133
+badges b,postHistory ph,users u#b.UserId=u.Id,ph.UserId=u.Id#b.Date,>=,46122447,b.Date,<=,176732668,ph.PostHistoryTypeId,=,2,ph.CreationDate,>=,60923028,ph.CreationDate,<=,175439083,u.Reputation,<=,705,u.CreationDate,>=,46824960,u.CreationDate,<=,176115881#284345
+badges b,posts p,users u#b.UserId=u.Id,p.OwnerUserId=u.Id#b.Date,>=,46122447,b.Date,<=,176732668,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,89,p.CreationDate,<=,176116864,u.Reputation,<=,705,u.CreationDate,>=,46824960,u.CreationDate,<=,176115881#70835
+posts p,postHistory ph,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#p.PostTypeId,=,2,ph.CreationDate,>=,46717699,ph.CreationDate,<=,176800963#47376444
+users u,postHistory ph#ph.UserId=u.Id#ph.CreationDate,>=,46717699,ph.CreationDate,<=,176800963#279018
+users u,posts p#p.OwnerUserId=u.Id#p.PostTypeId,=,2#47100
+badges b,users u#b.UserId=u.Id##79851
+users u,postHistory ph,posts p#p.OwnerUserId=u.Id,ph.UserId=u.Id#ph.CreationDate,>=,46717699,ph.CreationDate,<=,176800963,p.PostTypeId,=,2#47376444
+badges b,postHistory ph,users u#b.UserId=u.Id,ph.UserId=u.Id#ph.CreationDate,>=,46717699,ph.CreationDate,<=,176800963#16203910
+badges b,posts p,users u#b.UserId=u.Id,p.OwnerUserId=u.Id#p.PostTypeId,=,2#3115494
+posts p,postHistory ph,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#p.AnswerCount,>=,0,p.FavoriteCount,>=,0,p.CreationDate,<=,176178755#1454263
+users u,postHistory ph#ph.UserId=u.Id#u.CreationDate,<=,177024109#281808
+users u,posts p#p.OwnerUserId=u.Id#u.CreationDate,<=,177024109,p.AnswerCount,>=,0,p.FavoriteCount,>=,0,p.CreationDate,<=,176178755#12912
+badges b,users u#b.UserId=u.Id#u.CreationDate,<=,177024109#79838
+users u,postHistory ph,posts p#p.OwnerUserId=u.Id,ph.UserId=u.Id#u.CreationDate,<=,177024109,p.AnswerCount,>=,0,p.FavoriteCount,>=,0,p.CreationDate,<=,176178755#1454263
+badges b,postHistory ph,users u#b.UserId=u.Id,ph.UserId=u.Id#u.CreationDate,<=,177024109#16322611
+badges b,posts p,users u#b.UserId=u.Id,p.OwnerUserId=u.Id#p.AnswerCount,>=,0,p.FavoriteCount,>=,0,p.CreationDate,<=,176178755,u.CreationDate,<=,177024109#216873
+votes v,postHistory ph,users u#u.Id=ph.UserId,u.Id=v.UserId#v.CreationDate,<=,176770800#14104617
+users u,postHistory ph#u.Id=ph.UserId#u.DownVotes,>=,0,u.DownVotes,<=,3,u.UpVotes,>=,0,u.UpVotes,<=,71#156020
+users u,votes v#u.Id=v.UserId#u.DownVotes,>=,0,u.DownVotes,<=,3,u.UpVotes,>=,0,u.UpVotes,<=,71,v.CreationDate,<=,176770800#19477
+badges b,users u#u.Id=b.UserId#b.Date,>=,46040046,u.DownVotes,>=,0,u.DownVotes,<=,3,u.UpVotes,>=,0,u.UpVotes,<=,71#64907
+users u,postHistory ph,votes v#u.Id=ph.UserId,u.Id=v.UserId#u.DownVotes,>=,0,u.DownVotes,<=,3,u.UpVotes,>=,0,u.UpVotes,<=,71,v.CreationDate,<=,176770800#442957
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#b.Date,>=,46040046,u.DownVotes,>=,0,u.DownVotes,<=,3,u.UpVotes,>=,0,u.UpVotes,<=,71#1043962
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId#b.Date,>=,46040046,v.CreationDate,<=,176770800,u.DownVotes,>=,0,u.DownVotes,<=,3,u.UpVotes,>=,0,u.UpVotes,<=,71#120415
+votes v,postHistory ph,users u#u.Id=ph.UserId,u.Id=v.UserId#v.CreationDate,<=,176943600,ph.PostHistoryTypeId,=,1#373623
+users u,postHistory ph#u.Id=ph.UserId#u.Reputation,<=,126,u.Views,<=,11,u.CreationDate,>=,47229478,u.CreationDate,<=,176944590,ph.PostHistoryTypeId,=,1#21676
+users u,votes v#u.Id=v.UserId#u.Reputation,<=,126,u.Views,<=,11,u.CreationDate,>=,47229478,u.CreationDate,<=,176944590,v.CreationDate,<=,176943600#10430
+badges b,users u#u.Id=b.UserId#b.Date,<=,176224392,u.Reputation,<=,126,u.Views,<=,11,u.CreationDate,>=,47229478,u.CreationDate,<=,176944590#38533
+users u,postHistory ph,votes v#u.Id=ph.UserId,u.Id=v.UserId#u.Reputation,<=,126,u.Views,<=,11,u.CreationDate,>=,47229478,u.CreationDate,<=,176944590,ph.PostHistoryTypeId,=,1,v.CreationDate,<=,176943600#11332
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#b.Date,<=,176224392,ph.PostHistoryTypeId,=,1,u.Reputation,<=,126,u.Views,<=,11,u.CreationDate,>=,47229478,u.CreationDate,<=,176944590#52993
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId#b.Date,<=,176224392,v.CreationDate,<=,176943600,u.Reputation,<=,126,u.Views,<=,11,u.CreationDate,>=,47229478,u.CreationDate,<=,176944590#23386
+votes v,postHistory ph,users u#u.Id=ph.UserId,u.Id=v.UserId##14111005
+users u,postHistory ph#u.Id=ph.UserId#u.Views,>=,0#281859
+users u,votes v#u.Id=v.UserId#u.Views,>=,0#34789
+badges b,users u#u.Id=b.UserId#u.Views,>=,0#79851
+users u,postHistory ph,votes v#u.Id=ph.UserId,u.Id=v.UserId#u.Views,>=,0#14111005
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#u.Views,>=,0#16322646
+badges b,votes v,users u#u.Id=b.UserId,u.Id=v.UserId#u.Views,>=,0#1056687
+posts p,comments c#p.Id=c.PostId#p.FavoriteCount,>=,0,p.CreationDate,>=,46314012,p.CreationDate,<=,176647961,c.Score,=,0#22210
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,84400886,c.Score,=,0#21077
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.Score,=,0#529790
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,2,c.Score,=,0#468748
+postLinks pl,posts p#p.Id=pl.PostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,84400886,p.FavoriteCount,>=,0,p.CreationDate,>=,46314012,p.CreationDate,<=,176647961#3711
+postHistory ph,posts p#p.Id=ph.PostId#p.FavoriteCount,>=,0,p.CreationDate,>=,46314012,p.CreationDate,<=,176647961#74548
+votes v,posts p#p.Id=v.PostId#v.VoteTypeId,=,2,p.FavoriteCount,>=,0,p.CreationDate,>=,46314012,p.CreationDate,<=,176647961#66189
+postHistory ph,postLinks pl,posts p#p.Id=pl.PostId,p.Id=ph.PostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,84400886#52130
+votes v,postLinks pl,posts p#p.Id=pl.PostId,p.Id=v.PostId#v.VoteTypeId,=,2,pl.LinkTypeId,=,1,pl.CreationDate,>=,84400886#35692
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,2#989610
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,84400886,c.Score,=,0,p.FavoriteCount,>=,0,p.CreationDate,>=,46314012,p.CreationDate,<=,176647961#8938
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.Score,=,0,p.FavoriteCount,>=,0,p.CreationDate,>=,46314012,p.CreationDate,<=,176647961#142432
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,2,c.Score,=,0,p.FavoriteCount,>=,0,p.CreationDate,>=,46314012,p.CreationDate,<=,176647961#124001
+postHistory ph,posts p,postLinks pl#p.Id=pl.PostId,p.Id=ph.PostId#p.FavoriteCount,>=,0,p.CreationDate,>=,46314012,p.CreationDate,<=,176647961,pl.LinkTypeId,=,1,pl.CreationDate,>=,84400886#23304
+votes v,posts p,postLinks pl#p.Id=pl.PostId,p.Id=v.PostId#v.VoteTypeId,=,2,p.FavoriteCount,>=,0,p.CreationDate,>=,46314012,p.CreationDate,<=,176647961,pl.LinkTypeId,=,1,pl.CreationDate,>=,84400886#25523
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,2,p.FavoriteCount,>=,0,p.CreationDate,>=,46314012,p.CreationDate,<=,176647961#415486
+posts p,comments c#p.Id=c.PostId#p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756,c.CreationDate,>=,47128361#25695
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591,c.CreationDate,>=,47128361#31580
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.CreationDate,>=,51473505,c.CreationDate,>=,47128361#691045
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,<=,176857200,c.CreationDate,>=,47128361#847176
+postLinks pl,posts p#p.Id=pl.PostId#pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756#3167
+postHistory ph,posts p#p.Id=ph.PostId#ph.CreationDate,>=,51473505,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756#61284
+votes v,posts p#p.Id=v.PostId#v.CreationDate,<=,176857200,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756#56627
+postHistory ph,postLinks pl,posts p#p.Id=pl.PostId,p.Id=ph.PostId#ph.CreationDate,>=,51473505,pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591#55293
+votes v,postLinks pl,posts p#p.Id=pl.PostId,p.Id=v.PostId#v.CreationDate,<=,176857200,pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591#66311
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,<=,176857200,ph.CreationDate,>=,51473505#1228382
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591,c.CreationDate,>=,47128361,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756#10594
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.CreationDate,>=,51473505,c.CreationDate,>=,47128361,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756#160411
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,<=,176857200,c.CreationDate,>=,47128361,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756#147586
+postHistory ph,posts p,postLinks pl#p.Id=pl.PostId,p.Id=ph.PostId#ph.CreationDate,>=,51473505,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756,pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591#19015
+votes v,posts p,postLinks pl#p.Id=pl.PostId,p.Id=v.PostId#v.CreationDate,<=,176857200,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756,pl.LinkTypeId,=,1,pl.CreationDate,<=,174241591#18097
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,<=,176857200,p.Score,<=,44,p.FavoriteCount,>=,0,p.FavoriteCount,<=,3,p.CreationDate,>=,47998436,p.CreationDate,<=,176208756,ph.CreationDate,>=,51473505#334037
+posts p,comments c#p.Id=c.PostId#p.Score,>=,-1,p.ViewCount,<=,5896,p.AnswerCount,>=,0,p.CreationDate,>=,46882641,c.CreationDate,<=,176780555#87913
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#c.CreationDate,<=,176780555#35173
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.CreationDate,<=,176780555#701334
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,2,c.CreationDate,<=,176780555#681443
+postLinks pl,posts p#p.Id=pl.PostId#p.Score,>=,-1,p.ViewCount,<=,5896,p.AnswerCount,>=,0,p.CreationDate,>=,46882641#10666
+postHistory ph,posts p#p.Id=ph.PostId#p.Score,>=,-1,p.ViewCount,<=,5896,p.AnswerCount,>=,0,p.CreationDate,>=,46882641#212264
+votes v,posts p#p.Id=v.PostId#v.VoteTypeId,=,2,p.Score,>=,-1,p.ViewCount,<=,5896,p.AnswerCount,>=,0,p.CreationDate,>=,46882641#97099
+postHistory ph,postLinks pl,posts p#p.Id=pl.PostId,p.Id=ph.PostId##63615
+votes v,postLinks pl,posts p#p.Id=pl.PostId,p.Id=v.PostId#v.VoteTypeId,=,2#45487
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,2#989610
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#c.CreationDate,<=,176780555,p.Score,>=,-1,p.ViewCount,<=,5896,p.AnswerCount,>=,0,p.CreationDate,>=,46882641#33535
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.CreationDate,<=,176780555,p.Score,>=,-1,p.ViewCount,<=,5896,p.AnswerCount,>=,0,p.CreationDate,>=,46882641#502222
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,2,c.CreationDate,<=,176780555,p.Score,>=,-1,p.ViewCount,<=,5896,p.AnswerCount,>=,0,p.CreationDate,>=,46882641#248888
+postHistory ph,posts p,postLinks pl#p.Id=pl.PostId,p.Id=ph.PostId#p.Score,>=,-1,p.ViewCount,<=,5896,p.AnswerCount,>=,0,p.CreationDate,>=,46882641#60577
+votes v,posts p,postLinks pl#p.Id=pl.PostId,p.Id=v.PostId#v.VoteTypeId,=,2,p.Score,>=,-1,p.ViewCount,<=,5896,p.AnswerCount,>=,0,p.CreationDate,>=,46882641#35452
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,2,p.Score,>=,-1,p.ViewCount,<=,5896,p.AnswerCount,>=,0,p.CreationDate,>=,46882641#564227
+posts p,comments c#c.PostId=p.Id#p.CommentCount,>=,0,p.CommentCount,<=,14,c.CreationDate,>=,45314705,c.CreationDate,<=,176906589#167242
+postLinks pl,comments c,posts p#pl.RelatedPostId=p.Id,c.PostId=p.Id#pl.LinkTypeId,=,1,c.CreationDate,>=,45314705,c.CreationDate,<=,176906589#30379
+postHistory ph,comments c,posts p#ph.PostId=p.Id,c.PostId=p.Id#ph.CreationDate,>=,47528093,c.CreationDate,>=,45314705,c.CreationDate,<=,176906589#697276
+users u,comments c#u.Id=c.UserId#u.Reputation,>=,1,u.Reputation,<=,491,u.DownVotes,>=,0,u.DownVotes,<=,0,c.CreationDate,>=,45314705,c.CreationDate,<=,176906589#52606
+postLinks pl,posts p#pl.RelatedPostId=p.Id#pl.LinkTypeId,=,1,p.CommentCount,>=,0,p.CommentCount,<=,14#10074
+postHistory ph,posts p#ph.PostId=p.Id#ph.CreationDate,>=,47528093,p.CommentCount,>=,0,p.CommentCount,<=,14#298469
+postHistory ph,postLinks pl,posts p#pl.RelatedPostId=p.Id,ph.PostId=p.Id#ph.CreationDate,>=,47528093,pl.LinkTypeId,=,1#62670
+postLinks pl,comments c,posts p#pl.RelatedPostId=p.Id,c.PostId=p.Id#pl.LinkTypeId,=,1,c.CreationDate,>=,45314705,c.CreationDate,<=,176906589,p.CommentCount,>=,0,p.CommentCount,<=,14#28359
+postHistory ph,comments c,posts p#ph.PostId=p.Id,c.PostId=p.Id#ph.CreationDate,>=,47528093,c.CreationDate,>=,45314705,c.CreationDate,<=,176906589,p.CommentCount,>=,0,p.CommentCount,<=,14#659714
+users u,comments c,posts p#c.PostId=p.Id,u.Id=c.UserId#u.Reputation,>=,1,u.Reputation,<=,491,u.DownVotes,>=,0,u.DownVotes,<=,0,c.CreationDate,>=,45314705,c.CreationDate,<=,176906589,p.CommentCount,>=,0,p.CommentCount,<=,14#50737
+postHistory ph,posts p,postLinks pl#pl.RelatedPostId=p.Id,ph.PostId=p.Id#ph.CreationDate,>=,47528093,p.CommentCount,>=,0,p.CommentCount,<=,14,pl.LinkTypeId,=,1#61674
+posts p,comments c,users u#c.UserId=u.Id,p.OwnerUserId=u.Id#p.AnswerCount,>=,0,p.AnswerCount,<=,9,p.CreationDate,>=,46113445,p.CreationDate,<=,175521442,c.Score,=,2#65529
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id#ph.CreationDate,<=,176108327,c.Score,=,2#22337322
+votes v,comments c,users u#c.UserId=u.Id,v.UserId=u.Id#v.BountyAmount,>=,0,v.CreationDate,>=,40690800,c.Score,=,2#35785
+users u,comments c#c.UserId=u.Id#u.UpVotes,<=,230,u.CreationDate,>=,51581230,u.CreationDate,<=,174545543,c.Score,=,2#1933
+postHistory ph,posts p,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#ph.CreationDate,<=,176108327,p.AnswerCount,>=,0,p.AnswerCount,<=,9,p.CreationDate,>=,46113445,p.CreationDate,<=,175521442#2941291
+votes v,posts p,users u#p.OwnerUserId=u.Id,v.UserId=u.Id#v.BountyAmount,>=,0,v.CreationDate,>=,40690800,p.AnswerCount,>=,0,p.AnswerCount,<=,9,p.CreationDate,>=,46113445,p.CreationDate,<=,175521442#19791
+users u,posts p#p.OwnerUserId=u.Id#u.UpVotes,<=,230,u.CreationDate,>=,51581230,u.CreationDate,<=,174545543,p.AnswerCount,>=,0,p.AnswerCount,<=,9,p.CreationDate,>=,46113445,p.CreationDate,<=,175521442#36915
+votes v,postHistory ph,users u#v.UserId=u.Id,ph.UserId=u.Id#v.BountyAmount,>=,0,v.CreationDate,>=,40690800,ph.CreationDate,<=,176108327#590855
+users u,postHistory ph#ph.UserId=u.Id#u.UpVotes,<=,230,u.CreationDate,>=,51581230,u.CreationDate,<=,174545543,ph.CreationDate,<=,176108327#170323
+users u,votes v#v.UserId=u.Id#u.UpVotes,<=,230,u.CreationDate,>=,51581230,u.CreationDate,<=,174545543,v.BountyAmount,>=,0,v.CreationDate,>=,40690800#771
+users u,comments c,posts p#c.UserId=u.Id,p.OwnerUserId=u.Id#u.UpVotes,<=,230,u.CreationDate,>=,51581230,u.CreationDate,<=,174545543,c.Score,=,2,p.AnswerCount,>=,0,p.AnswerCount,<=,9,p.CreationDate,>=,46113445,p.CreationDate,<=,175521442#11279
+users u,comments c,postHistory ph#c.UserId=u.Id,ph.UserId=u.Id#u.UpVotes,<=,230,u.CreationDate,>=,51581230,u.CreationDate,<=,174545543,c.Score,=,2,ph.CreationDate,<=,176108327#315245
+users u,comments c,votes v#c.UserId=u.Id,v.UserId=u.Id#u.UpVotes,<=,230,u.CreationDate,>=,51581230,u.CreationDate,<=,174545543,c.Score,=,2,v.BountyAmount,>=,0,v.CreationDate,>=,40690800#925
+users u,posts p,postHistory ph#p.OwnerUserId=u.Id,ph.UserId=u.Id#u.UpVotes,<=,230,u.CreationDate,>=,51581230,u.CreationDate,<=,174545543,p.AnswerCount,>=,0,p.AnswerCount,<=,9,p.CreationDate,>=,46113445,p.CreationDate,<=,175521442,ph.CreationDate,<=,176108327#1284580
+users u,posts p,votes v#p.OwnerUserId=u.Id,v.UserId=u.Id#u.UpVotes,<=,230,u.CreationDate,>=,51581230,u.CreationDate,<=,174545543,p.AnswerCount,>=,0,p.AnswerCount,<=,9,p.CreationDate,>=,46113445,p.CreationDate,<=,175521442,v.BountyAmount,>=,0,v.CreationDate,>=,40690800#11044
+users u,postHistory ph,votes v#v.UserId=u.Id,ph.UserId=u.Id#u.UpVotes,<=,230,u.CreationDate,>=,51581230,u.CreationDate,<=,174545543,ph.CreationDate,<=,176108327,v.BountyAmount,>=,0,v.CreationDate,>=,40690800#58846
+posts p,comments c,users u#c.UserId=u.Id,p.OwnerUserId=u.Id#p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,5#1734830
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id#ph.PostHistoryTypeId,=,2,ph.CreationDate,>=,55383939,ph.CreationDate,<=,176710452#51551247
+votes v,comments c,users u#c.UserId=u.Id,v.UserId=u.Id#v.BountyAmount,>=,0,v.BountyAmount,<=,100,v.CreationDate,>=,46566000#459497
+users u,comments c#c.UserId=u.Id#u.Views,>=,0,u.Views,<=,13#34546
+postHistory ph,posts p,users u#p.OwnerUserId=u.Id,ph.UserId=u.Id#ph.PostHistoryTypeId,=,2,ph.CreationDate,>=,55383939,ph.CreationDate,<=,176710452,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,5#836767
+votes v,posts p,users u#p.OwnerUserId=u.Id,v.UserId=u.Id#v.BountyAmount,>=,0,v.BountyAmount,<=,100,v.CreationDate,>=,46566000,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,5#18269
+users u,posts p#p.OwnerUserId=u.Id#u.Views,>=,0,u.Views,<=,13,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,5#25348
+votes v,postHistory ph,users u#v.UserId=u.Id,ph.UserId=u.Id#v.BountyAmount,>=,0,v.BountyAmount,<=,100,v.CreationDate,>=,46566000,ph.PostHistoryTypeId,=,2,ph.CreationDate,>=,55383939,ph.CreationDate,<=,176710452#113681
+users u,postHistory ph#ph.UserId=u.Id#u.Views,>=,0,u.Views,<=,13,ph.PostHistoryTypeId,=,2,ph.CreationDate,>=,55383939,ph.CreationDate,<=,176710452#32677
+users u,votes v#v.UserId=u.Id#u.Views,>=,0,u.Views,<=,13,v.BountyAmount,>=,0,v.BountyAmount,<=,100,v.CreationDate,>=,46566000#240
+users u,comments c,posts p#c.UserId=u.Id,p.OwnerUserId=u.Id#u.Views,>=,0,u.Views,<=,13,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,5#87396
+users u,comments c,postHistory ph#c.UserId=u.Id,ph.UserId=u.Id#u.Views,>=,0,u.Views,<=,13,ph.PostHistoryTypeId,=,2,ph.CreationDate,>=,55383939,ph.CreationDate,<=,176710452#108073
+users u,comments c,votes v#c.UserId=u.Id,v.UserId=u.Id#u.Views,>=,0,u.Views,<=,13,v.BountyAmount,>=,0,v.BountyAmount,<=,100,v.CreationDate,>=,46566000#1299
+users u,posts p,postHistory ph#p.OwnerUserId=u.Id,ph.UserId=u.Id#u.Views,>=,0,u.Views,<=,13,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,5,ph.PostHistoryTypeId,=,2,ph.CreationDate,>=,55383939,ph.CreationDate,<=,176710452#72816
+users u,posts p,votes v#p.OwnerUserId=u.Id,v.UserId=u.Id#u.Views,>=,0,u.Views,<=,13,p.ViewCount,>=,0,p.AnswerCount,>=,0,p.AnswerCount,<=,5,v.BountyAmount,>=,0,v.BountyAmount,<=,100,v.CreationDate,>=,46566000#676
+users u,postHistory ph,votes v#v.UserId=u.Id,ph.UserId=u.Id#u.Views,>=,0,u.Views,<=,13,ph.PostHistoryTypeId,=,2,ph.CreationDate,>=,55383939,ph.CreationDate,<=,176710452,v.BountyAmount,>=,0,v.BountyAmount,<=,100,v.CreationDate,>=,46566000#17147
+postHistory ph,comments c,users u#c.UserId=u.Id,ph.UserId=u.Id##263105194
+votes v,comments c,users u#c.UserId=u.Id,v.UserId=u.Id#v.BountyAmount,>=,0,v.CreationDate,>=,46047600,v.CreationDate,<=,176857200#508105
+users u,comments c#c.UserId=u.Id#u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,31,u.CreationDate,<=,173821132#50973
+votes v,postHistory ph,users u#v.UserId=u.Id,ph.UserId=u.Id#v.BountyAmount,>=,0,v.CreationDate,>=,46047600,v.CreationDate,<=,176857200#599646
+users u,postHistory ph#ph.UserId=u.Id#u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,31,u.CreationDate,<=,173821132#128316
+users u,badges b#b.UserId=u.Id#u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,31,u.CreationDate,<=,173821132,b.Date,>=,51967034#55320
+users u,votes v#v.UserId=u.Id#u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,31,u.CreationDate,<=,173821132,v.BountyAmount,>=,0,v.CreationDate,>=,46047600,v.CreationDate,<=,176857200#427
+users u,comments c,postHistory ph#c.UserId=u.Id,ph.UserId=u.Id#u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,31,u.CreationDate,<=,173821132#1147749
+users u,comments c,votes v#c.UserId=u.Id,v.UserId=u.Id#u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,31,u.CreationDate,<=,173821132,v.BountyAmount,>=,0,v.CreationDate,>=,46047600,v.CreationDate,<=,176857200#6607
+badges b,comments c,users u#c.UserId=u.Id,b.UserId=u.Id#b.Date,>=,51967034,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,31,u.CreationDate,<=,173821132#295550
+users u,postHistory ph,votes v#v.UserId=u.Id,ph.UserId=u.Id#u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,31,u.CreationDate,<=,173821132,v.BountyAmount,>=,0,v.CreationDate,>=,46047600,v.CreationDate,<=,176857200#16468
+badges b,postHistory ph,users u#b.UserId=u.Id,ph.UserId=u.Id#b.Date,>=,51967034,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,31,u.CreationDate,<=,173821132#642330
+votes v,badges b,users u#b.UserId=u.Id,v.UserId=u.Id#v.BountyAmount,>=,0,v.CreationDate,>=,46047600,v.CreationDate,<=,176857200,b.Date,>=,51967034,u.DownVotes,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,31,u.CreationDate,<=,173821132#3780
+posts p,comments c,users u#u.Id=c.UserId,u.Id=p.OwnerUserId#p.Score,>=,-2,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,6,c.Score,=,0#609866
+postHistory ph,comments c,users u#u.Id=c.UserId,u.Id=ph.UserId#ph.CreationDate,<=,174815652,c.Score,=,0#162374170
+users u,comments c#u.Id=c.UserId#u.Views,=,0,u.DownVotes,>=,0,u.DownVotes,<=,60,c.Score,=,0#4586
+postHistory ph,posts p,users u#u.Id=p.OwnerUserId,u.Id=ph.UserId#ph.CreationDate,<=,174815652,p.Score,>=,-2,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,6#1198886
+users u,posts p#u.Id=p.OwnerUserId#u.Views,=,0,u.DownVotes,>=,0,u.DownVotes,<=,60,p.Score,>=,-2,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,6#741
+users u,postHistory ph#u.Id=ph.UserId#u.Views,=,0,u.DownVotes,>=,0,u.DownVotes,<=,60,ph.CreationDate,<=,174815652#18745
+users u,badges b#u.Id=b.UserId#u.Views,=,0,u.DownVotes,>=,0,u.DownVotes,<=,60#11599
+users u,comments c,posts p#u.Id=c.UserId,u.Id=p.OwnerUserId#u.Views,=,0,u.DownVotes,>=,0,u.DownVotes,<=,60,c.Score,=,0,p.Score,>=,-2,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,6#881
+users u,comments c,postHistory ph#u.Id=c.UserId,u.Id=ph.UserId#u.Views,=,0,u.DownVotes,>=,0,u.DownVotes,<=,60,c.Score,=,0,ph.CreationDate,<=,174815652#19761
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#c.Score,=,0,u.Views,=,0,u.DownVotes,>=,0,u.DownVotes,<=,60#7870
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,u.Id=ph.UserId#u.Views,=,0,u.DownVotes,>=,0,u.DownVotes,<=,60,p.Score,>=,-2,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,6,ph.CreationDate,<=,174815652#3017
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.Score,>=,-2,p.CommentCount,>=,0,p.CommentCount,<=,12,p.FavoriteCount,>=,0,p.FavoriteCount,<=,6,u.Views,=,0,u.DownVotes,>=,0,u.DownVotes,<=,60#1348
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#ph.CreationDate,<=,174815652,u.Views,=,0,u.DownVotes,>=,0,u.DownVotes,<=,60#27920
+posts p,comments c,users u#u.Id=c.UserId,u.Id=p.OwnerUserId#p.PostTypeId,=,1,p.ViewCount,>=,0,p.ViewCount,<=,4157,p.FavoriteCount,=,0,p.CreationDate,<=,176633896,c.Score,=,0#28846
+postHistory ph,comments c,users u#u.Id=c.UserId,u.Id=ph.UserId#c.Score,=,0#167312466
+users u,comments c#u.Id=c.UserId#c.Score,=,0#132712
+postHistory ph,posts p,users u#u.Id=p.OwnerUserId,u.Id=ph.UserId#p.PostTypeId,=,1,p.ViewCount,>=,0,p.ViewCount,<=,4157,p.FavoriteCount,=,0,p.CreationDate,<=,176633896#61634
+users u,posts p#u.Id=p.OwnerUserId#p.PostTypeId,=,1,p.ViewCount,>=,0,p.ViewCount,<=,4157,p.FavoriteCount,=,0,p.CreationDate,<=,176633896#866
+users u,postHistory ph#u.Id=ph.UserId##281859
+users u,badges b#u.Id=b.UserId##79851
+users u,comments c,posts p#u.Id=c.UserId,u.Id=p.OwnerUserId#c.Score,=,0,p.PostTypeId,=,1,p.ViewCount,>=,0,p.ViewCount,<=,4157,p.FavoriteCount,=,0,p.CreationDate,<=,176633896#28846
+users u,comments c,postHistory ph#u.Id=c.UserId,u.Id=ph.UserId#c.Score,=,0#167312466
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#c.Score,=,0#10238947
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,u.Id=ph.UserId#p.PostTypeId,=,1,p.ViewCount,>=,0,p.ViewCount,<=,4157,p.FavoriteCount,=,0,p.CreationDate,<=,176633896#61634
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.PostTypeId,=,1,p.ViewCount,>=,0,p.ViewCount,<=,4157,p.FavoriteCount,=,0,p.CreationDate,<=,176633896#8897
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId##16322646
+posts p,comments c,users u#u.Id=c.UserId,u.Id=p.OwnerUserId#p.PostTypeId,=,1,p.ViewCount,>=,0,p.ViewCount,<=,25597,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,>=,0,c.CreationDate,>=,48674029,c.CreationDate,<=,175672461#868002
+postHistory ph,comments c,users u#u.Id=c.UserId,u.Id=ph.UserId#c.CreationDate,>=,48674029,c.CreationDate,<=,175672461#256479273
+users u,comments c#u.Id=c.UserId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,123,c.CreationDate,>=,48674029,c.CreationDate,<=,175672461#57627
+postHistory ph,posts p,users u#u.Id=p.OwnerUserId,u.Id=ph.UserId#p.PostTypeId,=,1,p.ViewCount,>=,0,p.ViewCount,<=,25597,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,>=,0#1427072
+users u,posts p#u.Id=p.OwnerUserId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,123,p.PostTypeId,=,1,p.ViewCount,>=,0,p.ViewCount,<=,25597,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,>=,0#9610
+users u,postHistory ph#u.Id=ph.UserId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,123#144407
+users u,badges b#u.Id=b.UserId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,123#61518
+users u,comments c,posts p#u.Id=c.UserId,u.Id=p.OwnerUserId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,123,c.CreationDate,>=,48674029,c.CreationDate,<=,175672461,p.PostTypeId,=,1,p.ViewCount,>=,0,p.ViewCount,<=,25597,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,>=,0#119580
+users u,comments c,postHistory ph#u.Id=c.UserId,u.Id=ph.UserId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,123,c.CreationDate,>=,48674029,c.CreationDate,<=,175672461#1765715
+badges b,comments c,users u#u.Id=c.UserId,u.Id=b.UserId#c.CreationDate,>=,48674029,c.CreationDate,<=,175672461,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,123#410288
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,u.Id=ph.UserId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,123,p.PostTypeId,=,1,p.ViewCount,>=,0,p.ViewCount,<=,25597,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,>=,0#275324
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.PostTypeId,=,1,p.ViewCount,>=,0,p.ViewCount,<=,25597,p.CommentCount,>=,0,p.CommentCount,<=,11,p.FavoriteCount,>=,0,u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,123#69518
+badges b,postHistory ph,users u#u.Id=b.UserId,u.Id=ph.UserId#u.DownVotes,<=,0,u.UpVotes,>=,0,u.UpVotes,<=,123#869316
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,81547210,pl.CreationDate,<=,173219392,c.CreationDate,<=,177102735#26352
+posts p,comments c#p.Id=c.PostId#p.Score,>=,0,p.Score,<=,23,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,10,p.FavoriteCount,<=,9,p.CreationDate,>=,46264640,p.CreationDate,<=,176945232,c.CreationDate,<=,177102735#25066
+posts p,postLinks pl#p.Id=pl.RelatedPostId#p.Score,>=,0,p.Score,<=,23,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,10,p.FavoriteCount,<=,9,p.CreationDate,>=,46264640,p.CreationDate,<=,176945232,pl.LinkTypeId,=,1,pl.CreationDate,>=,81547210,pl.CreationDate,<=,173219392#4058
+users u,posts p#u.Id=p.OwnerUserId#p.Score,>=,0,p.Score,<=,23,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,10,p.FavoriteCount,<=,9,p.CreationDate,>=,46264640,p.CreationDate,<=,176945232#11763
+badges b,users u#u.Id=b.UserId##79851
+posts p,comments c,postLinks pl#p.Id=pl.RelatedPostId,p.Id=c.PostId#p.Score,>=,0,p.Score,<=,23,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,10,p.FavoriteCount,<=,9,p.CreationDate,>=,46264640,p.CreationDate,<=,176945232,c.CreationDate,<=,177102735,pl.LinkTypeId,=,1,pl.CreationDate,>=,81547210,pl.CreationDate,<=,173219392#10033
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#c.CreationDate,<=,177102735,p.Score,>=,0,p.Score,<=,23,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,10,p.FavoriteCount,<=,9,p.CreationDate,>=,46264640,p.CreationDate,<=,176945232#24665
+users u,postLinks pl,posts p#u.Id=p.OwnerUserId,p.Id=pl.RelatedPostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,81547210,pl.CreationDate,<=,173219392,p.Score,>=,0,p.Score,<=,23,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,10,p.FavoriteCount,<=,9,p.CreationDate,>=,46264640,p.CreationDate,<=,176945232#3982
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#p.Score,>=,0,p.Score,<=,23,p.AnswerCount,>=,0,p.AnswerCount,<=,4,p.CommentCount,>=,0,p.CommentCount,<=,10,p.FavoriteCount,<=,9,p.CreationDate,>=,46264640,p.CreationDate,<=,176945232#180943
+posts p,tags t#p.Id=t.ExcerptPostId#p.CommentCount,>=,0,p.CommentCount,<=,13#596
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,>=,1,p.CommentCount,>=,0,p.CommentCount,<=,13#90109
+votes v,posts p,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#p.CommentCount,>=,0,p.CommentCount,<=,13#2712537
+votes v,users u#u.Id=v.UserId#u.Reputation,>=,1#34789
+badges b,users u#u.Id=b.UserId#b.Date,<=,176488402,u.Reputation,>=,1#79206
+users u,tags t,posts p#u.Id=p.OwnerUserId,p.Id=t.ExcerptPostId#u.Reputation,>=,1,p.CommentCount,>=,0,p.CommentCount,<=,13#593
+votes v,posts p,users u#u.Id=p.OwnerUserId,u.Id=v.UserId#p.CommentCount,>=,0,p.CommentCount,<=,13,u.Reputation,>=,1#2712537
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,<=,176488402,p.CommentCount,>=,0,p.CommentCount,<=,13,u.Reputation,>=,1#3665459
+badges b,users u,votes v#u.Id=b.UserId,u.Id=v.UserId#b.Date,<=,176488402,u.Reputation,>=,1#1050170
+posts p,comments c#p.Id=c.PostId#p.Score,>=,-1,p.Score,<=,14#166502
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.CreationDate,<=,170165106#30009
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,>=,0#865125
+postLinks pl,posts p#p.Id=pl.RelatedPostId#pl.CreationDate,<=,170165106,p.Score,>=,-1,p.Score,<=,14#6879
+votes v,posts p#p.Id=v.PostId#v.CreationDate,>=,0,p.Score,>=,-1,p.Score,<=,14#264920
+users u,posts p#u.Id=p.OwnerUserId#u.DownVotes,>=,0,p.Score,>=,-1,p.Score,<=,14#88461
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.CreationDate,>=,0,pl.CreationDate,<=,170165106#291690
+users u,badges b#u.Id=b.UserId#u.DownVotes,>=,0,b.Date,>=,47375431,b.Date,<=,176089882#77692
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.CreationDate,<=,170165106,p.Score,>=,-1,p.Score,<=,14#18602
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,>=,0,p.Score,>=,-1,p.Score,<=,14#607655
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.DownVotes,>=,0,p.Score,>=,-1,p.Score,<=,14#163984
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.CreationDate,>=,0,p.Score,>=,-1,p.Score,<=,14,pl.CreationDate,<=,170165106#56968
+users u,posts p,postLinks pl#u.Id=p.OwnerUserId,p.Id=pl.RelatedPostId#u.DownVotes,>=,0,p.Score,>=,-1,p.Score,<=,14,pl.CreationDate,<=,170165106#6710
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.DownVotes,>=,0,p.Score,>=,-1,p.Score,<=,14,v.CreationDate,>=,0#260355
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,>=,47375431,b.Date,<=,176089882,p.Score,>=,-1,p.Score,<=,14,u.DownVotes,>=,0#3483198
+posts p,comments c#p.Id=c.PostId#p.ViewCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,12,p.FavoriteCount,>=,0,c.Score,=,0#20043
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,64353890,pl.CreationDate,<=,176053684,c.Score,=,0#18089
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.Score,=,0#529790
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,>=,45961200,v.CreationDate,<=,175906800,c.Score,=,0#582959
+users u,comments c#c.UserId=u.Id#c.Score,=,0#132712
+postLinks pl,posts p#p.Id=pl.RelatedPostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,64353890,pl.CreationDate,<=,176053684,p.ViewCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,12,p.FavoriteCount,>=,0#6218
+postHistory ph,posts p#p.Id=ph.PostId#p.ViewCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,12,p.FavoriteCount,>=,0#71953
+votes v,posts p#p.Id=v.PostId#v.CreationDate,>=,45961200,v.CreationDate,<=,175906800,p.ViewCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,12,p.FavoriteCount,>=,0#87809
+postHistory ph,postLinks pl,posts p#p.Id=ph.PostId,p.Id=pl.RelatedPostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,64353890,pl.CreationDate,<=,176053684#62530
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.CreationDate,>=,45961200,v.CreationDate,<=,175906800,pl.LinkTypeId,=,1,pl.CreationDate,>=,64353890,pl.CreationDate,<=,176053684#268505
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,>=,45961200,v.CreationDate,<=,175906800#1314885
+users u,badges b#b.UserId=u.Id#b.Date,>=,47554605,b.Date,<=,176969975#78544
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1,pl.CreationDate,>=,64353890,pl.CreationDate,<=,176053684,c.Score,=,0,p.ViewCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,12,p.FavoriteCount,>=,0#10139
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.Score,=,0,p.ViewCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,12,p.FavoriteCount,>=,0#125100
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,>=,45961200,v.CreationDate,<=,175906800,c.Score,=,0,p.ViewCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,12,p.FavoriteCount,>=,0#143102
+users u,comments c,posts p#c.UserId=u.Id,p.Id=c.PostId#c.Score,=,0,p.ViewCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,12,p.FavoriteCount,>=,0#19628
+badges b,comments c,users u#b.UserId=u.Id,c.UserId=u.Id#b.Date,>=,47554605,b.Date,<=,176969975,c.Score,=,0#10178277
+postHistory ph,posts p,postLinks pl#p.Id=ph.PostId,p.Id=pl.RelatedPostId#p.ViewCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,12,p.FavoriteCount,>=,0,pl.LinkTypeId,=,1,pl.CreationDate,>=,64353890,pl.CreationDate,<=,176053684#40467
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.CreationDate,>=,45961200,v.CreationDate,<=,175906800,p.ViewCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,12,p.FavoriteCount,>=,0,pl.LinkTypeId,=,1,pl.CreationDate,>=,64353890,pl.CreationDate,<=,176053684#133657
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,>=,45961200,v.CreationDate,<=,175906800,p.ViewCount,>=,0,p.AnswerCount,<=,5,p.CommentCount,<=,12,p.FavoriteCount,>=,0#542064
+posts p,comments c#p.Id=c.PostId#p.Score,<=,40,p.CommentCount,>=,0,p.CreationDate,>=,46802456,p.CreationDate,<=,176872964#171647
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1#30393
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId##704085
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId##865125
+users u,comments c#c.UserId=u.Id##171470
+postLinks pl,posts p#p.Id=pl.RelatedPostId#pl.LinkTypeId,=,1,p.Score,<=,40,p.CommentCount,>=,0,p.CreationDate,>=,46802456,p.CreationDate,<=,176872964#8786
+postHistory ph,posts p#p.Id=ph.PostId#p.Score,<=,40,p.CommentCount,>=,0,p.CreationDate,>=,46802456,p.CreationDate,<=,176872964#298827
+votes v,posts p#p.Id=v.PostId#p.Score,<=,40,p.CommentCount,>=,0,p.CreationDate,>=,46802456,p.CreationDate,<=,176872964#299322
+postHistory ph,postLinks pl,posts p#p.Id=ph.PostId,p.Id=pl.RelatedPostId#pl.LinkTypeId,=,1#65334
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId#pl.LinkTypeId,=,1#287961
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId##1331347
+users u,badges b#b.UserId=u.Id##79851
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1,p.Score,<=,40,p.CommentCount,>=,0,p.CreationDate,>=,46802456,p.CreationDate,<=,176872964#25273
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#p.Score,<=,40,p.CommentCount,>=,0,p.CreationDate,>=,46802456,p.CreationDate,<=,176872964#692309
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#p.Score,<=,40,p.CommentCount,>=,0,p.CreationDate,>=,46802456,p.CreationDate,<=,176872964#742435
+users u,comments c,posts p#c.UserId=u.Id,p.Id=c.PostId#p.Score,<=,40,p.CommentCount,>=,0,p.CreationDate,>=,46802456,p.CreationDate,<=,176872964#168900
+badges b,comments c,users u#b.UserId=u.Id,c.UserId=u.Id##15900001
+postHistory ph,posts p,postLinks pl#p.Id=ph.PostId,p.Id=pl.RelatedPostId#p.Score,<=,40,p.CommentCount,>=,0,p.CreationDate,>=,46802456,p.CreationDate,<=,176872964,pl.LinkTypeId,=,1#54737
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#p.Score,<=,40,p.CommentCount,>=,0,p.CreationDate,>=,46802456,p.CreationDate,<=,176872964,pl.LinkTypeId,=,1#119632
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#p.Score,<=,40,p.CommentCount,>=,0,p.CreationDate,>=,46802456,p.CreationDate,<=,176872964#1177021
+posts p,comments c#p.Id=c.PostId#p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,14,c.Score,=,0,c.CreationDate,>=,46627788#64406
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.CreationDate,>=,54637377,pl.CreationDate,<=,176315030,c.Score,=,0,c.CreationDate,>=,46627788#19912
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.CreationDate,<=,176929781,c.Score,=,0,c.CreationDate,>=,46627788#527835
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,>=,46134000,v.CreationDate,<=,177116400,c.Score,=,0,c.CreationDate,>=,46627788#585989
+users u,comments c#c.UserId=u.Id#c.Score,=,0,c.CreationDate,>=,46627788#132451
+postLinks pl,posts p#p.Id=pl.RelatedPostId#pl.CreationDate,>=,54637377,pl.CreationDate,<=,176315030,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,14#10683
+postHistory ph,posts p#p.Id=ph.PostId#ph.CreationDate,<=,176929781,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,14#215985
+votes v,posts p#p.Id=v.PostId#v.CreationDate,>=,46134000,v.CreationDate,<=,177116400,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,14#152614
+postHistory ph,postLinks pl,posts p#p.Id=ph.PostId,p.Id=pl.RelatedPostId#ph.CreationDate,<=,176929781,pl.CreationDate,>=,54637377,pl.CreationDate,<=,176315030#69462
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.CreationDate,>=,46134000,v.CreationDate,<=,177116400,pl.CreationDate,>=,54637377,pl.CreationDate,<=,176315030#303416
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,>=,46134000,v.CreationDate,<=,177116400,ph.CreationDate,<=,176929781#1326566
+users u,badges b#b.UserId=u.Id##79851
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.CreationDate,>=,54637377,pl.CreationDate,<=,176315030,c.Score,=,0,c.CreationDate,>=,46627788,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,14#18316
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.CreationDate,<=,176929781,c.Score,=,0,c.CreationDate,>=,46627788,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,14#361425
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,>=,46134000,v.CreationDate,<=,177116400,c.Score,=,0,c.CreationDate,>=,46627788,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,14#253217
+users u,comments c,posts p#c.UserId=u.Id,p.Id=c.PostId#c.Score,=,0,c.CreationDate,>=,46627788,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,14#63198
+badges b,comments c,users u#b.UserId=u.Id,c.UserId=u.Id#c.Score,=,0,c.CreationDate,>=,46627788#10225026
+postHistory ph,posts p,postLinks pl#p.Id=ph.PostId,p.Id=pl.RelatedPostId#ph.CreationDate,<=,176929781,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,14,pl.CreationDate,>=,54637377,pl.CreationDate,<=,176315030#68389
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.CreationDate,>=,46134000,v.CreationDate,<=,177116400,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,14,pl.CreationDate,>=,54637377,pl.CreationDate,<=,176315030#300737
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,>=,46134000,v.CreationDate,<=,177116400,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CommentCount,>=,0,p.CommentCount,<=,14,ph.CreationDate,<=,176929781#928622
+posts p,comments c#p.Id=c.PostId#p.AnswerCount,<=,4,p.FavoriteCount,>=,0,c.CreationDate,>=,47153507,c.CreationDate,<=,176906571#29236
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1,c.CreationDate,>=,47153507,c.CreationDate,<=,176906571#29657
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.CreationDate,>=,47153507,c.CreationDate,<=,176906571#699208
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,2,v.CreationDate,<=,176770800,c.CreationDate,>=,47153507,c.CreationDate,<=,176906571#668933
+users u,comments c#c.UserId=u.Id#c.CreationDate,>=,47153507,c.CreationDate,<=,176906571#170249
+postLinks pl,posts p#p.Id=pl.RelatedPostId#pl.LinkTypeId,=,1,p.AnswerCount,<=,4,p.FavoriteCount,>=,0#6021
+postHistory ph,posts p#p.Id=ph.PostId#p.AnswerCount,<=,4,p.FavoriteCount,>=,0#71359
+votes v,posts p#p.Id=v.PostId#v.VoteTypeId,=,2,v.CreationDate,<=,176770800,p.AnswerCount,<=,4,p.FavoriteCount,>=,0#55484
+postHistory ph,postLinks pl,posts p#p.Id=ph.PostId,p.Id=pl.RelatedPostId#pl.LinkTypeId,=,1#65334
+votes v,postLinks pl,posts p#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.VoteTypeId,=,2,v.CreationDate,<=,176770800,pl.LinkTypeId,=,1#164951
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,2,v.CreationDate,<=,176770800#987389
+users u,badges b#b.UserId=u.Id#b.Date,<=,173445869#75910
+postLinks pl,comments c,posts p#p.Id=pl.RelatedPostId,p.Id=c.PostId#pl.LinkTypeId,=,1,c.CreationDate,>=,47153507,c.CreationDate,<=,176906571,p.AnswerCount,<=,4,p.FavoriteCount,>=,0#16583
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#c.CreationDate,>=,47153507,c.CreationDate,<=,176906571,p.AnswerCount,<=,4,p.FavoriteCount,>=,0#185793
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.VoteTypeId,=,2,v.CreationDate,<=,176770800,c.CreationDate,>=,47153507,c.CreationDate,<=,176906571,p.AnswerCount,<=,4,p.FavoriteCount,>=,0#146285
+users u,comments c,posts p#c.UserId=u.Id,p.Id=c.PostId#c.CreationDate,>=,47153507,c.CreationDate,<=,176906571,p.AnswerCount,<=,4,p.FavoriteCount,>=,0#28596
+badges b,comments c,users u#b.UserId=u.Id,c.UserId=u.Id#b.Date,<=,173445869,c.CreationDate,>=,47153507,c.CreationDate,<=,176906571#14929017
+postHistory ph,posts p,postLinks pl#p.Id=ph.PostId,p.Id=pl.RelatedPostId#p.AnswerCount,<=,4,p.FavoriteCount,>=,0,pl.LinkTypeId,=,1#38925
+votes v,posts p,postLinks pl#p.Id=v.PostId,p.Id=pl.RelatedPostId#v.VoteTypeId,=,2,v.CreationDate,<=,176770800,p.AnswerCount,<=,4,p.FavoriteCount,>=,0,pl.LinkTypeId,=,1#65432
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.VoteTypeId,=,2,v.CreationDate,<=,176770800,p.AnswerCount,<=,4,p.FavoriteCount,>=,0#339466
+posts p,comments c#p.Id=c.PostId#p.AnswerCount,>=,0,p.CommentCount,>=,0#90677
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId##704085
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId##865125
+postHistory ph,posts p#p.Id=ph.PostId#p.AnswerCount,>=,0,p.CommentCount,>=,0#217851
+votes v,posts p#p.Id=v.PostId#p.AnswerCount,>=,0,p.CommentCount,>=,0#154617
+users u,posts p#u.Id=p.OwnerUserId#u.Reputation,>=,1,u.Reputation,<=,642,u.DownVotes,>=,0,p.AnswerCount,>=,0,p.CommentCount,>=,0#37022
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId##1331347
+users u,badges b#u.Id=b.UserId#u.Reputation,>=,1,u.Reputation,<=,642,u.DownVotes,>=,0,b.Date,<=,176935562#64490
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#p.AnswerCount,>=,0,p.CommentCount,>=,0#520351
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#p.AnswerCount,>=,0,p.CommentCount,>=,0#427774
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.Reputation,>=,1,u.Reputation,<=,642,u.DownVotes,>=,0,p.AnswerCount,>=,0,p.CommentCount,>=,0#77261
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#p.AnswerCount,>=,0,p.CommentCount,>=,0#948354
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,p.Id=ph.PostId#u.Reputation,>=,1,u.Reputation,<=,642,u.DownVotes,>=,0,p.AnswerCount,>=,0,p.CommentCount,>=,0#185940
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.Reputation,>=,1,u.Reputation,<=,642,u.DownVotes,>=,0,p.AnswerCount,>=,0,p.CommentCount,>=,0#110685
+badges b,posts p,users u#u.Id=p.OwnerUserId,u.Id=b.UserId#b.Date,<=,176935562,p.AnswerCount,>=,0,p.CommentCount,>=,0,u.Reputation,>=,1,u.Reputation,<=,642,u.DownVotes,>=,0#210347
+posts p,comments c#p.Id=c.PostId#p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574#90309
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.CreationDate,>=,56338057,pl.CreationDate,<=,175098323#33859
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,5#210237
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,>=,46134000#863038
+postLinks pl,posts p#p.Id=pl.PostId#pl.CreationDate,>=,56338057,pl.CreationDate,<=,175098323,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574#10581
+postHistory ph,posts p#p.Id=ph.PostId#ph.PostHistoryTypeId,=,5,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574#38637
+votes v,posts p#p.Id=v.PostId#v.CreationDate,>=,46134000,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574#150090
+users u,posts p#u.Id=p.OwnerUserId#u.UpVotes,>=,0,u.CreationDate,<=,176931108,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574#41977
+postHistory ph,postLinks pl,posts p#p.Id=pl.PostId,p.Id=ph.PostId#ph.PostHistoryTypeId,=,5,pl.CreationDate,>=,56338057,pl.CreationDate,<=,175098323#12272
+votes v,postLinks pl,posts p#p.Id=pl.PostId,p.Id=v.PostId#v.CreationDate,>=,46134000,pl.CreationDate,>=,56338057,pl.CreationDate,<=,175098323#64243
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,>=,46134000,ph.PostHistoryTypeId,=,5#357171
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.CreationDate,>=,56338057,pl.CreationDate,<=,175098323,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574#33758
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.PostHistoryTypeId,=,5,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574#117788
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#v.CreationDate,>=,46134000,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574#412822
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.UpVotes,>=,0,u.CreationDate,<=,176931108,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574#88722
+postHistory ph,posts p,postLinks pl#p.Id=pl.PostId,p.Id=ph.PostId#ph.PostHistoryTypeId,=,5,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574,pl.CreationDate,>=,56338057,pl.CreationDate,<=,175098323#12249
+votes v,posts p,postLinks pl#p.Id=pl.PostId,p.Id=v.PostId#v.CreationDate,>=,46134000,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574,pl.CreationDate,>=,56338057,pl.CreationDate,<=,175098323#61687
+users u,posts p,postLinks pl#p.Id=pl.PostId,u.Id=p.OwnerUserId#u.UpVotes,>=,0,u.CreationDate,<=,176931108,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574,pl.CreationDate,>=,56338057,pl.CreationDate,<=,175098323#10453
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#v.CreationDate,>=,46134000,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574,ph.PostHistoryTypeId,=,5#175223
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,p.Id=ph.PostId#u.UpVotes,>=,0,u.CreationDate,<=,176931108,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574,ph.PostHistoryTypeId,=,5#38044
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.UpVotes,>=,0,u.CreationDate,<=,176931108,p.PostTypeId,=,1,p.AnswerCount,>=,0,p.CreationDate,>=,46189433,p.CreationDate,<=,176941574,v.CreationDate,>=,46134000#146996
+posts p,comments c#p.Id=c.PostId#p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390,c.CreationDate,>=,46636623#169983
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.CreationDate,<=,173726871,c.CreationDate,>=,46636623#33456
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.CreationDate,>=,57296325,c.CreationDate,>=,46636623#679915
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#c.CreationDate,>=,46636623#853748
+postLinks pl,posts p#p.Id=pl.PostId#pl.CreationDate,<=,173726871,p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390#10494
+postHistory ph,posts p#p.Id=ph.PostId#ph.CreationDate,>=,57296325,p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390#289244
+votes v,posts p#p.Id=v.PostId#p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390#318561
+users u,posts p#u.Id=p.OwnerUserId#u.DownVotes,>=,0,u.UpVotes,>=,0,p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390#89639
+postHistory ph,postLinks pl,posts p#p.Id=pl.PostId,p.Id=ph.PostId#ph.CreationDate,>=,57296325,pl.CreationDate,<=,173726871#59178
+votes v,postLinks pl,posts p#p.Id=pl.PostId,p.Id=v.PostId#pl.CreationDate,<=,173726871#68029
+votes v,postHistory ph,posts p#p.Id=ph.PostId,p.Id=v.PostId#ph.CreationDate,>=,57296325#1179398
+postLinks pl,comments c,posts p#p.Id=pl.PostId,p.Id=c.PostId#pl.CreationDate,<=,173726871,c.CreationDate,>=,46636623,p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390#32546
+postHistory ph,comments c,posts p#p.Id=ph.PostId,p.Id=c.PostId#ph.CreationDate,>=,57296325,c.CreationDate,>=,46636623,p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390#659401
+votes v,comments c,posts p#p.Id=v.PostId,p.Id=c.PostId#c.CreationDate,>=,46636623,p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390#803828
+users u,comments c,posts p#u.Id=p.OwnerUserId,p.Id=c.PostId#u.DownVotes,>=,0,u.UpVotes,>=,0,c.CreationDate,>=,46636623,p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390#167410
+postHistory ph,posts p,postLinks pl#p.Id=pl.PostId,p.Id=ph.PostId#ph.CreationDate,>=,57296325,p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390,pl.CreationDate,<=,173726871#58730
+votes v,posts p,postLinks pl#p.Id=pl.PostId,p.Id=v.PostId#p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390,pl.CreationDate,<=,173726871#65064
+users u,posts p,postLinks pl#p.Id=pl.PostId,u.Id=p.OwnerUserId#u.DownVotes,>=,0,u.UpVotes,>=,0,p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390,pl.CreationDate,<=,173726871#10354
+votes v,posts p,postHistory ph#p.Id=ph.PostId,p.Id=v.PostId#p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390,ph.CreationDate,>=,57296325#1156329
+users u,posts p,postHistory ph#u.Id=p.OwnerUserId,p.Id=ph.PostId#u.DownVotes,>=,0,u.UpVotes,>=,0,p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390,ph.CreationDate,>=,57296325#284839
+users u,posts p,votes v#u.Id=p.OwnerUserId,p.Id=v.PostId#u.DownVotes,>=,0,u.UpVotes,>=,0,p.Score,>=,-2,p.CommentCount,<=,18,p.CreationDate,>=,46183808,p.CreationDate,<=,176860390#312661
